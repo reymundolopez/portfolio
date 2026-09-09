@@ -21,6 +21,12 @@ export function setLanguage(lang) {
   document.documentElement.lang = lang;
   renderPageContent();
   updateToggleButtons();
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'language_switch', {
+      language: lang
+    });
+  }
 }
 
 function updateToggleButtons() {
@@ -272,6 +278,14 @@ export function openDetailModal(key) {
   if (modal) {
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'view_case_study', {
+        case_study_id: key,
+        title: data.title,
+        language: currentLang
+      });
+    }
   }
 }
 
@@ -336,4 +350,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   renderPageContent();
   updateToggleButtons();
+
+  // Track WhatsApp conversion clicks
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'contact',
+          event_label: 'whatsapp_click',
+          button_id: link.id || 'whatsapp_link',
+          language: currentLang
+        });
+      }
+    });
+  });
 });
