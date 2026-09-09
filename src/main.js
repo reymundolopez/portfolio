@@ -81,7 +81,7 @@ function renderPageContent() {
   const statsContainer = document.getElementById('hero-stats-grid');
   if (statsContainer) {
     statsContainer.innerHTML = t.hero.stats.map(st => `
-      <div class="bg-brand-surface p-4 rounded-xl border border-brand-border/70 hover:border-brand-accent transition-all cursor-pointer group shadow-sm flex flex-col justify-between gap-2" data-stat-modal="${st.key}">
+      <div class="bg-brand-surface/90 backdrop-blur-md p-4 rounded-xl border border-brand-border/80 hover:border-brand-accent transition-all cursor-pointer group shadow-sm flex flex-col justify-between gap-2" data-stat-modal="${st.key}">
         <div class="flex items-center justify-between text-[11px] font-mono text-brand-textMuted uppercase tracking-wider">
           <span>${st.title}</span>
           <span class="w-5 h-5 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors">
