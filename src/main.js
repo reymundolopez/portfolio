@@ -47,12 +47,14 @@ function renderPageContent() {
   setText('nav-role', t.nav.role);
   setText('nav-status-badge', t.nav.statusBadge);
   setText('nav-link-whatido', t.nav.whatIDo);
+  setText('nav-link-superpowers', t.nav.superpowers);
   setText('nav-link-trackrecord', t.nav.trackRecord);
   setText('nav-link-contact', t.nav.contact);
   setText('nav-get-in-touch', t.nav.getInTouch);
 
   // Drawer Nav (Mobile)
   setText('drawer-link-whatido', t.nav.whatIDo);
+  setText('drawer-link-superpowers', t.nav.superpowers);
   setText('drawer-link-trackrecord', t.nav.trackRecord);
   setText('drawer-link-contact', t.nav.contact);
   setText('drawer-get-in-touch', t.nav.getInTouch);
@@ -91,6 +93,24 @@ function renderPageContent() {
     });
   }
 
+  // Superpowers Section
+  setText('superpowers-eyebrow', t.superpowers.eyebrow);
+  setText('superpowers-title', t.superpowers.title);
+  const superpowersContainer = document.getElementById('superpowers-grid');
+  if (superpowersContainer) {
+    superpowersContainer.innerHTML = t.superpowers.items.map(item => `
+      <div class="p-6 rounded-2xl bg-surface flex flex-col justify-between gap-4 border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined text-xl">${item.icon}</span>
+          </div>
+          <h3 class="font-headline text-lg font-bold text-on-surface">${item.title}</h3>
+        </div>
+        <p class="text-xs text-on-surface-variant font-light leading-relaxed">${item.desc}</p>
+      </div>
+    `).join('');
+  }
+
   // "What I Do" (Services) Section
   setText('whatido-eyebrow', t.whatIDo.eyebrow);
   setText('whatido-title', t.whatIDo.title);
@@ -105,7 +125,7 @@ function renderPageContent() {
             <span class="material-symbols-outlined text-2xl">${srv.icon}</span>
           </div>
           <h3 class="font-headline text-2xl font-bold text-on-surface leading-tight">${srv.title}</h3>
-          <p class="text-sm font-semibold text-primary leading-snug">${srv.summary}</p>
+          <p class="text-xs font-mono font-bold text-primary tracking-wide uppercase">${srv.summary}</p>
           <p class="text-xs text-on-surface-variant font-light leading-relaxed">${srv.details}</p>
         </div>
         <div class="flex flex-wrap gap-1.5 pt-2 border-t border-outline-variant/20">
