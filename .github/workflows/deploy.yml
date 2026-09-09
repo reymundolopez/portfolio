@@ -22,10 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Project
-        run: |
-          npm run build
-          mkdir server_deploy
-          cp server.js package.json package-lock.json server_deploy/
+        run: npm run build
 
       - name: Deploy Frontend
         uses: easingthemes/ssh-deploy@v6.0.1
@@ -36,47 +33,3 @@ jobs:
           SOURCE: "dist/"
           TARGET: ${{ secrets.FRONTEND_TARGET }}
           ARGS: "-rltgoDzvO --delete"
-
-      - name: Deploy Backend
-        uses: easingthemes/ssh-deploy@v6.0.1
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          SOURCE: "server_deploy/"
-          TARGET: ${{ secrets.BACKEND_TARGET }}
-          ARGS: "-rltgoDzvO"
-
-      - name: Restart Server
-        uses: appleboy/ssh-action@v1.2.5
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            # Load NVM
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            
-            echo "Using Node version: $(node -v)"
-            
-            cd ${{ secrets.BACKEND_TARGET }}
-            
-            # Install production dependencies
-            npm install --omit=dev
-            
-            # --- CONFIGURATION ---
-            APP_NAME="${{ secrets.APP_NAME }}"
-            PORT="${{ secrets.APP_PORT }}"
-            HOST="127.0.0.1"
-
-            # Check if process exists under THIS user (deploy)
-            if pm2 list | grep -q "$APP_NAME"; then
-                echo "Restarting $APP_NAME on $HOST:$PORT..."
-                HOST=$HOST PORT=$PORT pm2 restart $APP_NAME --update-env
-            else
-                echo "Starting $APP_NAME on $HOST:$PORT..."
-                HOST=$HOST PORT=$PORT pm2 start server.js --name "$APP_NAME"
-            fi
-            
-            pm2 save
