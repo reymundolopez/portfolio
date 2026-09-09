@@ -4,8 +4,8 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#faf5ee"/>
-  <title>Reymundo López | Staff Software Architect &amp; AI Systems</title>
-  <meta name="description" content="Senior software engineering architect turning complex distributed infrastructure, sub-second telemetry, and autonomous AI workflows into resilient enterprise engines."/>
+  <title>Reymundo López | Software Architect &amp; AI Systems</title>
+  <meta name="description" content="Reymundo López — 15+ years building custom business software, automating operations with AI, and scaling cloud infrastructure."/>
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -21,49 +21,44 @@
   <header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30">
     <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
       
-      <!-- Brand & Status -->
-      <div class="flex items-center gap-4">
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3 sm:gap-4">
         <a class="flex items-center gap-3 group" href="#hero">
-          <div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center font-headline text-lg font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+          <div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center font-headline text-lg font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 shadow-sm">
             RL
           </div>
           <div class="flex flex-col">
             <span class="text-sm font-bold tracking-tight text-on-surface leading-none">Reymundo López</span>
-            <span class="text-[11px] text-on-surface-variant font-medium tracking-wide mt-1" id="nav-role">Staff Architect &amp; AI</span>
+            <span class="text-[11px] text-on-surface-variant font-medium tracking-wide mt-1" id="nav-role">Software Architect &amp; AI</span>
           </div>
         </a>
         <div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs text-on-surface-variant">
           <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span id="nav-status-badge">Available for High-Impact Projects</span>
+          <span id="nav-status-badge">Available for Projects &amp; Advisory</span>
         </div>
       </div>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-6">
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#services" id="nav-link-services">Capabilities</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#architecture" id="nav-link-architecture">Architecture &amp; AI</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#experience" id="nav-link-experience">Experience</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#tech-stack" id="nav-link-stack">Tech Stack</a>
+      <!-- Clean 3-Item Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#whatido" id="nav-link-whatido">What I Do</a>
+        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#trackrecord" id="nav-link-trackrecord">Track Record</a>
         <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#contact" id="nav-link-contact">Contact</a>
       </nav>
 
-      <!-- Language Toggle & Actions -->
+      <!-- Language Switcher & Contact Button -->
       <div class="flex items-center gap-3">
         <!-- Bilingual Switcher -->
-        <div class="flex items-center p-1 rounded-full bg-surface-container text-xs font-semibold shadow-inner">
+        <div class="flex items-center p-1 rounded-full bg-surface-container text-xs font-semibold shadow-inner border border-outline-variant/20">
           <button class="lang-btn px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-lang-btn="en" type="button">EN</button>
           <button class="lang-btn px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-lang-btn="es" type="button">ES</button>
         </div>
 
-        <a class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-surface-container-high text-xs font-semibold text-on-surface hover:bg-surface-container-highest transition-colors cv-link" href="#contact" id="nav-download-cv">
-          Download CV
-        </a>
-        <a class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-xs font-semibold text-on-primary hover:opacity-95 transition-opacity shadow-sm" href="#contact" id="nav-get-in-touch">
-          Get in touch
+        <a class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-xs font-semibold text-on-primary hover:opacity-95 transition-opacity shadow-sm" href="#contact" id="nav-get-in-touch">
+          Get in Touch
         </a>
 
-        <!-- Mobile Drawer Toggle Button -->
-        <button class="lg:hidden p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="drawer-open-btn" aria-label="Open Navigation Menu" type="button">
+        <!-- Mobile Drawer Toggle -->
+        <button class="md:hidden p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="drawer-open-btn" aria-label="Open Menu" type="button">
           <span class="material-symbols-outlined text-xl">menu</span>
         </button>
       </div>
@@ -73,10 +68,7 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="fixed inset-0 z-50 hidden" id="mobile-drawer" role="dialog" aria-modal="true">
-    <!-- Backdrop -->
     <div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm drawer-backdrop" id="drawer-backdrop"></div>
-    
-    <!-- Drawer Panel -->
     <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-surface shadow-2xl p-6 flex flex-col justify-between overflow-y-auto drawer-panel border-l border-outline-variant/30">
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30">
@@ -86,7 +78,7 @@
             </div>
             <span class="font-bold text-sm text-on-surface">Reymundo López</span>
           </div>
-          <button class="p-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" id="drawer-close-btn" aria-label="Close Navigation Menu" type="button">
+          <button class="p-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" id="drawer-close-btn" aria-label="Close Menu" type="button">
             <span class="material-symbols-outlined text-lg">close</span>
           </button>
         </div>
@@ -102,30 +94,21 @@
 
         <!-- Links -->
         <nav class="flex flex-col gap-4 py-4">
-          <a class="text-sm font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#services" id="drawer-link-services">
-            Capabilities <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#whatido" id="drawer-link-whatido">
+            What I Do <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
           </a>
-          <a class="text-sm font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#architecture" id="drawer-link-architecture">
-            Architecture &amp; AI <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#trackrecord" id="drawer-link-trackrecord">
+            Track Record &amp; Proof <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
           </a>
-          <a class="text-sm font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#experience" id="drawer-link-experience">
-            Experience <span class="material-symbols-outlined text-sm">chevron_right</span>
-          </a>
-          <a class="text-sm font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#tech-stack" id="drawer-link-stack">
-            Tech Stack <span class="material-symbols-outlined text-sm">chevron_right</span>
-          </a>
-          <a class="text-sm font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#contact" id="drawer-link-contact">
-            Contact <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#contact" id="drawer-link-contact">
+            Contact <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
           </a>
         </nav>
       </div>
 
       <div class="pt-6 border-t border-outline-variant/30 flex flex-col gap-3">
-        <a class="w-full py-3 rounded-lg bg-surface-container-high text-xs font-bold text-center text-on-surface hover:bg-surface-container-highest transition-colors cv-link" href="#contact" id="drawer-download-cv">
-          Download CV
-        </a>
-        <a class="w-full py-3 rounded-lg bg-primary text-xs font-bold text-center text-on-primary hover:opacity-95 transition-opacity" href="#contact" id="drawer-get-in-touch">
-          Get in touch
+        <a class="w-full py-3 rounded-lg bg-primary text-xs font-bold text-center text-on-primary hover:opacity-95 transition-opacity shadow-sm" href="#contact" id="drawer-get-in-touch">
+          Get in Touch
         </a>
       </div>
     </div>
@@ -134,297 +117,216 @@
   <!-- MAIN CONTENT -->
   <main class="w-full pt-20">
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (3-Second Value Proposition) -->
     <section class="relative w-full px-4 sm:px-6 lg:px-12 py-12 lg:py-20 overflow-hidden" id="hero">
       <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto flex flex-col gap-10 relative z-10">
+      <div class="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-10 relative z-10">
         
-        <!-- Status Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container text-xs font-semibold text-on-surface tracking-wide shadow-sm">
+        <!-- Status & Location Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container text-xs font-semibold text-on-surface tracking-wide shadow-sm border border-outline-variant/20">
             <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             <span class="text-primary font-bold" id="hero-status-tag">STATUS:</span>
-            <span id="hero-status-text">Open for Staff / Principal Roles &amp; Strategic Advisory</span>
+            <span id="hero-status-text">Open for High-Impact Projects &amp; Advisory</span>
           </div>
-          <div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+          <div class="flex items-center gap-1.5 text-xs font-mono text-on-surface-variant">
             <span class="material-symbols-outlined text-sm text-primary">location_on</span>
-            <span id="hero-location">Mexico (UTC-6) • Remote &amp; On-Site Consultation</span>
+            <span id="hero-location">Mexico (UTC-6) • Remote &amp; On-Site</span>
           </div>
         </div>
 
-        <!-- Headline & Narrative -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="flex flex-col gap-5 lg:col-span-12">
-            <div class="flex items-center gap-3">
-              <span class="text-xs uppercase tracking-widest font-bold text-primary font-mono" id="hero-tagline">Distributed Systems • Cloud Scale • Agentic AI</span>
-              <div class="h-px w-10 bg-primary/40"></div>
-              <span class="text-xs text-on-surface-variant font-mono" id="hero-tenure-badge">15+ YRS PROD</span>
-            </div>
-            <h1 class="font-headline text-4xl sm:text-6xl font-medium tracking-tight text-on-surface leading-[1.1]" id="hero-title">
-              High-Throughput Distributed Systems &amp; Autonomous AI Architectures.
-            </h1>
-            <p class="text-base sm:text-lg text-on-surface-variant max-w-3xl font-light leading-relaxed" id="hero-desc">
-              Senior engineering architect turning complex distributed infrastructure, sub-second telemetry, and agentic workflows into resilient, revenue-generating engines.
-            </p>
+        <!-- Direct & Punchy Hero Narrative -->
+        <div class="flex flex-col gap-5 max-w-4xl">
+          <div class="text-xs uppercase tracking-widest font-bold text-primary font-mono" id="hero-greeting">
+            Hello, I'm Reymundo López
+          </div>
+          <h1 class="font-headline text-4xl sm:text-6xl font-medium tracking-tight text-on-surface leading-[1.1]" id="hero-title">
+            I build custom software, automate business operations with AI, and scale cloud systems.
+          </h1>
+          <p class="text-base sm:text-xl text-on-surface-variant font-light leading-relaxed max-w-3xl" id="hero-subtitle">
+            15+ years of production experience turning complex business challenges into fast, reliable software—from bespoke web platforms to 24/7 automated WhatsApp workflows.
+          </p>
+
+          <!-- Direct Calls to Action -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-sm font-semibold text-on-primary hover:opacity-95 transition-all shadow-sm" href="#contact">
+              <span class="material-symbols-outlined text-lg">chat</span>
+              <span id="hero-cta-primary">Start a Conversation</span>
+            </a>
+            <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-sm font-semibold text-on-surface transition-all border border-outline-variant/30" href="#trackrecord">
+              <span class="material-symbols-outlined text-lg text-primary">verified</span>
+              <span id="hero-cta-secondary">View Track Record &amp; Proof</span>
+            </a>
           </div>
         </div>
 
-        <!-- Interactive Stats Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4" id="hero-stats-grid">
+        <!-- 4 Key Proof Metric Cards (Click to open deep dive modal) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6" id="hero-stats-grid">
           <!-- Populated by i18n -->
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: CAPABILITIES & TAILORED SOLUTIONS -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="services">
+    <!-- SECTION 1: WHAT I DO (Direct Outcomes, No Fluff) -->
+    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="whatido">
       <div class="max-w-7xl mx-auto flex flex-col gap-10">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="services-eyebrow">01 • Engineering Capabilities</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="services-title">Solutions Engineered for Scale &amp; Reliability.</h2>
+            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="whatido-eyebrow">01 • How I Can Help You</span>
+            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="whatido-title">Direct Solutions for Real Business Growth.</h2>
           </div>
-          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="services-subtitle">
-            From tailored business platforms to distributed cloud backends and intelligent automation.
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="whatido-subtitle">
+            Clear outcomes designed to eliminate operational bottlenecks, reduce manual work, and protect your data.
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="services-grid">
+
+        <!-- 3 Core Outcome Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="whatido-grid">
           <!-- Populated by i18n -->
         </div>
       </div>
     </section>
 
-    <!-- SECTION: ARCHITECTURAL PILLARS -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface" id="architecture">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="arch-eyebrow">02 • Core Infrastructure</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="arch-title">Battle-Tested Architectural Pillars.</h2>
-          </div>
-          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="arch-subtitle">
-            Built for fault isolation, cryptographic zero-trust, and continuous enterprise availability.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="architecture-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: CAREER MILESTONES & LEADERSHIP -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="experience">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="exp-eyebrow">03 • Leadership Track Record</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="exp-title">Engineering Milestones.</h2>
-          </div>
-          <div class="text-xs font-mono text-on-surface-variant font-bold" id="exp-subtitle">15+ YEARS ENTERPRISE DELIVERY</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="experience-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: TECH STACK -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface" id="tech-stack">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="stack-eyebrow">04 • Verified Stack</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="stack-title">Core Competencies.</h2>
-          </div>
-          <div class="text-xs font-mono text-on-surface-variant font-bold" id="stack-subtitle">100% PRODUCTION VERIFIED</div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="tech-stack-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: CERTIFICATIONS & CREDENTIALS -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-16 bg-surface-container-low">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-primary font-mono" id="cert-eyebrow">05 • Continuous Mastery</span>
-            <h3 class="font-headline text-2xl sm:text-3xl font-semibold text-on-surface" id="cert-title">Recognized Certifications &amp; Accreditations</h3>
-          </div>
-          <span class="text-xs font-mono text-on-surface-variant" id="cert-subtitle">Verified Records</span>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="certifications-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: AUTONOMOUS AI ACCELERATION -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-16 bg-surface relative" id="ai-multiplier">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="ai-eyebrow">06 • Autonomous AI Acceleration</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="ai-title">Eliminating Engineering Friction.</h2>
-          </div>
-          <p class="text-xs sm:text-sm text-on-surface-variant max-w-md font-light leading-relaxed" id="ai-subtitle">
-            Deterministic LLM guards, agentic PR validation, and context-aware developer tools built for velocity.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="ai-multiplier-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: DIRECT CONTACT -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="contact">
+    <!-- SECTION 2: TRACK RECORD & PROOF (Credibility & Verification) -->
+    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface" id="trackrecord">
       <div class="max-w-7xl mx-auto flex flex-col gap-12">
-        <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
-          <span class="text-xs font-bold uppercase tracking-widest text-primary font-mono" id="contact-eyebrow">07 • Direct Engagement</span>
-          <h2 class="font-headline text-3xl sm:text-5xl font-medium tracking-tight text-on-surface leading-tight" id="contact-title">
-            Let's Architect Something Resilient.
-          </h2>
-          <p class="text-base sm:text-lg text-on-surface-variant leading-relaxed font-body max-w-2xl font-light" id="contact-desc">
-            Whether you require custom business software, workflow automation with AI, or high-scale cloud architecture, I offer direct engineering leadership and strategic technical guidance.
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div class="max-w-xl space-y-2">
+            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="trackrecord-eyebrow">02 • Verified Background</span>
+            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="trackrecord-title">Proof &amp; Track Record.</h2>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="trackrecord-subtitle">
+            15+ years delivering production software across startups, mass-scale platforms, and enterprise hardware.
           </p>
-          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface text-xs text-on-surface-variant font-mono mt-1 shadow-sm border border-outline-variant/30">
-            <span class="material-symbols-outlined text-base text-primary">schedule</span>
-            <span id="contact-notice">Rapid response guaranteed • Timezone: UTC-6 (Mexico / Central US)</span>
+        </div>
+
+        <!-- Milestones (Click for detailed modal) -->
+        <div class="space-y-4">
+          <p class="text-xs font-mono text-on-surface-variant" id="trackrecord-prompt">
+            Click any milestone for verified architectural deep dive:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="milestones-grid">
+            <!-- Populated by i18n -->
           </div>
         </div>
 
-        <!-- Contact Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
-          
-          <!-- Email -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-5 border border-outline-variant/30 group shadow-sm hover:shadow-md" href="mailto:me@reymundolopez.com">
-            <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-2xl">mail</span>
-              </div>
-              <span class="text-[11px] font-mono text-primary font-semibold bg-surface-container px-2.5 py-1 rounded" id="card-email-tag">Direct Inbox</span>
-            </div>
-            <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-email-label">Direct Email</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all">me@reymundolopez.com</span>
-              <p class="text-xs text-on-surface-variant font-light mt-2" id="card-email-desc">Send architecture inquiries, project proposals, or consulting requests.</p>
-            </div>
-          </a>
+        <!-- Credentials & Education -->
+        <div class="pt-6 border-t border-outline-variant/30 space-y-4">
+          <h3 class="text-xs font-mono uppercase tracking-widest font-bold text-primary" id="credentials-title">
+            Credentials &amp; Education
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="credentials-grid">
+            <!-- Populated by i18n -->
+          </div>
+        </div>
 
-          <!-- WhatsApp -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-5 border border-outline-variant/30 group shadow-sm hover:shadow-md" href="https://wa.me/524767280600" id="card-wa-link" rel="noreferrer" target="_blank">
+      </div>
+    </section>
+
+    <!-- SECTION 3: DIRECT CONTACT (Zero Friction) -->
+    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="contact">
+      <div class="max-w-7xl mx-auto flex flex-col gap-10">
+        
+        <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-4">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary font-mono" id="contact-eyebrow">03 • Get in Touch</span>
+          <h2 class="font-headline text-3xl sm:text-5xl font-medium tracking-tight text-on-surface leading-tight" id="contact-title">
+            Have a Project in Mind? Let's Talk.
+          </h2>
+          <p class="text-base sm:text-lg text-on-surface-variant leading-relaxed font-body max-w-2xl font-light" id="contact-subtitle">
+            Whether you need a custom platform built, repetitive workflows automated, or strategic technical guidance, I am here to help.
+          </p>
+          
+          <!-- Primary WhatsApp Quick Action -->
+          <div class="mt-4 flex flex-col items-center gap-2">
+            <a class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base transition-all shadow-md hover:shadow-lg" id="contact-main-whatsapp" href="https://wa.me/524767280600" rel="noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-2xl">chat</span>
+              <span id="contact-wa-btn-text">Chat Directly on WhatsApp</span>
+            </a>
+            <span class="text-xs font-mono text-on-surface-variant" id="contact-wa-sub">
+              Fastest response • Available for quick syncs and inquiries
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 Channel Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-6 w-full">
+          
+          <!-- WhatsApp Card -->
+          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://wa.me/524767280600" rel="noreferrer" target="_blank">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-2xl">chat</span>
+              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-xl">chat</span>
               </div>
-              <span class="text-[11px] font-mono text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded font-bold" id="card-wa-tag">Instant Chat</span>
+              <span class="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold" id="card-wa-tag">Instant</span>
             </div>
             <div>
               <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-wa-label">WhatsApp</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors">+52 476 728 0600</span>
-              <p class="text-xs text-on-surface-variant font-light mt-2" id="card-wa-desc">Direct messaging for syncs, urgent advisory, and project discussions.</p>
+              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors" id="card-wa-val">+52 476 728 0600</span>
             </div>
           </a>
 
-          <!-- GitHub -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-5 border border-outline-variant/30 group shadow-sm hover:shadow-md" href="https://github.com/reymundolopez" rel="noreferrer" target="_blank">
+          <!-- Email Card -->
+          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="mailto:me@reymundolopez.com">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-2xl">code</span>
+              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-xl">mail</span>
               </div>
-              <span class="text-[11px] font-mono text-on-surface-variant bg-surface-container px-2.5 py-1 rounded" id="card-gh-tag">Code &amp; Repos</span>
+              <span class="text-[10px] font-mono text-primary font-semibold bg-surface-container px-2 py-0.5 rounded" id="card-email-tag">Email</span>
             </div>
             <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-gh-label">GitHub</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all">github.com/reymundolopez</span>
-              <p class="text-xs text-on-surface-variant font-light mt-2" id="card-gh-desc">Inspect open-source architectural patterns, repos, and pipelines.</p>
+              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-email-label">Direct Email</span>
+              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-email-val">me@reymundolopez.com</span>
             </div>
           </a>
 
-          <!-- LinkedIn -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-5 border border-outline-variant/30 group shadow-sm hover:shadow-md" href="https://linkedin.com/in/reymundolopez" rel="noreferrer" target="_blank">
+          <!-- LinkedIn Card -->
+          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://linkedin.com/in/reymundolopez" rel="noreferrer" target="_blank">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-2xl">link</span>
+              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-xl">link</span>
               </div>
-              <span class="text-[11px] font-mono text-primary font-semibold bg-surface-container px-2.5 py-1 rounded" id="card-li-tag">Network</span>
+              <span class="text-[10px] font-mono text-primary font-semibold bg-surface-container px-2 py-0.5 rounded" id="card-li-tag">Network</span>
             </div>
             <div>
               <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-li-label">LinkedIn</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all">linkedin.com/in/reymundolopez</span>
-              <p class="text-xs text-on-surface-variant font-light mt-2" id="card-li-desc">Trajectory, enterprise network, recommendations, and credentials.</p>
+              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-li-val">reymundolopez</span>
+            </div>
+          </a>
+
+          <!-- GitHub Card -->
+          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://github.com/reymundolopez" rel="noreferrer" target="_blank">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-xl">code</span>
+              </div>
+              <span class="text-[10px] font-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded" id="card-gh-tag">Code</span>
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-gh-label">GitHub</span>
+              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-gh-val">reymundolopez</span>
             </div>
           </a>
 
         </div>
+
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full bg-surface-container py-16 border-t border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
-        
-        <div class="space-y-4">
-          <div class="text-lg font-headline font-bold text-on-surface flex items-center gap-2">
-            <span class="w-7 h-7 rounded-lg bg-surface flex items-center justify-center font-headline text-sm font-bold text-primary">RL</span>
-            Reymundo López
-          </div>
-          <p class="text-xs text-on-surface-variant leading-relaxed font-light" id="footer-role">
-            Lead Software Engineer, Senior Full-Stack Architect &amp; AI Specialist crafting fault-tolerant systems.
-          </p>
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface text-xs text-on-surface-variant border border-outline-variant/30">
-            <span class="material-symbols-outlined text-sm text-primary">location_on</span>
-            <span id="footer-location">Mexico (UTC-6) • Remote &amp; Regional Consultation</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4" id="footer-core-title">Core Systems &amp; Focus</div>
-          <p class="text-xs text-on-surface-variant leading-relaxed mb-3 font-light" id="footer-core-desc">
-            15+ Years Designing Resilient Distributed Systems &amp; Autonomous AI Pipelines.
-          </p>
-          <div class="text-xs text-primary font-medium">Cloud Native • Multi-Tenant • LLMOps</div>
-        </div>
-
-        <div>
-          <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4" id="footer-connect-title">Direct Channels</div>
-          <div class="flex flex-col gap-2.5 text-xs text-on-surface-variant font-mono">
-            <a class="hover:text-primary transition-colors flex items-center gap-2" href="mailto:me@reymundolopez.com">
-              <span class="material-symbols-outlined text-sm">mail</span>me@reymundolopez.com
-            </a>
-            <a class="hover:text-primary transition-colors flex items-center gap-2" href="https://wa.me/524767280600" rel="noreferrer" target="_blank">
-              <span class="material-symbols-outlined text-sm">chat</span>+52 476 728 0600
-            </a>
-            <a class="hover:text-primary transition-colors flex items-center gap-2" href="https://linkedin.com/in/reymundolopez" rel="noreferrer" target="_blank">
-              <span class="material-symbols-outlined text-sm">link</span>linkedin.com/in/reymundolopez
-            </a>
-            <a class="hover:text-primary transition-colors flex items-center gap-2" href="https://github.com/reymundolopez" rel="noreferrer" target="_blank">
-              <span class="material-symbols-outlined text-sm">code</span>github.com/reymundolopez
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="text-xs font-bold uppercase tracking-widest text-on-surface mb-4" id="footer-avail-title">Availability &amp; Engagement</div>
-          <p class="text-xs text-on-surface-variant leading-relaxed mb-4 font-light" id="footer-avail-desc">
-            Open for fractional advisory, strategic software consultations, and high-impact enterprise roles.
-          </p>
-          <a class="inline-block text-xs font-bold text-primary underline underline-offset-4 hover:opacity-80 transition-opacity" href="#contact" id="footer-schedule">
-            Schedule Technical Consultation →
-          </a>
-        </div>
-
+  <footer class="w-full bg-surface-container py-12 border-t border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <div class="flex items-center gap-3">
+        <span class="w-7 h-7 rounded-lg bg-surface flex items-center justify-center font-headline text-sm font-bold text-primary shadow-sm">RL</span>
+        <span class="font-medium text-on-surface" id="footer-tagline">Reymundo López — Senior Software Architect &amp; AI Systems Engineer.</span>
       </div>
-
-      <div class="pt-8 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
-        <p id="footer-copyright">© 2025 Reymundo López. Crafted with warm precision and minimal overhead.</p>
-        <p class="text-[11px] tracking-wide" id="footer-edition">Bilingual Portfolio • Global Edition (EN / ES)</p>
+      <div class="flex items-center gap-4">
+        <span id="footer-location">Mexico (UTC-6) • Available Worldwide &amp; Locally</span>
+        <span>•</span>
+        <span id="footer-copyright">© 2025 Reymundo López. Clear, minimal, and built for results.</span>
       </div>
     </div>
   </footer>
@@ -462,7 +364,7 @@
     </div>
   </div>
 
-  <!-- FLOATING MOBILE WHATSAPP BUTTON (FOR ACCESSIBLE QUICK CONTACT) -->
+  <!-- FLOATING MOBILE WHATSAPP BUTTON -->
   <a class="fixed bottom-6 right-6 z-30 sm:hidden w-14 h-14 rounded-full bg-emerald-600 text-white shadow-xl flex items-center justify-center hover:bg-emerald-700 transition-all focus:outline-none focus:ring-4 focus:ring-emerald-400/50" href="https://wa.me/524767280600" id="floating-whatsapp-btn" rel="noreferrer" target="_blank" aria-label="Chat on WhatsApp">
     <span class="material-symbols-outlined text-2xl">chat</span>
   </a>
