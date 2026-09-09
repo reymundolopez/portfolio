@@ -34,9 +34,9 @@ function updateToggleButtons() {
   toggles.forEach(btn => {
     const btnLang = btn.getAttribute('data-lang-btn');
     if (btnLang === currentLang) {
-      btn.className = 'lang-btn px-2.5 py-1 rounded-full bg-surface text-primary font-bold shadow-[0_1px_4px_rgba(58,48,42,0.08)] transition-all';
+      btn.className = 'lang-btn px-2.5 py-0.5 rounded-full bg-brand-surface text-brand-accent font-bold shadow-sm transition-all cursor-pointer';
     } else {
-      btn.className = 'lang-btn px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all';
+      btn.className = 'lang-btn px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary font-semibold transition-all cursor-pointer';
     }
   });
 }
@@ -46,21 +46,21 @@ function renderPageContent() {
 
   // Document Title
   document.title = currentLang === 'es'
-    ? 'Reymundo López | Arquitecto de Software & Sistemas con IA'
-    : 'Reymundo López | Software Architect & AI Systems';
+    ? 'Reymundo López — Arquitecto de Software & IA | El Creador de Software'
+    : 'Reymundo López — Software Architect & AI | The Software Creator';
 
   // Navigation
   setText('nav-role', t.nav.role);
   setText('nav-status-badge', t.nav.statusBadge);
-  setText('nav-link-whatido', t.nav.whatIDo);
   setText('nav-link-superpowers', t.nav.superpowers);
+  setText('nav-link-whatido', t.nav.whatIDo);
   setText('nav-link-trackrecord', t.nav.trackRecord);
   setText('nav-link-contact', t.nav.contact);
   setText('nav-get-in-touch', t.nav.getInTouch);
 
   // Drawer Nav (Mobile)
-  setText('drawer-link-whatido', t.nav.whatIDo);
   setText('drawer-link-superpowers', t.nav.superpowers);
+  setText('drawer-link-whatido', t.nav.whatIDo);
   setText('drawer-link-trackrecord', t.nav.trackRecord);
   setText('drawer-link-contact', t.nav.contact);
   setText('drawer-get-in-touch', t.nav.getInTouch);
@@ -68,8 +68,10 @@ function renderPageContent() {
   // Hero Section
   setText('hero-status-tag', t.hero.status);
   setText('hero-status-text', t.hero.statusText);
+  setText('hero-moniker-es', t.hero.monikerEs);
+  setText('hero-moniker-en', t.hero.monikerEn);
   setText('hero-location', t.hero.location);
-  setText('hero-greeting', t.hero.greeting);
+  setText('hero-consultant-tag', t.hero.consultantTag);
   setText('hero-title', t.hero.title);
   setText('hero-subtitle', t.hero.subtitle);
   setText('hero-cta-primary', t.hero.ctaPrimary);
@@ -79,14 +81,16 @@ function renderPageContent() {
   const statsContainer = document.getElementById('hero-stats-grid');
   if (statsContainer) {
     statsContainer.innerHTML = t.hero.stats.map(st => `
-      <div class="p-5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-3 border border-outline-variant/30 cursor-pointer group shadow-sm hover:shadow-md" data-stat-modal="${st.key}">
-        <div class="flex items-center justify-between">
-          <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">${st.title}</span>
-          <span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary transition-colors">info</span>
+      <div class="bg-brand-surface p-4 rounded-xl border border-brand-border/70 hover:border-brand-accent transition-all cursor-pointer group shadow-sm flex flex-col justify-between gap-2" data-stat-modal="${st.key}">
+        <div class="flex items-center justify-between text-[11px] font-mono text-brand-textMuted uppercase tracking-wider">
+          <span>${st.title}</span>
+          <span class="w-5 h-5 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
         </div>
         <div>
-          <div class="font-headline text-3xl font-bold text-primary">${st.num}</div>
-          <div class="text-[11px] text-on-surface-variant mt-0.5 leading-snug">${st.label}</div>
+          <div class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary font-semibold">${st.num}</div>
+          <div class="text-[11px] text-brand-textSecondary mt-0.5 leading-snug">${st.label}</div>
         </div>
       </div>
     `).join('');
@@ -104,41 +108,68 @@ function renderPageContent() {
   setText('superpowers-title', t.superpowers.title);
   const superpowersContainer = document.getElementById('superpowers-grid');
   if (superpowersContainer) {
-    superpowersContainer.innerHTML = t.superpowers.items.map(item => `
-      <div class="p-6 rounded-2xl bg-surface flex flex-col justify-between gap-4 border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary/40 transition-all">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
-            <span class="material-symbols-outlined text-xl">${item.icon}</span>
+    superpowersContainer.innerHTML = t.superpowers.items.map(item => {
+      let iconHtml = '';
+      if (item.codeBadge) {
+        iconHtml = `<span class="text-sm font-mono font-bold text-brand-accent">&lt;/&gt;</span>`;
+      } else if (item.icon === 'lightning') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`;
+      } else {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`;
+      }
+
+      return `
+        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 shadow-sm flex flex-col justify-between gap-4 hover:border-brand-accent/60 transition-all">
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center shrink-0">
+              ${iconHtml}
+            </div>
+            <h3 class="font-bold text-base text-brand-textPrimary">${item.title}</h3>
           </div>
-          <h3 class="font-headline text-lg font-bold text-on-surface">${item.title}</h3>
+          <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">${item.desc}</p>
         </div>
-        <p class="text-xs text-on-surface-variant font-light leading-relaxed">${item.desc}</p>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
-  // "What I Do" (Services) Section
+  // "What I Do" (4 Solution Cards) Section
   setText('whatido-eyebrow', t.whatIDo.eyebrow);
   setText('whatido-title', t.whatIDo.title);
   setText('whatido-subtitle', t.whatIDo.subtitle);
 
   const servicesContainer = document.getElementById('whatido-grid');
   if (servicesContainer) {
-    servicesContainer.innerHTML = t.whatIDo.services.map(srv => `
-      <div class="p-7 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between gap-6 border border-outline-variant/30 group shadow-sm">
-        <div class="space-y-3">
-          <div class="w-12 h-12 rounded-xl bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors shadow-sm">
-            <span class="material-symbols-outlined text-2xl">${srv.icon}</span>
+    servicesContainer.innerHTML = t.whatIDo.services.map(srv => {
+      let iconHtml = '';
+      if (srv.icon === 'ai') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`;
+      } else if (srv.icon === 'code') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`;
+      } else if (srv.icon === 'rocket') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>`;
+      } else {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`;
+      }
+
+      return `
+        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 hover:border-brand-accent transition-all flex flex-col justify-between gap-5 shadow-sm group">
+          <div class="space-y-3">
+            <div class="w-11 h-11 rounded-xl bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center group-hover:bg-brand-accent transition-colors shadow-sm">
+              ${iconHtml}
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-brand-tagBg text-brand-accent border border-brand-border/60">
+              ${srv.tag}
+            </div>
+            <h3 class="font-serif-headline text-xl text-brand-textPrimary font-semibold leading-tight">${srv.title}</h3>
+            <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">${srv.desc}</p>
           </div>
-          <h3 class="font-headline text-2xl font-bold text-on-surface leading-tight">${srv.title}</h3>
-          <p class="text-xs font-mono font-bold text-primary tracking-wide uppercase">${srv.summary}</p>
-          <p class="text-xs text-on-surface-variant font-light leading-relaxed">${srv.details}</p>
+          <div class="pt-3 border-t border-brand-border/60 flex items-center gap-2 text-[11px] font-medium text-brand-textPrimary">
+            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>${srv.takeaway}</span>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-1.5 pt-2 border-t border-outline-variant/20">
-          ${srv.tags.map(tg => `<span class="px-2 py-0.5 rounded bg-surface text-[11px] font-mono text-on-surface-variant border border-outline-variant/20">${tg}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   // Track Record & Proof Section
@@ -150,20 +181,20 @@ function renderPageContent() {
   const milestonesContainer = document.getElementById('milestones-grid');
   if (milestonesContainer) {
     milestonesContainer.innerHTML = t.trackRecord.milestones.map(m => `
-      <div class="p-6 rounded-2xl bg-surface hover:bg-surface-container transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm cursor-pointer" data-modal-btn="${m.id}">
-        <div class="space-y-2">
+      <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 hover:border-brand-accent transition-all flex flex-col justify-between gap-5 group shadow-sm cursor-pointer" data-modal-btn="${m.id}">
+        <div class="space-y-2.5">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-mono font-bold text-primary">${m.period}</span>
-            <div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
-              <span class="material-symbols-outlined text-sm">info</span>
+            <span class="text-xs font-mono font-bold text-brand-accent bg-[#fbf2eb] px-2.5 py-0.5 rounded-full border border-brand-accent/20">${m.period}</span>
+            <div class="w-7 h-7 rounded-full bg-brand-bg flex items-center justify-center text-brand-textMuted group-hover:bg-brand-accent group-hover:text-white transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
           </div>
-          <h4 class="font-headline text-xl font-bold text-on-surface">${m.title}</h4>
-          <div class="text-xs font-semibold text-on-surface-variant">${m.org}</div>
-          <p class="text-xs text-on-surface-variant font-light pt-1 leading-relaxed">${m.summary}</p>
+          <h4 class="font-serif-headline text-2xl font-semibold text-brand-textPrimary leading-snug">${m.title}</h4>
+          <div class="text-xs font-bold text-brand-textSecondary">${m.org}</div>
+          <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed pt-1">${m.summary}</p>
         </div>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          ${m.tags.map(tg => `<span class="px-2 py-0.5 rounded bg-surface-container text-[10px] font-mono text-on-surface-variant">${tg}</span>`).join('')}
+        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-brand-border/60">
+          ${m.tags.map(tg => `<span class="px-2 py-0.5 rounded bg-brand-bg text-[10px] font-mono text-brand-textSecondary border border-brand-border/60">${tg}</span>`).join('')}
         </div>
       </div>
     `).join('');
@@ -179,18 +210,29 @@ function renderPageContent() {
   setText('credentials-title', t.trackRecord.credentialsTitle);
   const credentialsContainer = document.getElementById('credentials-grid');
   if (credentialsContainer) {
-    credentialsContainer.innerHTML = t.trackRecord.credentials.map(c => `
-      <div class="p-5 rounded-xl bg-surface flex items-center gap-4 border border-outline-variant/30 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
-          <span class="material-symbols-outlined">${c.icon}</span>
+    credentialsContainer.innerHTML = t.trackRecord.credentials.map(c => {
+      let iconSvg = '';
+      if (c.icon === 'degree') {
+        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5"/></svg>`;
+      } else if (c.icon === 'spark') {
+        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`;
+      } else {
+        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>`;
+      }
+
+      return `
+        <div class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 flex items-center gap-3.5 shadow-sm">
+          <div class="w-10 h-10 rounded-lg bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center shrink-0">
+            ${iconSvg}
+          </div>
+          <div>
+            <div class="text-xs sm:text-sm font-bold text-brand-textPrimary leading-tight">${c.title}</div>
+            <div class="text-[11px] font-mono text-brand-accent font-semibold">${c.issuer}</div>
+            <div class="text-[11px] text-brand-textSecondary font-light mt-0.5">${c.note}</div>
+          </div>
         </div>
-        <div>
-          <div class="text-sm font-bold text-on-surface">${c.title}</div>
-          <div class="text-[11px] font-mono text-primary font-medium">${c.issuer}</div>
-          <div class="text-[11px] text-on-surface-variant font-light mt-0.5">${c.note}</div>
-        </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   // Contact Section
@@ -236,13 +278,13 @@ function renderPageContent() {
   setText('footer-location', t.footer.location);
   setText('footer-copyright', t.footer.copyright);
 
-  // Modal close label
-  setText('modal-close-btn-text', t.modal.close);
+  // Modal Buttons
+  setText('modalUnderstoodText', t.modal.understood);
 }
 
 function setText(id, text) {
   const el = document.getElementById(id);
-  if (el) {
+  if (el && text !== undefined) {
     el.textContent = text;
   }
 }
@@ -251,12 +293,12 @@ export function openDetailModal(key) {
   const data = modalDeepDives[key] ? modalDeepDives[key][currentLang] : null;
   if (!data) return;
 
-  const catEl = document.getElementById('modal-category');
-  const titleEl = document.getElementById('modal-title');
-  const bodyEl = document.getElementById('modal-body');
-  const statLabelEl = document.getElementById('modal-stat-label');
-  const statValEl = document.getElementById('modal-stat-val');
-  const tagsContainer = document.getElementById('modal-tags');
+  const catEl = document.getElementById('modalCategory');
+  const titleEl = document.getElementById('modalTitle');
+  const bodyEl = document.getElementById('modalDescription');
+  const statLabelEl = document.getElementById('modalStatLabel');
+  const statValEl = document.getElementById('modalStatVal');
+  const tagsContainer = document.getElementById('modalTags');
 
   if (catEl) catEl.textContent = data.cat;
   if (titleEl) titleEl.textContent = data.title;
@@ -268,15 +310,20 @@ export function openDetailModal(key) {
     tagsContainer.innerHTML = '';
     data.tags.forEach(tag => {
       const sp = document.createElement('span');
-      sp.className = 'px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-mono text-on-surface border border-outline-variant/30';
+      sp.className = 'px-2 py-0.5 rounded bg-brand-bg text-[11px] font-mono text-brand-textSecondary border border-brand-border/80';
       sp.textContent = tag;
       tagsContainer.appendChild(sp);
     });
   }
 
-  const modal = document.getElementById('detail-modal');
+  const modal = document.getElementById('infoModal');
+  const modalBox = document.getElementById('modalBox');
   if (modal) {
     modal.classList.remove('hidden');
+    if (modalBox) {
+      modalBox.classList.remove('scale-95');
+      modalBox.classList.add('scale-100');
+    }
     document.body.style.overflow = 'hidden';
 
     if (typeof window.gtag === 'function') {
@@ -290,8 +337,13 @@ export function openDetailModal(key) {
 }
 
 export function closeDetailModal() {
-  const modal = document.getElementById('detail-modal');
+  const modal = document.getElementById('infoModal');
+  const modalBox = document.getElementById('modalBox');
   if (modal) {
+    if (modalBox) {
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+    }
     modal.classList.add('hidden');
     document.body.style.overflow = '';
   }
@@ -335,13 +387,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const modalCloseBtn = document.getElementById('modal-close-icon');
-  const modalCloseFooterBtn = document.getElementById('modal-close-footer');
-  const modalBackdrop = document.getElementById('modal-backdrop');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalUnderstoodBtn = document.getElementById('modalUnderstoodBtn');
+  const modalContainer = document.getElementById('infoModal');
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeDetailModal);
-  if (modalCloseFooterBtn) modalCloseFooterBtn.addEventListener('click', closeDetailModal);
-  if (modalBackdrop) modalBackdrop.addEventListener('click', closeDetailModal);
+  if (modalUnderstoodBtn) modalUnderstoodBtn.addEventListener('click', closeDetailModal);
+  if (modalContainer) {
+    modalContainer.addEventListener('click', (e) => {
+      if (e.target === modalContainer) {
+        closeDetailModal();
+      }
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDetailModal();
@@ -365,3 +423,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+

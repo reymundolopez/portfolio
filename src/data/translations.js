@@ -5,83 +5,93 @@ export const translations = {
       statusBadge: "Available",
       whatIDo: "What I Do",
       superpowers: "Superpowers",
-      trackRecord: "Track Record",
+      trackRecord: "Track Record & Proof",
       contact: "Contact",
       chatWhatsapp: "Chat on WhatsApp",
       getInTouch: "Get in Touch"
     },
     hero: {
-      status: "STATUS:",
-      statusText: "Available",
+      status: "Status:",
+      statusText: "Available for Projects",
+      monikerEs: "El Creador de Software",
+      monikerEn: "The Software Creator",
       location: "Mexico (UTC-6) • Remote & On-Site",
-      greeting: "Hello, I'm Reymundo López",
-      title: "I build custom software, automate business operations with AI, and scale cloud systems.",
-      subtitle: "15+ years of production experience as a TypeScript expert and systems architect. I leverage Claude Code, Gemini / Antigravity CLI, and Codex to accelerate development velocity and elevate software quality without generating technical debt.",
-      ctaPrimary: "Start a Conversation",
+      consultantTag: "Reymundo López — Consultant & Software Creator",
+      title: "I build software that solves real problems, drives business growth, and automates operations with Artificial Intelligence.",
+      subtitle: "I design and engineer resilient systems that eliminate manual bottlenecks, multiply sales, and transform sluggish processes into automated competitive advantages for businesses of any size.",
+      ctaPrimary: "Let's Talk About Your Project",
       ctaSecondary: "View Track Record & Proof",
       stats: [
-        { key: "exp15", num: "15+ Years", label: "Production Engineering & Architecture", title: "Tenure" },
-        { key: "mobility", num: "5M+ Trips", label: "Chicago Public Transit Systems (Rail & Bus)", title: "Scale" },
-        { key: "endpoints", num: "5,000+", label: "Active Live Hardware Devices Managed", title: "Concurrency" },
-        { key: "agentic", num: "100%", label: "AI-Augmented Velocity & Zero Tech Debt", title: "Velocity" }
+        { key: "exp15", num: "15+ Years", label: "Engineering & Systems in Production", title: "Tenure" },
+        { key: "mobility", num: "5M+ Trips", label: "Mass Transit & Public Systems", title: "Scale" },
+        { key: "endpoints", num: "5,000+", label: "Active Live Hardware Devices Monitored", title: "Concurrency" },
+        { key: "agentic", num: "100%", label: "AI-Augmented Engineering Efficiency", title: "Efficiency" }
       ]
     },
     superpowers: {
-      eyebrow: "CORE SUPERPOWERS",
+      eyebrow: "TECHNICAL SUPERPOWERS",
       title: "How I Work & Technologies I Master",
       items: [
         {
-          icon: "code",
+          codeBadge: "</>",
           title: "TypeScript Expert",
-          desc: "Strict type contracts, scalable backend & frontend architectures, resilient design patterns, and zero technical debt from day one."
+          desc: "Strict typing contracts, scalable architectures across frontend and backend, resilient design patterns, and zero technical debt from the very first commit."
         },
         {
-          icon: "psychology",
+          icon: "lightning",
           title: "AI-Augmented Velocity",
-          desc: "Proficient with Claude Code, Gemini / Antigravity CLI, and Codex to multiply delivery speed 3x–5x while maintaining high test coverage and rigorous architecture."
+          desc: "Deep proficiency with Claude Code, Gemini / Antigravity CLI, and Codex to accelerate delivery speed 3x to 5x while enforcing high test coverage and rigorous architecture."
         },
         {
-          icon: "monitoring",
+          icon: "chart",
           title: "ELK Stack (Elasticsearch, Logstash, Kibana)",
-          desc: "Real-time log ingestion, high-throughput streaming pipelines, distributed search, and proactive anomaly alert triggers for enterprise fleets."
+          desc: "Real-time log ingestion, high-throughput telemetry streaming pipelines, distributed search, and proactive anomaly alert triggers for enterprise hardware fleets."
         }
       ]
     },
     whatIDo: {
-      eyebrow: "01 • How I Can Help You",
-      title: "Direct Solutions for Real Business Growth.",
-      subtitle: "Clear outcomes designed to eliminate operational bottlenecks, reduce manual work, and protect your data.",
+      eyebrow: "01 • Solutions for Businesses & Enterprises",
+      title: "How can I help you grow and operate better?",
+      subtitle: "Practical solutions designed for growing businesses and established companies seeking tangible, measurable results.",
       services: [
         {
-          id: "srv_software",
-          icon: "terminal",
-          title: "Custom Software & Web Platforms",
-          summary: "TypeScript Mastery • Modern Web Platforms & Clean Architecture",
-          details: "Replace spreadsheets, manual tracking, or rigid off-the-shelf software with tailored web applications designed specifically for your business workflow, inventory, and operations.",
-          tags: ["TypeScript (Expert)", "React", "Node.js", "PostgreSQL", "Tailwind", "Zero Tech Debt"]
+          id: "srv_ai",
+          icon: "ai",
+          title: "Task & Process Automation with AI",
+          tag: "Time Savings • 24/7 Availability",
+          desc: "Eliminate repetitive manual tasks, cut operational hours, and answer customer inquiries instantly 24/7 with intelligent conversational assistants integrated directly into your sales channels.",
+          takeaway: "Instant responses & zero lost leads"
         },
         {
-          id: "srv_ai",
-          icon: "smart_toy",
-          title: "AI Automation & WhatsApp Assistants",
-          summary: "Claude Code & Antigravity CLI • 24/7 Intelligent Customer Care",
-          details: "Free your team from repetitive tasks by automatically capturing leads, answering customer inquiries 24/7 via WhatsApp, and speeding up business operations with custom AI agents.",
-          tags: ["Claude Code", "Antigravity CLI", "Codex", "WhatsApp Bots", "AI Agents", "Fast Velocity"]
+          id: "srv_software",
+          icon: "code",
+          title: "Bespoke Systems & Custom Software",
+          tag: "Engineered for Your Real Workflow",
+          desc: "Replace messy spreadsheets and outdated tools with a dedicated, lightning-fast web platform built precisely around how your business operates, manages inventory, and bills clients.",
+          takeaway: "Total control & tool ownership"
+        },
+        {
+          id: "srv_growth",
+          icon: "rocket",
+          title: "Business Modernization & Acceleration",
+          tag: "Scale Without Doubling Overhead",
+          desc: "Unify sales, inventory, and customer data in real time. Prepare your business to multiply transaction volume effortlessly without needing to double your operational overhead.",
+          takeaway: "Clear real-time data for confident decisions"
         },
         {
           id: "srv_cloud",
-          icon: "cloud_done",
-          title: "Cloud Architecture & ELK Observability",
-          summary: "Elastic Stack (ELK) • High Availability • 99.995% SLA",
-          details: "Rock-solid cloud backends and live telemetry monitoring. Sub-second log ingestion with Elasticsearch, Logstash & Kibana to guarantee zero downtime and instant anomaly detection.",
-          tags: ["ELK Stack", "Elasticsearch", "Logstash", "Kibana", "AWS", "Kubernetes", "Zero Downtime"]
+          icon: "shield",
+          title: "High-Demand Architecture & Stability",
+          tag: "Continuous Uptime & Data Shielding",
+          desc: "High-availability, fault-tolerant cloud systems that never go down—protecting your critical data and ensuring your operations run smoothly during high-traffic revenue peaks.",
+          takeaway: "Guaranteed protection & uptime"
         }
       ]
     },
     trackRecord: {
-      eyebrow: "02 • Verified Background",
-      title: "Proof & Track Record.",
-      subtitle: "15+ years delivering production software across startups, mass-scale public systems, and enterprise hardware.",
+      eyebrow: "02 • Verified Experience",
+      title: "Proof & Track Record of Engineering.",
+      subtitle: "15+ years creating production software across startups, mass-scale platforms, and enterprise hardware.",
       clickPrompt: "Click any milestone for verified architectural deep dive:",
       milestones: [
         {
@@ -89,7 +99,7 @@ export const translations = {
           period: "2021 – Present",
           title: "Lead Software Engineer",
           org: "Coforge",
-          summary: "Directing core API infrastructure, biometric 2FA, and ELK Stack log ingestion powering 5,000+ active operational hardware terminals with 99.995% uptime.",
+          summary: "Directing API infrastructure, biometric 2FA, and ELK Stack log ingestion powering 5,000+ active operational hardware terminals with 99.995% uptime.",
           tags: ["Kubernetes", "Vault", "Biometric 2FA", "ELK Stack", "TypeScript"]
         },
         {
@@ -113,20 +123,20 @@ export const translations = {
           period: "2014 – 2018",
           title: "Senior Mobile Systems Engineer",
           org: "Chicago Public Transportation Systems",
-          summary: "Core engineering contributor to high-concurrency mobile ticketing and payment platforms serving 5M+ daily trips across city rail and bus networks, pioneering Apple Pay integration.",
+          summary: "Core engineering contributor to high-concurrency mobile ticketing and payment platforms serving 5M+ daily trips across city rail, suburban rail, and bus networks.",
           tags: ["Swift / Obj-C", "Apple Pay", "High Concurrency", "Rail & Bus Transit", "PCI Compliance"]
         }
       ],
-      credentialsTitle: "Credentials & Education",
+      credentialsTitle: "Accreditations & Education",
       credentials: [
         {
-          icon: "school",
+          icon: "degree",
           title: "Master’s in Web Technology",
           issuer: "De La Salle Bajío University",
           note: "Graduate Degree • Honors • Former Operating Systems Professor"
         },
         {
-          icon: "auto_awesome",
+          icon: "spark",
           title: "GenAI Training Track",
           issuer: "Coursera / Google",
           note: "Agentic Systems, LLM Orchestration & Production Pipelines"
@@ -140,11 +150,11 @@ export const translations = {
       ]
     },
     contact: {
-      eyebrow: "03 • Get in Touch",
+      eyebrow: "03 • Direct Contact",
       title: "Have a Project in Mind? Let's Talk.",
-      subtitle: "Whether you need a custom platform built, repetitive workflows automated with AI, or high-performance systems architecture, I am here to help.",
+      subtitle: "Whether you need custom software, AI workflow automation, or high-reliability cloud systems architecture, I am here to help.",
       whatsappBtn: "Chat Directly on WhatsApp",
-      whatsappSub: "Fastest response • Available for quick syncs and inquiries",
+      whatsappSub: "Fastest response • Ideal for immediate consultations and projects",
       cards: {
         whatsapp: {
           label: "WhatsApp",
@@ -165,18 +175,18 @@ export const translations = {
         github: {
           label: "GitHub",
           value: "github.com/reymundolopez",
-          tag: "Code & Open Source"
+          tag: "Open Source & Code"
         }
       }
     },
     footer: {
       tagline: "Reymundo López — Senior Software Architect & AI Systems Engineer.",
-      location: "Mexico (UTC-6) • Available Worldwide & Locally",
-      copyright: "© 2025 Reymundo López. Clear, minimal, and built for results."
+      location: "Mexico (UTC-6) • Global & Regional Consultation",
+      copyright: "© 2025 Reymundo López. Clear, concise, and built for results."
     },
     modal: {
       close: "Close Overview",
-      tagsLabel: "Technologies & Competencies"
+      understood: "Understood"
     }
   },
 
@@ -192,19 +202,21 @@ export const translations = {
       getInTouch: "Contactar"
     },
     hero: {
-      status: "ESTADO:",
-      statusText: "Disponible",
+      status: "Estado:",
+      statusText: "Disponible para Proyectos",
+      monikerEs: "El Creador de Software",
+      monikerEn: "The Software Creator",
       location: "México (UTC-6) • Remoto & Presencial",
-      greeting: "Hola, soy Reymundo López",
-      title: "Desarrollo software a la medida, automatizo operaciones con IA y escalo sistemas en la nube.",
-      subtitle: "Más de 15 años de experiencia en producción como arquitecto de sistemas y experto en TypeScript. Domino Claude Code, Gemini / Antigravity CLI y Codex para multiplicar la velocidad de desarrollo y elevar la calidad sin generar deuda técnica.",
+      consultantTag: "Reymundo López — Consultor & Creador de Software",
+      title: "Creo software que resuelve problemas reales, impulsa negocios y automatiza operaciones con Inteligencia Artificial.",
+      subtitle: "Diseño y construyo sistemas robustos que eliminan cuellos de botella manuales, multiplican las ventas y transforman procesos lentos en ventajas competitivas automáticas para empresas de cualquier tamaño.",
       ctaPrimary: "Platiquemos sobre tu proyecto",
       ctaSecondary: "Ver Trayectoria & Pruebas",
       stats: [
-        { key: "exp15", num: "15+ Años", label: "Ingeniería y Arquitectura en Producción", title: "Trayectoria" },
-        { key: "mobility", num: "5M+ Viajes", label: "Sistemas de Transporte de Chicago (Tren & Autobús)", title: "Escala" },
-        { key: "endpoints", num: "5,000+", label: "Dispositivos de Hardware Activos Gestionados", title: "Concurrencia" },
-        { key: "agentic", num: "100%", label: "Velocidad Asistida por IA y Cero Deuda Técnica", title: "Velocidad" }
+        { key: "exp15", num: "15+ Años", label: "Ingeniería y Sistemas en Producción", title: "Trayectoria" },
+        { key: "mobility", num: "5M+ Viajes", label: "Sistemas de Transporte Masivo", title: "Escala" },
+        { key: "endpoints", num: "5,000+", label: "Dispositivos Activos Monitoreados", title: "Concurrencia" },
+        { key: "agentic", num: "100%", label: "Eficiencia Asistida por IA", title: "Eficiencia" }
       ]
     },
     superpowers: {
@@ -212,50 +224,58 @@ export const translations = {
       title: "Cómo Trabajo y Tecnologías que Domino",
       items: [
         {
-          icon: "code",
+          codeBadge: "</>",
           title: "Experto en TypeScript",
           desc: "Tipado estricto, arquitecturas escalables en frontend y backend, patrones de diseño resilientes y cero deuda técnica desde el primer commit."
         },
         {
-          icon: "psychology",
+          icon: "lightning",
           title: "Velocidad con Inteligencia Artificial",
           desc: "Dominio de Claude Code, Gemini / Antigravity CLI y Codex para multiplicar de 3x a 5x la velocidad de entrega, con alta cobertura de pruebas y arquitectura rigurosa."
         },
         {
-          icon: "monitoring",
+          icon: "chart",
           title: "Stack ELK (Elasticsearch, Logstash, Kibana)",
           desc: "Ingesta de registros en tiempo real, pipelines de telemetría de alto volumen, búsqueda distribuida y detección proactiva de anomalías para flotas empresariales."
         }
       ]
     },
     whatIDo: {
-      eyebrow: "01 • Cómo Puedo Ayudarte",
-      title: "Soluciones Concretas para Impulsar tu Operación.",
-      subtitle: "Resultados claros diseñados para eliminar cuellos de botella, reducir trabajo manual y blindar tus datos.",
+      eyebrow: "01 • Soluciones para Negocios y Empresas",
+      title: "¿Cómo puedo ayudarte a crecer y operar mejor?",
+      subtitle: "Soluciones prácticas diseñadas tanto para negocios en crecimiento como para empresas consolidadas que buscan resultados tangibles.",
       services: [
         {
-          id: "srv_software",
-          icon: "terminal",
-          title: "Software a la Medida & Plataformas Web",
-          summary: "Dominio Experto de TypeScript • Plataformas Modernas & Código Limpio",
-          details: "Reemplaza hojas de cálculo desordenadas o software genérico con aplicaciones web hechas a la medida de tu operación, inventarios y procesos, garantizando mantenimiento sencillo y cero deuda técnica.",
-          tags: ["TypeScript (Experto)", "React", "Node.js", "PostgreSQL", "Tailwind", "Cero Deuda Técnica"]
+          id: "srv_ai",
+          icon: "ai",
+          title: "Automatización de Tareas y Procesos con IA",
+          tag: "Ahorro de Tiempo • Atención 24/7",
+          desc: "Elimina tareas manuales y repetitivas, reduce horas de trabajo operativo y atiende a tus clientes al instante las 24 horas del día con asistentes inteligentes integrados a tus canales de venta.",
+          takeaway: "Respuestas inmediatas y cero olvidos"
         },
         {
-          id: "srv_ai",
-          icon: "smart_toy",
-          title: "Automatización con IA & Asistentes de WhatsApp",
-          summary: "Claude Code & Antigravity CLI • Atención Inteligente 24/7",
-          details: "Libera a tu equipo de tareas repetitivas automatizando la captura de prospectos y atención a clientes vía WhatsApp, complementado con agentes de IA diseñados para acelerar las tareas operativas de tu empresa.",
-          tags: ["Claude Code", "Antigravity CLI", "Codex", "Bots WhatsApp", "Agentes IA", "Máxima Velocidad"]
+          id: "srv_software",
+          icon: "code",
+          title: "Sistemas y Software a la Medida",
+          tag: "Diseñado para tu Operación Real",
+          desc: "Reemplaza hojas de cálculo desordenadas y sistemas obsoletos por una plataforma propia, rápida y fácil de usar, diseñada con precisión para la forma en que opera y factura tu negocio.",
+          takeaway: "Control total y propiedad de tus herramientas"
+        },
+        {
+          id: "srv_growth",
+          icon: "rocket",
+          title: "Modernización y Aceleración de Negocios",
+          tag: "Escalabilidad sin Duplicar Costos",
+          desc: "Conecta tus ventas, inventarios y clientes en tiempo real. Prepara a tu empresa pequeña o mediana para multiplicar su volumen de transacciones sin tener que duplicar tus costos operativos.",
+          takeaway: "Información clara para decidir mejor"
         },
         {
           id: "srv_cloud",
-          icon: "cloud_done",
-          title: "Arquitectura Cloud & Observabilidad con ELK",
-          summary: "Stack Elastic (ELK) • Alta Disponibilidad • SLA 99.995%",
-          details: "Infraestructura en la nube y monitoreo continuo de telemetría en sub-segundos con Elasticsearch, Logstash y Kibana para operar sin caídas de servicio y detectar anomalías de inmediato.",
-          tags: ["Stack ELK", "Elasticsearch", "Logstash", "Kibana", "AWS", "Kubernetes", "Cero Caídas"]
+          icon: "shield",
+          title: "Arquitectura y Estabilidad para Alta Demanda",
+          tag: "Blindaje y Disponibilidad Continua",
+          desc: "Sistemas confiables y seguros que nunca se caen, blindando tus datos y asegurando que tu negocio funcione sin interrupciones, pérdidas económicas ni fallos en momentos clave de venta.",
+          takeaway: "Protección y continuidad garantizada"
         }
       ]
     },
@@ -278,7 +298,7 @@ export const translations = {
           period: "2021",
           title: "Senior Architect & Full-Stack",
           org: "Hatch Startups",
-          summary: "Diseño de infraestructura cloud desde cero con Terraform IaC y microservicios serverless para startups de rápido crecimiento en HealthTech.",
+          summary: "Diseño de infraestructura cloud desde cero con Terraform IaC y microservicios serverless para startups de rápido crecimiento en health/tech.",
           tags: ["Terraform", "AWS Lambda", "Firebase", "React", "TypeScript"]
         },
         {
@@ -301,13 +321,13 @@ export const translations = {
       credentialsTitle: "Acreditaciones & Formación",
       credentials: [
         {
-          icon: "school",
+          icon: "degree",
           title: "Maestría en Tecnologías Web",
           issuer: "Universidad De La Salle Bajío",
-          note: "Grado de Posgrado • Mención Honorífica • Exprofesor de Sistemas Operativos"
+          note: "Grado de Posgrado • Mención honorífica • Exprofesor de Sistemas Operativos"
         },
         {
-          icon: "auto_awesome",
+          icon: "spark",
           title: "GenAI Training Track",
           issuer: "Coursera / Google",
           note: "Sistemas Agénticos, Orquestación de LLMs y Pipelines de Producción"
@@ -357,7 +377,7 @@ export const translations = {
     },
     modal: {
       close: "Cerrar Detalle",
-      tagsLabel: "Tecnologías & Competencias"
+      understood: "Entendido"
     }
   }
 };
@@ -365,72 +385,72 @@ export const translations = {
 export const modalDeepDives = {
   exp15: {
     en: {
-      cat: "LEADERSHIP TENURE",
+      cat: "PROVEN TENURE",
       title: "15+ Years Systems Architecture & TypeScript Expertise",
       tags: ["TypeScript Expert", "Staff Architect", "ELK Stack", "AI-Augmented Velocity", "Bilingual EN/ES"],
-      body: "Over fifteen years of engineering leadership across high-availability enterprise services, startup velocity, and scalable web platforms. Deep mastery of TypeScript across full-stack systems, building strict typing boundaries, comprehensive automated test suites, and clean design patterns that prevent technical debt. Highly proficient in Claude Code, Gemini / Antigravity CLI, and Codex to accelerate delivery speed while elevating architectural rigor.",
+      body: "Over fifteen years of engineering leadership designing and shipping stable, low-maintenance technology solutions. Deep mastery of TypeScript across full-stack architectures, clean design patterns, and automated test suites that eliminate technical debt. Highly proficient in Claude Code, Gemini / Antigravity CLI, and Codex to accelerate delivery speed while elevating architectural rigor.",
       statLabel: "Continuous Production Time",
       statVal: "15+ Years In Prod"
     },
     es: {
-      cat: "TRAYECTORIA DE LIDERAZGO",
+      cat: "TRAYECTORIA COMPROBADA",
       title: "15+ Años en Arquitectura de Sistemas & Dominio de TypeScript",
       tags: ["Experto TypeScript", "Staff Architect", "Stack ELK", "Velocidad Asistida por IA", "Bilingüe EN/ES"],
-      body: "Más de quince años de liderazgo técnico en servicios empresariales de alta disponibilidad, startups de rápido crecimiento y plataformas web escalables. Dominio profundo de TypeScript en frontend y backend, estableciendo contratos de tipado estricto, pruebas automatizadas y patrones de diseño limpios que previenen la deuda técnica. Experiencia avanzada trabajando con Claude Code, Gemini / Antigravity CLI y Codex para multiplicar la velocidad de entrega manteniendo la máxima disciplina arquitectónica.",
+      body: "Más de 15 años diseñando y entregando soluciones tecnológicas estables, ayudando a negocios a operar con fluidez y sin deuda técnica. Dominio profundo de TypeScript en frontend y backend, tipado estricto y pruebas automatizadas. Experiencia avanzada con Claude Code, Gemini / Antigravity CLI y Codex para multiplicar la velocidad de entrega manteniendo la máxima disciplina arquitectónica.",
       statLabel: "Tiempo Continuo en Producción",
       statVal: "15+ Años en Prod"
     }
   },
   mobility: {
     en: {
-      cat: "URBAN SCALE MOBILITY",
+      cat: "MASSIVE SCALE",
       title: "Chicago Public Transportation & Ticketing Systems",
       tags: ["City Rail Transit", "Suburban Commuter Rail", "Municipal Bus", "Apple Pay", "PCI-DSS"],
-      body: "Core engineering contributor to high-concurrency urban transit & ticketing platforms serving more than 5,000,000 daily commuter trips across city rail transit, suburban commuter rail, and municipal bus networks in the Chicago metropolitan area. Implemented contactless mobile payments with Apple Pay, real-time schedule feeds, and sub-second fare validation under stringent financial audit and zero-downtime standards.",
+      body: "High-performance systems tested with millions of continuous daily transactions without service interruptions. Engineering contributor to high-concurrency transit & ticketing platforms serving more than 5,000,000 daily commuter trips across city rail transit, suburban commuter rail, and municipal bus networks in the Chicago metropolitan area. Implemented contactless mobile payments with Apple Pay, real-time schedule feeds, and sub-second fare validation under stringent financial audit standards.",
       statLabel: "Daily Commuters Served",
       statVal: "5M+ Daily Trips"
     },
     es: {
-      cat: "MOVILIDAD A ESCALA URBANA",
+      cat: "GRAN ESCALA",
       title: "Sistemas de Transporte Público & Boletaje de Chicago",
       tags: ["Tren Metropolitano", "Tren Suburbano", "Autobús Urbano", "Apple Pay", "Cumplimiento PCI-DSS"],
-      body: "Ingeniero central en plataformas masivas de transporte urbano atendiendo a más de 5,000,000 de viajes diarios a lo largo de redes de tren metropolitano, tren suburbano y autobuses urbanos del área metropolitana de Chicago. Implementación de pagos móviles sin contacto con Apple Pay, sincronización de rutas y frecuencias en tiempo real, y validación de tarifas en milisegundos bajo estrictas auditorías financieras y operación sin interrupciones.",
+      body: "Sistemas de alto rendimiento probados con millones de usuarios y transacciones diarias continuas sin fallos de servicio. Ingeniero central en plataformas masivas de transporte urbano atendiendo a más de 5,000,000 de viajes diarios a lo largo de redes de tren metropolitano, tren suburbano y autobuses urbanos del área metropolitana de Chicago. Implementación de pagos móviles sin contacto con Apple Pay, sincronización de rutas y validación de tarifas en milisegundos bajo estrictas auditorías financieras.",
       statLabel: "Usuarios Diarios Atendidos",
       statVal: "5M+ Viajes Diarios"
     }
   },
   endpoints: {
     en: {
-      cat: "FLEET CONCURRENCY & OBSERVABILITY",
+      cat: "CONCURRENCY & HARDWARE",
       title: "5,000+ Hardware Devices & ELK Telemetry",
       tags: ["Biometric 2FA", "Hardware Sync", "ELK Stack", "Vault", "99.995% SLA"],
-      body: "Architectural design and maintenance for core backends serving over 5,000 active operational edge devices. Integrated the ELK Stack (Elasticsearch, Logstash, Kibana) for sub-second log aggregation, real-time event analytics, and proactive anomaly alert triggers. Replaced external authentication vendors with internal cryptographic peer-to-peer handshakes and HashiCorp Vault secrets management, maximizing uptime and reducing operational overhead.",
+      body: "Live telemetry and security supervision for thousands of critical devices with sub-200ms updates. Architectural design and maintenance for core backends serving over 5,000 active operational edge devices. Integrated the ELK Stack (Elasticsearch, Logstash, Kibana) for sub-second log aggregation, real-time event analytics, and proactive anomaly alert triggers. Replaced external authentication vendors with internal cryptographic peer-to-peer handshakes.",
       statLabel: "Active Managed Terminals",
       statVal: "5,000+ Devices"
     },
     es: {
-      cat: "CONCURRENCIA DE HARDWARE & OBSERVABILIDAD",
+      cat: "CONCURRENCIA & HARDWARE",
       title: "5,000+ Dispositivos de Hardware & Telemetría ELK",
       tags: ["2FA Biométrico", "Sincronización Hardware", "Stack ELK", "Vault", "SLA 99.995%"],
-      body: "Diseño y mantenimiento arquitectónico para servicios que atienden a más de 5,000 terminales y dispositivos operativos activos. Integración del Stack ELK (Elasticsearch, Logstash, Kibana) para ingesta de registros en menos de un segundo, análisis de eventos en tiempo real y alertas proactivas ante anomalías. Eliminación de costos recurrentes de autenticación mediante protocolos criptográficos directos e integración con HashiCorp Vault.",
+      body: "Supervisión en vivo de telemetría y seguridad para miles de dispositivos críticos con actualización por debajo de 200ms. Diseño y mantenimiento arquitectónico para servicios que atienden a más de 5,000 terminales y dispositivos operativos activos. Integración del Stack ELK (Elasticsearch, Logstash, Kibana) para ingesta de registros en menos de un segundo, análisis de eventos en tiempo real y alertas proactivas ante anomalías.",
       statLabel: "Terminales Activas Gestionadas",
       statVal: "5,000+ Dispositivos"
     }
   },
   agentic: {
     en: {
-      cat: "AI VELOCITY & ZERO TECH DEBT",
+      cat: "AI-ASSISTED EFFICIENCY",
       title: "AI-Augmented Engineering (Claude Code, Antigravity, Codex)",
       tags: ["Claude Code", "Antigravity CLI", "Codex", "Zero Tech Debt", "Strict TypeScript"],
-      body: "Leveraging state-of-the-art AI tooling as an engineering force multiplier: using Claude Code, Gemini / Antigravity CLI, and Codex to accelerate development by 3x–5x. Rather than creating technical debt, this approach pairs AI velocity with strict TypeScript compiler checks, automated unit and integration tests, deterministic schema validations, and clean architectural boundaries.",
+      body: "Multiplying development and deployment speed through advanced agentic workflows without compromising technical rigor. Leveraging state-of-the-art AI tooling as an engineering force multiplier: using Claude Code, Gemini / Antigravity CLI, and Codex to accelerate development by 3x–5x while pairing AI velocity with strict TypeScript compiler checks, automated unit and integration tests, and clean architectural boundaries.",
       statLabel: "Velocity Multiplier",
       statVal: "3x–5x Faster Delivery"
     },
     es: {
-      cat: "VELOCIDAD CON IA & CERO DEUDA TÉCNICA",
+      cat: "EFICIENCIA ASISTIDA POR IA",
       title: "Ingeniería Asistida por IA (Claude Code, Antigravity, Codex)",
       tags: ["Claude Code", "Antigravity CLI", "Codex", "Cero Deuda Técnica", "TypeScript Estricto"],
-      body: "Uso avanzado de herramientas de IA de última generación como multiplicador de fuerza en ingeniería: aprovechando Claude Code, Gemini / Antigravity CLI y Codex para acelerar el desarrollo entre 3x y 5x. En lugar de generar deuda técnica, este enfoque combina velocidad de IA con validación estricta del compilador de TypeScript, pruebas unitarias y de integración automatizadas, y límites arquitectónicos claros.",
+      body: "Multiplicación de la velocidad de desarrollo e implementación mediante flujos agénticos avanzados sin comprometer rigor técnico. Uso avanzado de herramientas de IA de última generación (Claude Code, Gemini / Antigravity CLI y Codex) para acelerar el desarrollo entre 3x y 5x, combinando velocidad con validación estricta del compilador de TypeScript, pruebas automatizadas y límites arquitectónicos claros.",
       statLabel: "Multiplicador de Velocidad",
       statVal: "Entrega 3x–5x Más Rápida"
     }
@@ -438,17 +458,17 @@ export const modalDeepDives = {
   exp_coforge: {
     en: {
       cat: "CAREER MILESTONE",
-      title: "Lead Software Engineer • Coforge",
-      tags: ["2021 – Present", "Kubernetes", "Vault", "ELK Stack", "Fleet Architecture", "TypeScript"],
-      body: "Directing architectural health and rollout strategies for core API platforms backing 5,000+ operational devices. Designed internal biometric 2FA protocols, secure credential distribution via Vault, and high-throughput ELK Stack (Elasticsearch, Logstash, Kibana) telemetry pipelines.",
+      title: "Coforge — Lead Software Engineer",
+      tags: ["2021 – Present", "Kubernetes", "Vault", "ELK Stack", "Biometric 2FA", "TypeScript"],
+      body: "Technical leadership in microservices architecture and biometric integration for secure self-service hardware terminals. Deployment of Kibana dashboards to monitor anomalies in critical transactions with 99.995% SLA across 5,000+ active edge devices.",
       statLabel: "Scale Managed",
       statVal: "5,000+ Active Terminals"
     },
     es: {
       cat: "HITO PROFESIONAL",
-      title: "Lead Software Engineer • Coforge",
-      tags: ["2021 – Presente", "Kubernetes", "Vault", "Stack ELK", "Arquitectura de Flotas", "TypeScript"],
-      body: "Liderazgo técnico y arquitectónico para plataformas de APIs centrales que dan soporte a más de 5,000 dispositivos operativos. Diseño de protocolos de 2FA biométrico, distribución segura de credenciales con Vault y pipelines de telemetría de alto volumen con el Stack ELK (Elasticsearch, Logstash, Kibana).",
+      title: "Coforge — Lead Software Engineer",
+      tags: ["2021 – Presente", "Kubernetes", "Vault", "Stack ELK", "2FA Biométrico", "TypeScript"],
+      body: "Liderazgo técnico en la arquitectura de microservicios e integración biométrica para terminales seguras de autoservicio. Despliegue de dashboards en Kibana para monitorear anomalías en transacciones críticas con 99.995% SLA.",
       statLabel: "Escala Administrada",
       statVal: "5,000+ Terminales Activas"
     }
@@ -456,17 +476,17 @@ export const modalDeepDives = {
   exp_hatch: {
     en: {
       cat: "CAREER MILESTONE",
-      title: "Senior Architect & Full-Stack • Hatch Startups",
-      tags: ["2021", "Terraform", "AWS Lambda", "InsurTech", "HealthTech", "TypeScript"],
-      body: "Architected greenfield cloud environments using Terraform Infrastructure-as-Code for fast-growing ventures. Implemented serverless microservices with AWS Lambda, secure patient data pipelines, and responsive portal applications in TypeScript and React.",
+      title: "Hatch Startups — Senior Architect & Full-Stack",
+      tags: ["2021", "Terraform", "AWS Lambda", "Firebase", "React", "TypeScript"],
+      body: "Complete structuring of CI/CD pipelines and reproducible deployments using Terraform. Integration of scalable serverless databases with strict validations and compliance with healthcare data regulations.",
       statLabel: "Infrastructure Pattern",
       statVal: "100% Terraform IaC"
     },
     es: {
       cat: "HITO PROFESIONAL",
-      title: "Senior Architect & Full-Stack • Hatch Startups",
-      tags: ["2021", "Terraform", "AWS Lambda", "InsurTech", "HealthTech", "TypeScript"],
-      body: "Diseño de infraestructura en la nube desde cero utilizando Terraform como código para startups de rápido crecimiento. Implementación de microservicios serverless con AWS Lambda, protección de datos y portales web reactivos en TypeScript y React.",
+      title: "Hatch Startups — Senior Architect & Full-Stack",
+      tags: ["2021", "Terraform", "AWS Lambda", "Firebase", "React", "TypeScript"],
+      body: "Estructuración completa de pipelines CI/CD y despliegues reproducibles usando Terraform. Integración de bases de datos serverless escalables con validaciones estrictas y cumplimiento de normativas de datos de salud.",
       statLabel: "Patrón de Infraestructura",
       statVal: "100% Terraform IaC"
     }
@@ -474,17 +494,17 @@ export const modalDeepDives = {
   exp_anexinet: {
     en: {
       cat: "CAREER MILESTONE",
-      title: "Software Architect & Senior Engineer • Anexinet",
+      title: "Anexinet — Software Architect & Senior Engineer",
       tags: ["2018 – 2021", "AWS EKS", "Microservices", "API Gateway", "Docker", "CI/CD"],
-      body: "Guided enterprise clients through legacy modernization, migrating monolithic services to containerized microservices running on AWS EKS with fully automated CI/CD deployment pipelines.",
+      body: "Gradual migration of legacy monolithic services to containerized microservices managed with Kubernetes on AWS (EKS), reducing deployment times from weeks to minutes and eliminating downtime during peak traffic spikes.",
       statLabel: "Cloud Platform",
       statVal: "AWS Enterprise EKS"
     },
     es: {
       cat: "HITO PROFESIONAL",
-      title: "Software Architect & Senior Engineer • Anexinet",
+      title: "Anexinet — Software Architect & Senior Engineer",
       tags: ["2018 – 2021", "AWS EKS", "Microservicios", "API Gateway", "Docker", "CI/CD"],
-      body: "Asesoría y modernización técnica para clientes empresariales, migrando sistemas legados hacia microservicios en contenedores sobre AWS EKS con pipelines automatizados de integración y despliegue continuo.",
+      body: "Migración gradual de servicios legados hacia contenedores gestionados con Kubernetes en AWS (EKS), reduciendo tiempos de despliegue de semanas a minutos y eliminando tiempos muertos durante picos de tráfico.",
       statLabel: "Plataforma Cloud",
       statVal: "AWS Enterprise EKS"
     }
@@ -492,17 +512,17 @@ export const modalDeepDives = {
   exp_mobility: {
     en: {
       cat: "CAREER MILESTONE",
-      title: "Senior Mobile Systems Engineer • Chicago Public Transit Platforms",
-      tags: ["2014 – 2018", "City Rail", "Suburban Commuter Rail", "Bus Network", "Apple Pay", "Swift"],
-      body: "Core engineering contributor delivering high-concurrency mobile ticketing and payment platforms serving millions of commuter trips daily across the Chicago public transportation network (city rail transit, suburban commuter rail, and municipal bus routes). Led the integration of Apple Pay and contactless payment processing adhering to strict financial audit and zero-downtime requirements.",
+      title: "Chicago Public Transportation Systems — Senior Mobile Engineer",
+      tags: ["2014 – 2018", "City Rail", "Suburban Rail", "Bus Network", "Apple Pay", "Swift"],
+      body: "Engineering ticketing modules integrated with tokenized payment gateways and Apple Pay under strict PCI-DSS standards. Direct support ensuring zero-friction transit experiences for 5,000,000+ daily riders across rail and bus routes.",
       statLabel: "Commuters Impacted",
       statVal: "5M+ Daily Trips"
     },
     es: {
       cat: "HITO PROFESIONAL",
-      title: "Senior Mobile Systems Engineer • Plataformas de Tránsito de Chicago",
+      title: "Sistemas de Transporte Público de Chicago — Senior Mobile Engineer",
       tags: ["2014 – 2018", "Tren Metropolitano", "Tren Suburbano", "Red de Autobuses", "Apple Pay", "Swift"],
-      body: "Ingeniero central en el desarrollo de plataformas móviles de pago y emisión de boletos de transporte masivo que atienden a millones de usuarios al día en la red de transporte público de Chicago (tren metropolitano, tren suburbano y rutas de autobuses). Implementación pionera de pagos sin contacto con Apple Pay bajo rigurosas normativas financieras y operación ininterrumpida.",
+      body: "Desarrollo de módulos de venta de pasajes con integración a pasarelas tokenizadas y Apple Pay bajo estrictos estándares PCI-DSS. Soporte directo para soportar 5 millones de pasajeros diarios sin fricciones.",
       statLabel: "Impacto en Pasajeros",
       statVal: "5M+ Viajes Diarios"
     }

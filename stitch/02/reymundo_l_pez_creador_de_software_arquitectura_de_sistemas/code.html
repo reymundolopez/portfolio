@@ -1,0 +1,654 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Reymundo López — Arquitecto de Software &amp; IA</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#fbf8f5',
+              surface: '#ffffff',
+              card: '#fdfbf9',
+              border: '#eae4dc',
+              accent: '#c05c2a',
+              accentHover: '#ab4f22',
+              textPrimary: '#1a1816',
+              textSecondary: '#6e6962',
+              textMuted: '#9e978e',
+              tagBg: '#f4efe8'
+            }
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'Playfair Display', 'Merriweather', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Google Fonts for Editorial Serif and Clean Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style data-purpose="custom-typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fbf8f5;
+      color: #1a1816;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-headline {
+      font-family: 'Newsreader', serif;
+      letter-spacing: -0.02em;
+    }
+  </style>
+<style data-purpose="animations-and-badges">
+    .status-pulse {
+      animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.9); }
+    }
+    .card-hover-transition {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-transition:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(50, 40, 30, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-brand-textPrimary min-h-screen selection:bg-[#c05c2a]/20 selection:text-brand-textPrimary">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 bg-[#fbf8f5]/90 backdrop-blur-md border-b border-brand-border/70">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+<!-- Monogram & Identity -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-10 h-10 rounded-full bg-[#f4ece3] border border-brand-border flex items-center justify-center font-bold text-sm tracking-tight text-brand-accent group-hover:border-brand-accent transition-colors">
+          RL
+        </div>
+<div>
+<div class="font-bold text-sm sm:text-base text-brand-textPrimary leading-tight flex items-center gap-2">
+            Reymundo López
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 status-pulse"></span>
+              Disponible
+            </span>
+</div>
+<p class="text-xs text-brand-textSecondary">Arquitecto de Software &amp; IA</p>
+</div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden md:flex items-center gap-7 text-[12px] font-semibold tracking-wider text-brand-textSecondary uppercase">
+<a class="hover:text-brand-accent transition-colors" href="#que-hago">Qué Hago</a>
+<a class="hover:text-brand-accent transition-colors" href="#especialidades">Especialidades</a>
+<a class="hover:text-brand-accent transition-colors" href="#trayectoria">Trayectoria &amp; Pruebas</a>
+<a class="hover:text-brand-accent transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Action & Lang Switcher -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center text-xs font-semibold bg-[#efe8df] p-1 rounded-full border border-brand-border/60">
+<span class="px-2 py-0.5 text-brand-textSecondary cursor-pointer hover:text-brand-textPrimary">EN</span>
+<span class="px-2.5 py-0.5 bg-brand-surface rounded-full text-brand-textPrimary shadow-sm">ES</span>
+</div>
+<a class="px-4 py-2 bg-brand-accent text-white hover:bg-brand-accentHover text-xs font-semibold rounded-lg shadow-sm transition duration-150 inline-flex items-center" href="#contacto">
+          Contactar
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden border-b border-brand-border/60">
+<!-- Background Image with Editorial Warm Overlay -->
+<div class="absolute inset-0 z-0 pointer-events-none"><div class="absolute inset-0 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDi-fVBOVyBaRGaNFLXCH0IEK5K6CH-9dBo_9gbmJztTPH7tLgnrYZhAwool-GBS1XL4lIKGSPpor8QFwGDycXhNySgctUYnO1g7Us02i0lNKVdyDd2752SqK7eVzEl-F5yWnaXNu0i7j7xGy0BXWF-m2e9nhPMDP8WdM3dY4759CceBY7Q6UZQbXfyFYicVP5yJQNN7wJES6x0DxYbcgbPneTazpvmEKICJjlhUw9DJe-_VrW6GrEY&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; image-rendering: -webkit-optimize-contrast;"></div></div>
+<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-14">
+<!-- Status meta strip & Distinctive Moniker Badge -->
+<div class="flex flex-wrap items-center justify-between gap-3 text-xs text-brand-textSecondary mb-8 pb-3 border-b border-brand-border/50">
+<div class="flex flex-wrap items-center gap-2">
+<div class="inline-flex items-center gap-2 bg-[#f4efe8]/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-textPrimary font-medium border border-brand-border/80 text-[11px]">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-brand-textMuted uppercase text-[10px] tracking-wider">Estado:</span>
+<span class="">Disponible para Proyectos</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#fbf2eb] text-brand-accent border border-brand-accent/20 tracking-wide">
+<span class="">El Creador de Software</span>
+<span class="text-brand-textMuted font-normal">|</span>
+<span class="text-brand-textSecondary font-medium">The Software Creator</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-brand-textSecondary text-xs bg-brand-surface/80 px-3 py-1 rounded-full border border-brand-border/50">
+<svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">México (UTC-6) • Remoto &amp; Presencial</span>
+</div>
+</div>
+<!-- Hero Copy -->
+<div class="max-w-4xl bg-[#fbf8f5]/90 rounded-2xl p-6 border border-brand-border/80 shadow-sm"><span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4 block">Reymundo López — Consultor &amp; Creador de Software</span><h1 class="font-serif-headline text-3xl sm:text-5xl lg:text-[54px] font-normal leading-[1.15] text-brand-textPrimary tracking-tight mb-6">Creo software que resuelve problemas reales, impulsa negocios y automatiza operaciones con Inteligencia Artificial.</h1><p class="text-base sm:text-lg text-brand-textSecondary leading-relaxed max-w-3xl mb-9 font-normal">Diseño y construyo sistemas robustos que eliminan cuellos de botella manuales, multiplican las ventas y transforman procesos lentos en ventajas competitivas automáticas para empresas de cualquier tamaño.</p><div class="flex flex-wrap items-center gap-4"><a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-accent hover:bg-brand-accentHover text-white rounded-lg font-semibold text-sm transition shadow-sm" href="#contacto"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0h-2v2h2V9z" fill-rule="evenodd"></path></svg>Platiquemos sobre tu proyecto</a><a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-surface/90 hover:bg-[#ede5da] text-brand-textPrimary border border-brand-border rounded-lg font-semibold text-sm transition shadow-sm" href="#trayectoria"><svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Ver Trayectoria &amp; Pruebas</a></div></div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14 pt-8 border-t border-brand-border/50">
+<!-- Metric 1 -->
+<div class="bg-brand-surface/85 backdrop-blur-sm border border-brand-border/80 rounded-xl p-5 card-hover-transition shadow-sm">
+<div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-brand-textMuted mb-2">
+<span class="">Trayectoria</span>
+<button aria-label="Información de trayectoria" class="text-brand-textMuted hover:text-brand-accent" onclick="showInfoModal('Trayectoria Comprobada', 'Más de 15 años diseñando y entregando soluciones tecnológicas estables, ayudando a negocios a operar con fluidez y sin deuda técnica.')" type="button">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+<div class="text-2xl font-serif-headline font-semibold text-brand-textPrimary">15+ Años</div>
+<p class="text-xs text-brand-textSecondary mt-1 leading-snug">Ingeniería y Sistemas en Producción</p>
+</div>
+<!-- Metric 2 -->
+<div class="bg-brand-surface/85 backdrop-blur-sm border border-brand-border/80 rounded-xl p-5 card-hover-transition shadow-sm">
+<div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-brand-textMuted mb-2">
+<span class="">Escala</span>
+<button aria-label="Información de escala" class="text-brand-textMuted hover:text-brand-accent" onclick="showInfoModal('Gran Escala', 'Sistemas de alto rendimiento probados con millones de usuarios y transacciones diarias continuas sin fallos de servicio.')" type="button">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+<div class="text-2xl font-serif-headline font-semibold text-brand-textPrimary">5M+ Viajes</div>
+<p class="text-xs text-brand-textSecondary mt-1 leading-snug">Sistemas de Transporte Masivo</p>
+</div>
+<!-- Metric 3 -->
+<div class="bg-brand-surface/85 backdrop-blur-sm border border-brand-border/80 rounded-xl p-5 card-hover-transition shadow-sm">
+<div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-brand-textMuted mb-2">
+<span class="">Concurrencia</span>
+<button aria-label="Información de concurrencia" class="text-brand-textMuted hover:text-brand-accent" onclick="showInfoModal('Concurrencia &amp; Hardware', 'Supervisión en vivo de telemetría y seguridad para miles de dispositivos críticos con actualización por debajo de 200ms.')" type="button">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+<div class="text-2xl font-serif-headline font-semibold text-brand-textPrimary">5,000+</div>
+<p class="text-xs text-brand-textSecondary mt-1 leading-snug">Dispositivos Activos Monitoreados</p>
+</div>
+<!-- Metric 4 -->
+<div class="bg-brand-surface/85 backdrop-blur-sm border border-brand-border/80 rounded-xl p-5 card-hover-transition shadow-sm">
+<div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-brand-textMuted mb-2">
+<span class="">Eficiencia</span>
+<button aria-label="Información de eficiencia" class="text-brand-textMuted hover:text-brand-accent" onclick="showInfoModal('Eficiencia Asistida por IA', 'Multiplicación de la velocidad de desarrollo e implementación mediante flujos agénticos avanzados sin comprometer rigor técnico.')" type="button">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+<div class="text-2xl font-serif-headline font-semibold text-brand-textPrimary">100%</div>
+<p class="text-xs text-brand-textSecondary mt-1 leading-snug">Eficiencia Asistida por IA</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: HowIWorkSection -->
+<section class="py-14 border-t border-brand-border/60 bg-[#f7f3ed]/60" id="especialidades">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2">Especialidades Técnicas</span>
+</div>
+<h2 class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary text-left md:text-right">
+            Cómo Trabajo y Tecnologías que Domino
+          </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Item 1 -->
+<div class="bg-brand-surface p-6 rounded-xl border border-brand-border/80 card-hover-transition">
+<div class="w-9 h-9 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-4 text-sm font-bold font-mono">
+              &lt;/&gt;
+            </div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2">Experto en TypeScript</h3>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed">
+              Tipado estricto, arquitecturas escalables en frontend y backend, patrones de diseño resilientes y cero deuda técnica desde el primer commit.
+            </p>
+</div>
+<!-- Item 2 -->
+<div class="bg-brand-surface p-6 rounded-xl border border-brand-border/80 card-hover-transition">
+<div class="w-9 h-9 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-4 text-sm">
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2">Velocidad con Inteligencia Artificial</h3>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed">
+              Dominio de Claude Code, Gemini / Antigravity CLI y Codex para multiplicar de 3x a 5x la velocidad de entrega, con alta cobertura de pruebas y arquitectura rigurosa.
+            </p>
+</div>
+<!-- Item 3 -->
+<div class="bg-brand-surface p-6 rounded-xl border border-brand-border/80 card-hover-transition">
+<div class="w-9 h-9 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-4 text-sm">
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2 leading-tight">Stack ELK (Elasticsearch, Logstash, Kibana)</h3>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed">
+              Ingesta de registros en tiempo real, pipelines de telemetría de alto volumen, búsqueda distribuida y detección proactiva de anomalías para flotas empresariales.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowIWorkSection -->
+<!-- BEGIN: ConcreteSolutionsSection -->
+<section class="py-16" id="que-hago"><div class="max-w-6xl mx-auto px-4 sm:px-6">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-brand-border/50 gap-4">
+<div class="max-w-xl">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2">01 • Soluciones para Negocios y Empresas</span>
+<h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary">
+        ¿Cómo puedo ayudarte a crecer y operar mejor?
+      </h2>
+</div>
+<p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right">
+      Soluciones prácticas diseñadas tanto para negocios en crecimiento como para empresas consolidadas que buscan resultados tangibles.
+    </p>
+</div>
+<!-- 4 Business Solution Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Solution Card 1: Automatización con IA -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between card-hover-transition shadow-sm hover:border-brand-accent">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-5 border border-brand-accent/20">
+<!-- Smart AI / Robot Gear Icon -->
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M9 9h.01M15 9h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2 leading-snug">
+          Automatización de Tareas y Procesos con IA
+        </h3>
+<p class="text-[10px] font-bold tracking-wider text-brand-accent uppercase mb-3">
+          Ahorro de Tiempo • Atención 24/7
+        </p>
+<p class="text-xs text-brand-textSecondary leading-relaxed mb-5">
+          Elimina tareas manuales y repetitivas, reduce horas de trabajo operativo y atiende a tus clientes al instante las 24 horas del día con asistentes inteligentes integrados a tus canales de venta.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-border/60 text-[11px] text-brand-textPrimary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+<span class="">Respuestas inmediatas y cero olvidos</span>
+</div>
+</div>
+<!-- Solution Card 2: Software a la Medida -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between card-hover-transition shadow-sm hover:border-brand-accent">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-5 border border-brand-accent/20">
+<!-- Custom Code / Platform Icon -->
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2 leading-snug">
+          Sistemas y Software a la Medida
+        </h3>
+<p class="text-[10px] font-bold tracking-wider text-brand-accent uppercase mb-3">
+          Diseñado para tu Operación Real
+        </p>
+<p class="text-xs text-brand-textSecondary leading-relaxed mb-5">
+          Reemplaza hojas de cálculo desordenadas y sistemas obsoletos por una plataforma propia, rápida y fácil de usar, diseñada con precisión para la forma en que opera y factura tu negocio.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-border/60 text-[11px] text-brand-textPrimary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+<span class="">Control total y propiedad de tus herramientas</span>
+</div>
+</div>
+<!-- Solution Card 3: Modernización y Crecimiento -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between card-hover-transition shadow-sm hover:border-brand-accent">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-5 border border-brand-accent/20">
+<!-- Growth / Rocket Icon -->
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2 leading-snug">
+          Modernización y Aceleración de Negocios
+        </h3>
+<p class="text-[10px] font-bold tracking-wider text-brand-accent uppercase mb-3">
+          Escalabilidad sin Duplicar Costos
+        </p>
+<p class="text-xs text-brand-textSecondary leading-relaxed mb-5">
+          Conecta tus ventas, inventarios y clientes en tiempo real. Prepara a tu empresa pequeña o mediana para multiplicar su volumen de transacciones sin tener que duplicar tus costos operativos.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-border/60 text-[11px] text-brand-textPrimary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+<span class="">Información clara para decidir mejor</span>
+</div>
+</div>
+<!-- Solution Card 4: Arquitectura y Estabilidad -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between card-hover-transition shadow-sm hover:border-brand-accent">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#fbf2eb] text-brand-accent flex items-center justify-center mb-5 border border-brand-accent/20">
+<!-- Cloud Shield / High Reliability Icon -->
+<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-bold text-base text-brand-textPrimary mb-2 leading-snug">
+          Arquitectura y Estabilidad para Alta Demanda
+        </h3>
+<p class="text-[10px] font-bold tracking-wider text-brand-accent uppercase mb-3">
+          Blindaje y Disponibilidad Continua
+        </p>
+<p class="text-xs text-brand-textSecondary leading-relaxed mb-5">
+          Sistemas confiables y seguros que nunca se caen, blindando tus datos y asegurando que tu negocio funcione sin interrupciones, pérdidas económicas ni fallos en momentos clave de venta.
+        </p>
+</div>
+<div class="pt-4 border-t border-brand-border/60 text-[11px] text-brand-textPrimary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+<span class="">Protección y continuidad garantizada</span>
+</div>
+</div>
+</div>
+</div></section>
+<!-- END: ConcreteSolutionsSection -->
+<!-- BEGIN: ExperienceTimelineSection -->
+<section class="py-16 bg-[#f7f3ed]/60 border-y border-brand-border/60" id="trayectoria">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2">02 • Experiencia Verificada</span>
+<h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary mb-2">
+              Pruebas &amp; Trayectoria de Ingeniería.
+            </h2>
+<p class="text-xs text-brand-textSecondary">
+              Haz clic en cualquier hito para ver los detalles técnicos comprobados:
+            </p>
+</div>
+<p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right">
+            15+ años creando software en producción para startups, plataformas de millones de usuarios y flotas empresariales.
+          </p>
+</div>
+<!-- 2x2 Grid of Career Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<!-- Career Card 1 -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between cursor-pointer card-hover-transition" onclick="showInfoModal('Coforge — Lead Software Engineer', 'Liderazgo técnico en la arquitectura de microservicios e integración biométrica para terminales seguras de autoservicio. Despliegue de dashboards en Kibana para monitorear anomalías en transacciones críticas con 99.995% SLA.')">
+<div>
+<div class="flex items-center justify-between text-xs text-brand-textMuted mb-2">
+<span class="font-semibold text-brand-accent">2021 – Presente</span>
+<span class="hover:text-brand-accent text-brand-textMuted"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg></span>
+</div>
+<h3 class="font-bold text-lg text-brand-textPrimary">Lead Software Engineer</h3>
+<p class="text-xs font-semibold text-brand-textSecondary mb-3">Coforge</p>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed mb-6">
+                Dirección de infraestructura de APIs, 2FA biométrico y telemetría ELK Stack para más de 5,000 terminales de hardware activas con 99.995% de disponibilidad.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-brand-border/60">
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Kubernetes</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Vault</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">2FA Biométrico</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Stack ELK</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">TypeScript</span>
+</div>
+</div>
+<!-- Career Card 2 -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between cursor-pointer card-hover-transition" onclick="showInfoModal('Hatch Startups — Senior Architect &amp; Full-Stack', 'Estructuración completa de pipelines CI/CD y despliegues reproducibles usando Terraform. Integración de bases de datos serverless escalables con validaciones estrictas y cumplimiento de normativas de datos de salud.')">
+<div>
+<div class="flex items-center justify-between text-xs text-brand-textMuted mb-2">
+<span class="font-semibold text-brand-accent">2021</span>
+<span class="hover:text-brand-accent text-brand-textMuted"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg></span>
+</div>
+<h3 class="font-bold text-lg text-brand-textPrimary">Senior Architect &amp; Full-Stack</h3>
+<p class="text-xs font-semibold text-brand-textSecondary mb-3">Hatch Startups</p>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed mb-6">
+                Diseño de infraestructura cloud desde cero con Terraform IaC y microservicios serverless para startups de rápido crecimiento en health/tech.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-brand-border/60">
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Terraform</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">AWS Lambda</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Firebase</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">React</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">TypeScript</span>
+</div>
+</div>
+<!-- Career Card 3 -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between cursor-pointer card-hover-transition" onclick="showInfoModal('Anexinet — Software Architect &amp; Senior Engineer', 'Migración gradual de servicios legados hacia contenedores gestionados con Kubernetes en AWS (EKS), reduciendo tiempos de despliegue de semanas a minutos y eliminando tiempos muertos durante picos de tráfico.')">
+<div>
+<div class="flex items-center justify-between text-xs text-brand-textMuted mb-2">
+<span class="font-semibold text-brand-accent">2018 – 2021</span>
+<span class="hover:text-brand-accent text-brand-textMuted"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg></span>
+</div>
+<h3 class="font-bold text-lg text-brand-textPrimary">Software Architect &amp; Senior Engineer</h3>
+<p class="text-xs font-semibold text-brand-textSecondary mb-3">Anexinet</p>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed mb-6">
+                Modernización de sistemas empresariales monolíticos hacia microservicios en contenedores sobre AWS EKS con despliegues automatizados y cero caídas.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-brand-border/60">
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">AWS EKS</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Microservicios</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">API Gateway</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Docker</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">CI/CD</span>
+</div>
+</div>
+<!-- Career Card 4 -->
+<div class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col justify-between cursor-pointer card-hover-transition" onclick="showInfoModal('Sistemas de Transporte Público de Chicago', 'Desarrollo de módulos de venta de pasajes con integración a pasarelas tokenizadas y Apple Pay bajo estrictos estándares PCI-DSS. Soporte directo para soportar 5 millones de pasajeros diarios sin fricciones.')">
+<div>
+<div class="flex items-center justify-between text-xs text-brand-textMuted mb-2">
+<span class="font-semibold text-brand-accent">2014 – 2018</span>
+<span class="hover:text-brand-accent text-brand-textMuted"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path></svg></span>
+</div>
+<h3 class="font-bold text-lg text-brand-textPrimary">Senior Mobile Systems Engineer</h3>
+<p class="text-xs font-semibold text-brand-textSecondary mb-3">Sistemas de Transporte Público de Chicago</p>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed mb-6">
+                Ingeniero central en plataformas móviles de alta concurrencia para boletaje y pagos en redes de tren metropolitano, tren suburbano y autobuses con más de 5M de viajes diarios.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-brand-border/60">
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Swift / Obj-C</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Apple Pay</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Alta Concurrencia</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Tren &amp; Autobús</span>
+<span class="text-[11px] bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded font-medium">Cumplimiento PCI</span>
+</div>
+</div>
+</div>
+<!-- Acreditaciones & Formación Strip -->
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-4">Acreditaciones &amp; Formación</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-brand-surface p-4 rounded-lg border border-brand-border/80 flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-md bg-[#fbf2eb] text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-xs sm:text-sm text-brand-textPrimary">Maestría en Tecnologías Web</h4>
+<p class="text-[11px] text-brand-accent font-medium">Universidad De La Salle Bajío</p>
+<p class="text-[11px] text-brand-textSecondary mt-1 leading-snug">Grado de Posgrado • Mención honorífica • Exprofesor de Sistemas Operativos</p>
+</div>
+</div>
+<div class="bg-brand-surface p-4 rounded-lg border border-brand-border/80 flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-md bg-[#fbf2eb] text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" fill-rule="evenodd"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-xs sm:text-sm text-brand-textPrimary">GenAI Training Track</h4>
+<p class="text-[11px] text-brand-accent font-medium">Coursera / Google</p>
+<p class="text-[11px] text-brand-textSecondary mt-1 leading-snug">Sistemas Agénticos, Orquestación de LLMs y Pipelines de Producción</p>
+</div>
+</div>
+<div class="bg-brand-surface p-4 rounded-lg border border-brand-border/80 flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-md bg-[#fbf2eb] text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+</div>
+<div>
+<h4 class="font-bold text-xs sm:text-sm text-brand-textPrimary">Titanium Certified Expert &amp; Instructor</h4>
+<p class="text-[11px] text-brand-accent font-medium">Appcelerator / ITexico</p>
+<p class="text-[11px] text-brand-textSecondary mt-1 leading-snug">Certificación Oficial como Instructor en Arquitecturas Móviles Nativas</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ExperienceTimelineSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-20" id="contacto">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+<span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-3 block">
+          03 • Contacto Directo
+        </span>
+<h2 class="font-serif-headline text-3xl sm:text-5xl text-brand-textPrimary mb-4">
+          ¿Tienes un Proyecto en Mente? Hablemos.
+        </h2>
+<p class="text-sm sm:text-base text-brand-textSecondary max-w-xl mx-auto leading-relaxed mb-8">
+          Ya sea que necesites una plataforma de software a la medida, automatizar procesos con IA o arquitectura de alta confiabilidad, estoy a tus órdenes.
+        </p>
+<!-- Prominent WhatsApp Action -->
+<div class="mb-14">
+<a class="inline-flex items-center gap-3 bg-[#24955b] hover:bg-[#1e804d] text-white text-sm sm:text-base font-semibold px-7 py-3.5 rounded-lg shadow-sm transition hover:shadow duration-150" href="https://wa.me/524767280600" rel="noopener noreferrer" target="_blank">
+<!-- WhatsApp Vector Icon -->
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+            Chatear Directamente por WhatsApp
+          </a>
+<p class="text-xs text-brand-textSecondary mt-2.5">
+            Respuesta más rápida • Ideal para consultas inmediatas y proyectos
+          </p>
+</div>
+<!-- 4 Contact Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-left">
+<!-- Card 1: WhatsApp -->
+<a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group" href="https://wa.me/524767280600" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between mb-3">
+<span class="w-7 h-7 rounded bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"></path></svg>
+</span>
+<span class="text-[9px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">Mensaje Inmediato</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block">WhatsApp</span>
+<span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition">+52 476 728 0600</span>
+</a>
+<!-- Card 2: Email -->
+<a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group" href="mailto:me@reymundolopez.com">
+<div class="flex items-center justify-between mb-3">
+<span class="w-7 h-7 rounded bg-[#fbf2eb] text-brand-accent flex items-center justify-center text-xs">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full">Consultas &amp; Propuestas</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block">Correo Directo</span>
+<span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block">me@reymundolopez.com</span>
+</a>
+<!-- Card 3: LinkedIn -->
+<a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group" href="https://linkedin.com/in/reymundolopez" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between mb-3">
+<span class="w-7 h-7 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-xs font-bold">
+                in
+              </span>
+<span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full">Trayectoria Profesional</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block">LinkedIn</span>
+<span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block">linkedin.com/in/reymundolopez</span>
+</a>
+<!-- Card 4: GitHub -->
+<a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group" href="https://github.com/reymundolopez" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center justify-between mb-3">
+<span class="w-7 h-7 rounded bg-[#f4ece3] text-brand-textPrimary flex items-center justify-center text-xs font-mono font-bold">
+                &lt;&gt;
+              </span>
+<span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full">Código Abierto &amp; Repos</span>
+</div>
+<span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block">GitHub</span>
+<span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block">github.com/reymundolopez</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-[#f2ece3] border-t border-brand-border py-8 text-brand-textSecondary text-xs">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-brand-textPrimary">
+<span class="font-bold text-xs bg-brand-surface px-1.5 py-0.5 rounded border border-brand-border">RL</span>
+<span class="font-medium">Reymundo López — Arquitecto de Software Senior &amp; Especialista en IA.</span>
+</div>
+<div class="text-center md:text-right text-[11px] text-brand-textSecondary">
+<span class="">México (UTC-6) • Consultoría Global y Regional</span>
+<span class="block sm:inline sm:ml-2 text-brand-textMuted">• © 2025 Reymundo López. Claro, conciso y enfocado en resultados.</span>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: DetailModal -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="infoModal">
+<div class="bg-brand-surface rounded-2xl max-w-md w-full p-6 border border-brand-border shadow-2xl transition-transform transform scale-95 duration-150" id="modalBox">
+<div class="flex items-start justify-between mb-3">
+<h3 class="font-serif-headline text-xl text-brand-textPrimary font-semibold" id="modalTitle"></h3>
+<button class="text-brand-textMuted hover:text-brand-textPrimary p-1" onclick="closeInfoModal()" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed mb-6" id="modalDescription"></p>
+<div class="flex justify-end">
+<button class="px-4 py-2 bg-brand-accent text-white rounded-lg text-xs font-semibold hover:bg-brand-accentHover transition" onclick="closeInfoModal()" type="button">
+          Entendido
+        </button>
+</div>
+</div>
+</div>
+<!-- END: DetailModal -->
+<!-- Modal Interactivity Script -->
+<script data-purpose="modal-handlers">
+    const infoModal = document.getElementById('infoModal');
+    const modalBox = document.getElementById('modalBox');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+
+    function showInfoModal(title, description) {
+      modalTitle.textContent = title;
+      modalDescription.textContent = description;
+      infoModal.classList.remove('hidden');
+      setTimeout(() => {
+        modalBox.classList.remove('scale-95');
+        modalBox.classList.add('scale-100');
+      }, 10);
+    }
+
+    function closeInfoModal() {
+      modalBox.classList.remove('scale-100');
+      modalBox.classList.add('scale-95');
+      setTimeout(() => {
+        infoModal.classList.add('hidden');
+      }, 100);
+    }
+
+    infoModal.addEventListener('click', (e) => {
+      if (e.target === infoModal) {
+        closeInfoModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !infoModal.classList.contains('hidden')) {
+        closeInfoModal();
+      }
+    });
+  </script>
+
+
+
+
+</body></html>

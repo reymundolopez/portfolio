@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="theme-color" content="#faf5ee"/>
+  <meta name="theme-color" content="#fbf8f5"/>
   
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGFL7T57SE"></script>
@@ -14,63 +14,65 @@
 
     gtag('config', 'G-CGFL7T57SE');
   </script>
-  <title>Reymundo López | Software Architect &amp; AI Systems</title>
-  <meta name="description" content="Reymundo López — 15+ years building custom business software, automating operations with AI, and scaling cloud infrastructure."/>
+
+  <title>Reymundo López — Arquitecto de Software &amp; IA | El Creador de Software</title>
+  <meta name="description" content="Reymundo López — Consultor &amp; Creador de Software. Más de 15 años creando software robusto, automatizando procesos con IA y escalando sistemas en la nube."/>
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   
   <link rel="stylesheet" href="/src/styles/main.css"/>
 </head>
-<body class="bg-surface font-body text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<body class="bg-brand-bg text-brand-textPrimary min-h-screen selection:bg-[#c05c2a]/20 selection:text-brand-textPrimary">
 
   <!-- HEADER -->
-  <header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30">
-    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
+  <header class="sticky top-0 z-40 bg-[#fbf8f5]/90 backdrop-blur-md border-b border-brand-border/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand & Title -->
-      <div class="flex items-center gap-3 sm:gap-4">
-        <a class="flex items-center gap-3 group" href="#hero">
-          <div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center font-headline text-lg font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 shadow-sm">
-            RL
-          </div>
-          <div class="flex flex-col">
-            <span class="text-sm font-bold tracking-tight text-on-surface leading-none">Reymundo López</span>
-            <span class="text-[11px] text-on-surface-variant font-medium tracking-wide mt-1" id="nav-role">Software Architect &amp; AI</span>
-          </div>
-        </a>
-        <div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-xs text-on-surface-variant">
-          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span id="nav-status-badge">Available</span>
+      <!-- Brand & Identity -->
+      <a class="flex items-center gap-3.5 group" href="#hero">
+        <div class="w-10 h-10 rounded-full bg-[#f4ece3] border border-brand-border flex items-center justify-center font-bold text-sm tracking-tight text-brand-accent group-hover:border-brand-accent transition-colors shadow-sm">
+          RL
         </div>
-      </div>
+        <div>
+          <div class="font-bold text-sm sm:text-base text-brand-textPrimary leading-tight flex items-center gap-2">
+            Reymundo López
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 status-pulse"></span>
+              <span id="nav-status-badge">Disponible</span>
+            </span>
+          </div>
+          <p class="text-xs text-brand-textSecondary" id="nav-role">Arquitecto de Software &amp; IA</p>
+        </div>
+      </a>
 
-      <!-- Clean Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8">
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#whatido" id="nav-link-whatido">What I Do</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#superpowers" id="nav-link-superpowers">Superpowers</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#trackrecord" id="nav-link-trackrecord">Track Record</a>
-        <a class="text-xs font-semibold uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#contact" id="nav-link-contact">Contact</a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-7 text-[12px] font-semibold tracking-wider text-brand-textSecondary uppercase">
+        <a class="hover:text-brand-accent transition-colors" href="#especialidades" id="nav-link-superpowers">Especialidades</a>
+        <a class="hover:text-brand-accent transition-colors" href="#que-hago" id="nav-link-whatido">Qué Hago</a>
+        <a class="hover:text-brand-accent transition-colors" href="#trayectoria" id="nav-link-trackrecord">Trayectoria &amp; Pruebas</a>
+        <a class="hover:text-brand-accent transition-colors" href="#contacto" id="nav-link-contact">Contacto</a>
       </nav>
 
-      <!-- Language Switcher & Contact Button -->
-      <div class="flex items-center gap-3">
-        <!-- Bilingual Switcher -->
-        <div class="flex items-center p-1 rounded-full bg-surface-container text-xs font-semibold shadow-inner border border-outline-variant/20">
-          <button class="lang-btn px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-lang-btn="en" type="button">EN</button>
-          <button class="lang-btn px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-lang-btn="es" type="button">ES</button>
+      <!-- Action & Lang Switcher -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Bilingual Pill Toggle -->
+        <div class="flex items-center text-xs font-semibold bg-[#efe8df] p-1 rounded-full border border-brand-border/60">
+          <button class="lang-btn px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary transition-all cursor-pointer" data-lang-btn="en" type="button">EN</button>
+          <button class="lang-btn px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary transition-all cursor-pointer" data-lang-btn="es" type="button">ES</button>
         </div>
 
-        <a class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-xs font-semibold text-on-primary hover:opacity-95 transition-opacity shadow-sm" href="#contact" id="nav-get-in-touch">
-          Get in Touch
+        <a class="px-4 py-2 bg-brand-accent text-white hover:bg-brand-accentHover text-xs font-semibold rounded-lg shadow-sm transition duration-150 inline-flex items-center" href="#contacto" id="nav-get-in-touch">
+          Contactar
         </a>
 
         <!-- Mobile Drawer Toggle -->
-        <button class="md:hidden p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="drawer-open-btn" aria-label="Open Menu" type="button">
-          <span class="material-symbols-outlined text-xl">menu</span>
+        <button class="md:hidden p-2 rounded-lg bg-[#efe8df] text-brand-textPrimary hover:bg-brand-border transition-colors" id="drawer-open-btn" aria-label="Open Menu" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
         </button>
       </div>
 
@@ -79,261 +81,281 @@
 
   <!-- MOBILE NAVIGATION DRAWER -->
   <div class="fixed inset-0 z-50 hidden" id="mobile-drawer" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm drawer-backdrop" id="drawer-backdrop"></div>
-    <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-surface shadow-2xl p-6 flex flex-col justify-between overflow-y-auto drawer-panel border-l border-outline-variant/30">
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-brand-bg shadow-2xl p-6 flex flex-col justify-between overflow-y-auto drawer-panel border-l border-brand-border">
       <div>
-        <div class="flex items-center justify-between pb-6 border-b border-outline-variant/30">
+        <div class="flex items-center justify-between pb-6 border-b border-brand-border/60">
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center font-headline text-base font-bold text-primary">
+            <div class="w-9 h-9 rounded-full bg-[#f4ece3] border border-brand-border flex items-center justify-center font-bold text-xs text-brand-accent">
               RL
             </div>
-            <span class="font-bold text-sm text-on-surface">Reymundo López</span>
+            <span class="font-bold text-sm text-brand-textPrimary">Reymundo López</span>
           </div>
-          <button class="p-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" id="drawer-close-btn" aria-label="Close Menu" type="button">
-            <span class="material-symbols-outlined text-lg">close</span>
+          <button class="p-2 rounded-full bg-[#efe8df] text-brand-textSecondary hover:text-brand-textPrimary" id="drawer-close-btn" aria-label="Close Menu" type="button">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
           </button>
         </div>
 
         <!-- Language Switcher in Drawer -->
-        <div class="my-6 flex items-center justify-between p-2 rounded-xl bg-surface-container">
-          <span class="text-xs font-mono text-on-surface-variant">Language / Idioma:</span>
-          <div class="flex items-center p-1 rounded-full bg-surface-container-high text-xs font-semibold">
-            <button class="lang-btn px-3 py-1 rounded-full text-on-surface-variant" data-lang-btn="en" type="button">EN</button>
-            <button class="lang-btn px-3 py-1 rounded-full text-on-surface-variant" data-lang-btn="es" type="button">ES</button>
+        <div class="my-6 flex items-center justify-between p-2 rounded-xl bg-[#efe8df]">
+          <span class="text-xs font-mono text-brand-textSecondary">Language / Idioma:</span>
+          <div class="flex items-center p-1 rounded-full bg-brand-surface text-xs font-semibold shadow-sm">
+            <button class="lang-btn px-3 py-0.5 rounded-full text-brand-textSecondary" data-lang-btn="en" type="button">EN</button>
+            <button class="lang-btn px-3 py-0.5 rounded-full text-brand-textSecondary" data-lang-btn="es" type="button">ES</button>
           </div>
         </div>
 
-        <!-- Links -->
-        <nav class="flex flex-col gap-4 py-4">
-          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#whatido" id="drawer-link-whatido">
-            What I Do <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
+        <!-- Mobile Links -->
+        <nav class="flex flex-col gap-3 py-2">
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#especialidades" id="drawer-link-superpowers">
+            Especialidades <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
-          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#superpowers" id="drawer-link-superpowers">
-            Superpowers <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#que-hago" id="drawer-link-whatido">
+            Qué Hago <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
-          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#trackrecord" id="drawer-link-trackrecord">
-            Track Record &amp; Proof <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#trayectoria" id="drawer-link-trackrecord">
+            Trayectoria &amp; Pruebas <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
-          <a class="text-base font-semibold text-on-surface hover:text-primary transition-colors flex items-center justify-between py-2 border-b border-outline-variant/20" href="#contact" id="drawer-link-contact">
-            Contact <span class="material-symbols-outlined text-sm text-primary">chevron_right</span>
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#contacto" id="drawer-link-contact">
+            Contacto <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
         </nav>
       </div>
 
-      <div class="pt-6 border-t border-outline-variant/30 flex flex-col gap-3">
-        <a class="w-full py-3 rounded-lg bg-primary text-xs font-bold text-center text-on-primary hover:opacity-95 transition-opacity shadow-sm" href="#contact" id="drawer-get-in-touch">
-          Get in Touch
+      <div class="pt-6 border-t border-brand-border/60">
+        <a class="w-full py-3 bg-brand-accent text-white rounded-lg text-xs font-bold text-center block shadow-sm hover:bg-brand-accentHover transition" href="#contacto" id="drawer-get-in-touch">
+          Contactar
         </a>
       </div>
     </div>
   </div>
 
   <!-- MAIN CONTENT -->
-  <main class="w-full pt-20">
+  <main>
 
-    <!-- HERO SECTION (3-Second Value Proposition) -->
-    <section class="relative w-full px-4 sm:px-6 lg:px-12 py-12 lg:py-20 overflow-hidden" id="hero">
-      <div class="absolute -top-24 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-10 relative z-10">
+    <!-- HERO SECTION (Editorial Architectural Look) -->
+    <section class="relative overflow-hidden border-b border-brand-border/60" id="hero">
+      
+      <!-- Architectural Background Texture with Warm Overlay -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply" style="background-image: url('/images/hero-bg.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#fbf8f5]/80 via-[#fbf8f5]/90 to-[#fbf8f5]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-14">
         
-        <!-- Status & Location Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container text-xs font-semibold text-on-surface tracking-wide shadow-sm border border-outline-variant/20">
-            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-            <span class="text-primary font-bold" id="hero-status-tag">STATUS:</span>
-            <span id="hero-status-text">Available</span>
+        <!-- Status meta strip & Distinctive Moniker Badge -->
+        <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-brand-textSecondary mb-8 pb-3 border-b border-brand-border/50">
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="inline-flex items-center gap-2 bg-[#f4efe8]/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-textPrimary font-medium border border-brand-border/80 text-[11px] shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span class="text-brand-textMuted uppercase text-[10px] tracking-wider" id="hero-status-tag">Estado:</span>
+              <span id="hero-status-text">Disponible para Proyectos</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#fbf2eb] text-brand-accent border border-brand-accent/20 tracking-wide shadow-sm">
+              <span id="hero-moniker-es">El Creador de Software</span>
+              <span class="text-brand-textMuted font-normal">|</span>
+              <span class="text-brand-textSecondary font-medium" id="hero-moniker-en">The Software Creator</span>
+            </div>
           </div>
-          <div class="flex items-center gap-1.5 text-xs font-mono text-on-surface-variant">
-            <span class="material-symbols-outlined text-sm text-primary">location_on</span>
-            <span id="hero-location">Mexico (UTC-6) • Remote &amp; On-Site</span>
+          <div class="flex items-center gap-1.5 text-brand-textSecondary text-xs bg-brand-surface/80 px-3 py-1 rounded-full border border-brand-border/50 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+            <span id="hero-location">México (UTC-6) • Remoto &amp; Presencial</span>
           </div>
         </div>
 
-        <!-- Direct & Punchy Hero Narrative -->
-        <div class="flex flex-col gap-5 max-w-4xl">
-          <div class="text-xs uppercase tracking-widest font-bold text-primary font-mono" id="hero-greeting">
-            Hello, I'm Reymundo López
-          </div>
-          <h1 class="font-headline text-4xl sm:text-6xl font-medium tracking-tight text-on-surface leading-[1.1]" id="hero-title">
-            I build custom software, automate business operations with AI, and scale cloud systems.
+        <!-- Hero Copy Inside Framed Editorial Card -->
+        <div class="max-w-4xl bg-[#fbf8f5]/90 rounded-2xl p-6 sm:p-8 border border-brand-border/80 shadow-sm backdrop-blur-sm">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4 block font-mono" id="hero-consultant-tag">
+            Reymundo López — Consultor &amp; Creador de Software
+          </span>
+          <h1 class="font-serif-headline text-3xl sm:text-5xl lg:text-[52px] font-normal leading-[1.15] text-brand-textPrimary tracking-tight mb-6" id="hero-title">
+            Creo software que resuelve problemas reales, impulsa negocios y automatiza operaciones con Inteligencia Artificial.
           </h1>
-          <p class="text-base sm:text-xl text-on-surface-variant font-light leading-relaxed max-w-3xl" id="hero-subtitle">
-            15+ years of production experience as a TypeScript expert and systems architect. I leverage Claude Code, Gemini / Antigravity CLI, and Codex to accelerate development velocity and elevate software quality without generating technical debt.
-          </p>
-
-          <!-- Direct Calls to Action -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-sm font-semibold text-on-primary hover:opacity-95 transition-all shadow-sm" href="#contact">
-              <span class="material-symbols-outlined text-lg">chat</span>
-              <span id="hero-cta-primary">Start a Conversation</span>
-            </a>
-            <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-sm font-semibold text-on-surface transition-all border border-outline-variant/30" href="#trackrecord">
-              <span class="material-symbols-outlined text-lg text-primary">verified</span>
-              <span id="hero-cta-secondary">View Track Record &amp; Proof</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 4 Key Proof Metric Cards (Click to open deep dive modal) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6" id="hero-stats-grid">
-          <!-- Populated by i18n -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: CORE SUPERPOWERS (TypeScript, AI Velocity, ELK Stack) -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-14 bg-surface-container/60 border-y border-outline-variant/30" id="superpowers">
-      <div class="max-w-7xl mx-auto flex flex-col gap-6">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-          <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="superpowers-eyebrow">CORE SUPERPOWERS</span>
-          <h2 class="font-headline text-2xl sm:text-3xl font-medium text-on-surface" id="superpowers-title">How I Work &amp; Technologies I Master</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="superpowers-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: WHAT I DO (Direct Outcomes, No Fluff) -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="whatido">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="whatido-eyebrow">01 • How I Can Help You</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="whatido-title">Direct Solutions for Real Business Growth.</h2>
-          </div>
-          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="whatido-subtitle">
-            Clear outcomes designed to eliminate operational bottlenecks, reduce manual work, and protect your data.
-          </p>
-        </div>
-
-        <!-- 3 Core Outcome Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="whatido-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: TRACK RECORD & PROOF (Credibility & Verification) -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface" id="trackrecord">
-      <div class="max-w-7xl mx-auto flex flex-col gap-12">
-        
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="max-w-xl space-y-2">
-            <span class="text-xs font-mono text-primary font-bold uppercase tracking-widest" id="trackrecord-eyebrow">02 • Verified Background</span>
-            <h2 class="font-headline text-3xl sm:text-4xl font-medium tracking-tight text-on-surface" id="trackrecord-title">Proof &amp; Track Record.</h2>
-          </div>
-          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm font-light leading-relaxed" id="trackrecord-subtitle">
-            15+ years delivering production software across startups, mass-scale platforms, and enterprise hardware.
-          </p>
-        </div>
-
-        <!-- Milestones (Click for detailed modal) -->
-        <div class="space-y-4">
-          <p class="text-xs font-mono text-on-surface-variant" id="trackrecord-prompt">
-            Click any milestone for verified architectural deep dive:
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="milestones-grid">
-            <!-- Populated by i18n -->
-          </div>
-        </div>
-
-        <!-- Credentials & Education -->
-        <div class="pt-6 border-t border-outline-variant/30 space-y-4">
-          <h3 class="text-xs font-mono uppercase tracking-widest font-bold text-primary" id="credentials-title">
-            Credentials &amp; Education
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="credentials-grid">
-            <!-- Populated by i18n -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 3: DIRECT CONTACT (Zero Friction) -->
-    <section class="w-full px-4 sm:px-6 lg:px-12 py-20 bg-surface-container-low" id="contact">
-      <div class="max-w-7xl mx-auto flex flex-col gap-10">
-        
-        <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-primary font-mono" id="contact-eyebrow">03 • Get in Touch</span>
-          <h2 class="font-headline text-3xl sm:text-5xl font-medium tracking-tight text-on-surface leading-tight" id="contact-title">
-            Have a Project in Mind? Let's Talk.
-          </h2>
-          <p class="text-base sm:text-lg text-on-surface-variant leading-relaxed font-body max-w-2xl font-light" id="contact-subtitle">
-            Whether you need a custom platform built, repetitive workflows automated with AI, or high-performance systems architecture, I am here to help.
+          <p class="text-base sm:text-lg text-brand-textSecondary leading-relaxed max-w-3xl mb-8 font-normal" id="hero-subtitle">
+            Diseño y construyo sistemas robustos que eliminan cuellos de botella manuales, multiplican las ventas y transforman procesos lentos en ventajas competitivas automáticas para empresas de cualquier tamaño.
           </p>
           
-          <!-- Primary WhatsApp Quick Action -->
-          <div class="mt-4 flex flex-col items-center gap-2">
-            <a class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base transition-all shadow-md hover:shadow-lg" id="contact-main-whatsapp" href="https://wa.me/524767280600" rel="noreferrer" target="_blank">
-              <span class="material-symbols-outlined text-2xl">chat</span>
-              <span id="contact-wa-btn-text">Chat Directly on WhatsApp</span>
+          <div class="flex flex-wrap items-center gap-4">
+            <a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-accent hover:bg-brand-accentHover text-white rounded-lg font-semibold text-sm transition shadow-sm" href="#contacto">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path clip-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0h-2v2h2V9z" fill-rule="evenodd"/>
+              </svg>
+              <span id="hero-cta-primary">Platiquemos sobre tu proyecto</span>
             </a>
-            <span class="text-xs font-mono text-on-surface-variant" id="contact-wa-sub">
-              Fastest response • Available for quick syncs and inquiries
-            </span>
+            <a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-surface/90 hover:bg-[#ede5da] text-brand-textPrimary border border-brand-border rounded-lg font-semibold text-sm transition shadow-sm" href="#trayectoria">
+              <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              </svg>
+              <span id="hero-cta-secondary">Ver Trayectoria &amp; Pruebas</span>
+            </a>
           </div>
+        </div>
+
+        <!-- Quick Metrics Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-brand-border/50" id="hero-stats-grid">
+          <!-- Populated by i18n -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: ESPECIALIDADES TÉCNICAS (Core Superpowers) -->
+    <section class="py-14 border-b border-brand-border/60 bg-[#f7f3ed]/60" id="especialidades">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="superpowers-eyebrow">Especialidades Técnicas</span>
+          </div>
+          <h2 class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary text-left md:text-right" id="superpowers-title">
+            Cómo Trabajo y Tecnologías que Domino
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="superpowers-grid">
+          <!-- Populated by i18n -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: SOLUCIONES PARA NEGOCIOS Y EMPRESAS (4 Solution Cards) -->
+    <section class="py-16" id="que-hago">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-brand-border/50 gap-4">
+          <div class="max-w-xl">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="whatido-eyebrow">01 • Soluciones para Negocios y Empresas</span>
+            <h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary" id="whatido-title">
+              ¿Cómo puedo ayudarte a crecer y operar mejor?
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right" id="whatido-subtitle">
+            Soluciones prácticas diseñadas tanto para negocios en crecimiento como para empresas consolidadas que buscan resultados tangibles.
+          </p>
+        </div>
+
+        <!-- 4 Business Solution Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="whatido-grid">
+          <!-- Populated by i18n -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXPERIENCIA VERIFICADA & TRAYECTORIA -->
+    <section class="py-16 bg-[#f7f3ed]/60 border-y border-brand-border/60" id="trayectoria">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="trackrecord-eyebrow">02 • Experiencia Verificada</span>
+            <h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary mb-2" id="trackrecord-title">
+              Pruebas &amp; Trayectoria de Ingeniería.
+            </h2>
+            <p class="text-xs text-brand-textSecondary" id="trackrecord-prompt">
+              Haz clic en cualquier hito para ver los detalles técnicos comprobados:
+            </p>
+          </div>
+          <p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right" id="trackrecord-subtitle">
+            15+ años creando software en producción para startups, plataformas de millones de usuarios y flotas empresariales.
+          </p>
+        </div>
+
+        <!-- 4 Milestones 2x2 Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" id="milestones-grid">
+          <!-- Populated by i18n -->
+        </div>
+
+        <!-- Acreditaciones & Formación Strip -->
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-4" id="credentials-title">
+            Acreditaciones &amp; Formación
+          </span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="credentials-grid">
+            <!-- Populated by i18n -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: CONTACTO DIRECTO -->
+    <section class="py-20" id="contacto">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-3 block font-mono" id="contact-eyebrow">
+          03 • Contacto Directo
+        </span>
+        <h2 class="font-serif-headline text-3xl sm:text-5xl text-brand-textPrimary mb-4" id="contact-title">
+          ¿Tienes un Proyecto en Mente? Hablemos.
+        </h2>
+        <p class="text-sm sm:text-base text-brand-textSecondary max-w-xl mx-auto leading-relaxed mb-8" id="contact-subtitle">
+          Ya sea que necesites una plataforma de software a la medida, automatizar procesos con IA o arquitectura de alta confiabilidad, estoy a tus órdenes.
+        </p>
+
+        <!-- Prominent WhatsApp Action -->
+        <div class="mb-14">
+          <a class="inline-flex items-center gap-3 bg-[#24955b] hover:bg-[#1e804d] text-white text-sm sm:text-base font-semibold px-7 py-3.5 rounded-lg shadow-sm transition hover:shadow duration-150" href="https://wa.me/524767280600" id="contact-main-whatsapp" rel="noopener noreferrer" target="_blank">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span id="contact-wa-btn-text">Chatear Directamente por WhatsApp</span>
+          </a>
+          <p class="text-xs text-brand-textSecondary mt-2.5" id="contact-wa-sub">
+            Respuesta más rápida • Ideal para consultas inmediatas y proyectos
+          </p>
         </div>
 
         <!-- 4 Channel Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pt-6 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-left">
           
           <!-- WhatsApp Card -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://wa.me/524767280600" rel="noreferrer" target="_blank">
-            <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-xl">chat</span>
-              </div>
-              <span class="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold" id="card-wa-tag">Instant</span>
+          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="https://wa.me/524767280600" rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-7 h-7 rounded bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+              </span>
+              <span class="text-[9px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full" id="card-wa-tag">Mensaje Inmediato</span>
             </div>
-            <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-wa-label">WhatsApp</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors" id="card-wa-val">+52 476 728 0600</span>
-            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-wa-label">WhatsApp</span>
+            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition" id="card-wa-val">+52 476 728 0600</span>
           </a>
 
           <!-- Email Card -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="mailto:me@reymundolopez.com">
-            <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-xl">mail</span>
-              </div>
-              <span class="text-[10px] font-mono text-primary font-semibold bg-surface-container px-2 py-0.5 rounded" id="card-email-tag">Email</span>
+          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="mailto:me@reymundolopez.com">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-7 h-7 rounded bg-[#fbf2eb] text-brand-accent flex items-center justify-center text-xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+              </span>
+              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-email-tag">Consultas &amp; Propuestas</span>
             </div>
-            <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-email-label">Direct Email</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-email-val">me@reymundolopez.com</span>
-            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-email-label">Correo Directo</span>
+            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-email-val">me@reymundolopez.com</span>
           </a>
 
           <!-- LinkedIn Card -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://linkedin.com/in/reymundolopez" rel="noreferrer" target="_blank">
-            <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-xl">link</span>
-              </div>
-              <span class="text-[10px] font-mono text-primary font-semibold bg-surface-container px-2 py-0.5 rounded" id="card-li-tag">Network</span>
+          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="https://linkedin.com/in/reymundolopez" rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-7 h-7 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-xs font-bold">
+                in
+              </span>
+              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-li-tag">Trayectoria Profesional</span>
             </div>
-            <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-li-label">LinkedIn</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-li-val">reymundolopez</span>
-            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-li-label">LinkedIn</span>
+            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-li-val">linkedin.com/in/reymundolopez</span>
           </a>
 
           <!-- GitHub Card -->
-          <a class="p-6 rounded-2xl bg-surface hover:bg-surface-container-high transition-all flex flex-col justify-between gap-4 border border-outline-variant/30 group shadow-sm" href="https://github.com/reymundolopez" rel="noreferrer" target="_blank">
-            <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-xl">code</span>
-              </div>
-              <span class="text-[10px] font-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded" id="card-gh-tag">Code</span>
+          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="https://github.com/reymundolopez" rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-7 h-7 rounded bg-[#f4ece3] text-brand-textPrimary flex items-center justify-center text-xs font-mono font-bold">
+                &lt;&gt;
+              </span>
+              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-gh-tag">Código Abierto &amp; Repos</span>
             </div>
-            <div>
-              <span class="text-xs font-mono uppercase tracking-wider text-on-surface-variant block mb-1" id="card-gh-label">GitHub</span>
-              <span class="font-mono font-bold text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors break-all" id="card-gh-val">reymundolopez</span>
-            </div>
+            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-gh-label">GitHub</span>
+            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-gh-val">github.com/reymundolopez</span>
           </a>
 
         </div>
@@ -344,47 +366,45 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full bg-surface-container py-12 border-t border-outline-variant/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
-      <div class="flex items-center gap-3">
-        <span class="w-7 h-7 rounded-lg bg-surface flex items-center justify-center font-headline text-sm font-bold text-primary shadow-sm">RL</span>
-        <span class="font-medium text-on-surface" id="footer-tagline">Reymundo López — Senior Software Architect &amp; AI Systems Engineer.</span>
+  <footer class="bg-[#f2ece3] border-t border-brand-border py-8 text-brand-textSecondary text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-brand-textPrimary">
+        <span class="font-bold text-xs bg-brand-surface px-1.5 py-0.5 rounded border border-brand-border">RL</span>
+        <span class="font-medium" id="footer-tagline">Reymundo López — Arquitecto de Software Senior &amp; Especialista en IA.</span>
       </div>
-      <div class="flex items-center gap-4">
-        <span id="footer-location">Mexico (UTC-6) • Available Worldwide &amp; Locally</span>
-        <span>•</span>
-        <span id="footer-copyright">© 2025 Reymundo López. Clear, minimal, and built for results.</span>
+      <div class="text-center md:text-right text-[11px] text-brand-textSecondary">
+        <span id="footer-location">México (UTC-6) • Consultoría Global y Regional</span>
+        <span class="block sm:inline sm:ml-2 text-brand-textMuted" id="footer-copyright">• © 2025 Reymundo López. Claro, conciso y enfocado en resultados.</span>
       </div>
     </div>
   </footer>
 
   <!-- DETAIL MODAL -->
-  <div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6" id="detail-modal" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity" id="modal-backdrop"></div>
-    <div class="relative bg-surface rounded-2xl shadow-2xl border border-outline-variant/50 max-w-2xl w-full p-6 sm:p-8 overflow-y-auto max-h-[90vh] z-10 flex flex-col gap-5">
+  <div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="infoModal" role="dialog" aria-modal="true">
+    <div class="bg-brand-surface rounded-2xl max-w-lg w-full p-6 sm:p-7 border border-brand-border shadow-2xl transition-transform transform scale-95 duration-150 flex flex-col gap-4" id="modalBox">
       
-      <div class="flex items-start justify-between gap-4 border-b border-outline-variant/30 pb-4">
+      <div class="flex items-start justify-between gap-4 border-b border-brand-border/60 pb-3">
         <div>
-          <div class="text-xs font-mono text-primary font-bold uppercase tracking-wider mb-1" id="modal-category">Category</div>
-          <h3 class="font-headline text-2xl sm:text-3xl font-bold text-on-surface" id="modal-title">Title</h3>
+          <span class="text-[10px] font-mono font-bold tracking-wider text-brand-accent uppercase" id="modalCategory"></span>
+          <h3 class="font-serif-headline text-2xl text-brand-textPrimary font-semibold mt-0.5" id="modalTitle"></h3>
         </div>
-        <button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="modal-close-icon" title="Close" type="button">
-          <span class="material-symbols-outlined text-lg">close</span>
+        <button class="text-brand-textMuted hover:text-brand-textPrimary p-1.5 rounded-full hover:bg-brand-bg transition-colors" id="modalCloseBtn" aria-label="Close" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
         </button>
       </div>
 
-      <div class="flex flex-wrap gap-1.5" id="modal-tags"></div>
+      <div class="flex flex-wrap gap-1.5" id="modalTags"></div>
 
-      <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed font-light" id="modal-body"></p>
+      <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light" id="modalDescription"></p>
 
-      <div class="rounded-xl bg-surface-container-low p-4 text-xs font-mono border border-outline-variant/30 flex items-center justify-between" id="modal-stat-box">
-        <span class="text-on-surface-variant" id="modal-stat-label">Key Metric</span>
-        <span class="font-bold text-primary text-sm" id="modal-stat-val">Metric Value</span>
+      <div class="rounded-xl bg-brand-bg p-3.5 text-xs font-mono border border-brand-border/80 flex items-center justify-between" id="modalStatBox">
+        <span class="text-brand-textSecondary" id="modalStatLabel"></span>
+        <span class="font-bold text-brand-accent text-sm" id="modalStatVal"></span>
       </div>
 
       <div class="flex justify-end pt-2">
-        <button class="px-5 py-2.5 rounded-lg bg-surface-container-high text-xs font-mono font-bold text-on-surface hover:bg-surface-container-highest transition-colors" id="modal-close-footer" type="button">
-          <span id="modal-close-btn-text">Close Overview</span>
+        <button class="px-5 py-2.5 bg-brand-accent text-white rounded-lg text-xs font-semibold hover:bg-brand-accentHover transition shadow-sm" id="modalUnderstoodBtn" type="button">
+          <span id="modalUnderstoodText">Entendido</span>
         </button>
       </div>
 
@@ -392,8 +412,10 @@
   </div>
 
   <!-- FLOATING MOBILE WHATSAPP BUTTON -->
-  <a class="fixed bottom-6 right-6 z-30 sm:hidden w-14 h-14 rounded-full bg-emerald-600 text-white shadow-xl flex items-center justify-center hover:bg-emerald-700 transition-all focus:outline-none focus:ring-4 focus:ring-emerald-400/50" href="https://wa.me/524767280600" id="floating-whatsapp-btn" rel="noreferrer" target="_blank" aria-label="Chat on WhatsApp">
-    <span class="material-symbols-outlined text-2xl">chat</span>
+  <a class="fixed bottom-6 right-6 z-30 sm:hidden w-14 h-14 rounded-full bg-[#24955b] text-white shadow-xl flex items-center justify-center hover:bg-[#1e804d] transition-all focus:outline-none focus:ring-4 focus:ring-emerald-400/50" href="https://wa.me/524767280600" id="floating-whatsapp-btn" rel="noreferrer" target="_blank" aria-label="Chat on WhatsApp">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+    </svg>
   </a>
 
   <!-- Vite Entry -->
