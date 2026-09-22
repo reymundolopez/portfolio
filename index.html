@@ -15,13 +15,13 @@
     gtag('config', 'G-CGFL7T57SE');
   </script>
 
-  <title>Reymundo López — Arquitecto de Software &amp; IA | El Creador de Software</title>
-  <meta name="description" content="Reymundo López — Consultor &amp; Creador de Software. Más de 15 años creando software robusto, automatizando procesos con IA y escalando sistemas en la nube."/>
+  <title>Reymundo López — Consultor de Software &amp; Full-Stack | Portafolio</title>
+  <meta name="description" content="Reymundo López — Consultor de Software &amp; Desarrollador Full-Stack. Más de 15 años creando aplicaciones web a la medida, automatizaciones con IA y arquitecturas confiables en la nube."/>
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
   
   <link rel="stylesheet" href="/src/styles/main.css"/>
 </head>
@@ -31,28 +31,25 @@
   <header class="sticky top-0 z-40 bg-[#fbf8f5]/90 backdrop-blur-md border-b border-brand-border/70">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand & Identity -->
+      <!-- Brand & Identity (Clean, No Green Chat Dots) -->
       <a class="flex items-center gap-3.5 group" href="#hero">
-        <div class="w-10 h-10 rounded-full bg-[#f4ece3] border border-brand-border flex items-center justify-center font-bold text-sm tracking-tight text-brand-accent group-hover:border-brand-accent transition-colors shadow-sm">
-          RL
+        <div class="w-11 h-11 rounded-full overflow-hidden border border-brand-border flex items-center justify-center font-bold text-sm tracking-tight text-brand-accent group-hover:border-brand-accent transition-colors shadow-sm bg-[#f4ece3] shrink-0">
+          <img src="/images/reymundo-profile.jpg" alt="Reymundo López" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="hidden">RL</span>
         </div>
         <div>
-          <div class="font-bold text-sm sm:text-base text-brand-textPrimary leading-tight flex items-center gap-2">
+          <div class="font-bold text-sm sm:text-base text-brand-textPrimary leading-tight">
             Reymundo López
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 status-pulse"></span>
-              <span id="nav-status-badge">Disponible</span>
-            </span>
           </div>
-          <p class="text-xs text-brand-textSecondary" id="nav-role">Arquitecto de Software &amp; IA</p>
+          <p class="text-xs text-brand-textSecondary mt-0.5" id="nav-role">Consultor de Software &amp; Full-Stack</p>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex items-center gap-7 text-[12px] font-semibold tracking-wider text-brand-textSecondary uppercase">
-        <a class="hover:text-brand-accent transition-colors" href="#especialidades" id="nav-link-superpowers">Especialidades</a>
-        <a class="hover:text-brand-accent transition-colors" href="#que-hago" id="nav-link-whatido">Qué Hago</a>
-        <a class="hover:text-brand-accent transition-colors" href="#trayectoria" id="nav-link-trackrecord">Trayectoria &amp; Pruebas</a>
+        <a class="hover:text-brand-accent transition-colors" href="#que-hago" id="nav-link-whatido">Soluciones</a>
+        <a class="hover:text-brand-accent transition-colors" href="#como-trabajamos" id="nav-link-howiwork">Cómo Trabajo</a>
+        <a class="hover:text-brand-accent transition-colors" href="/cv.html" id="nav-link-cv">CV Técnico</a>
         <a class="hover:text-brand-accent transition-colors" href="#contacto" id="nav-link-contact">Contacto</a>
       </nav>
 
@@ -86,10 +83,13 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-brand-border/60">
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-[#f4ece3] border border-brand-border flex items-center justify-center font-bold text-xs text-brand-accent">
-              RL
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-brand-border flex items-center justify-center font-bold text-xs text-brand-accent bg-[#f4ece3] shrink-0">
+              <img src="/images/reymundo-profile.jpg" alt="Reymundo López" class="w-full h-full object-cover" />
             </div>
-            <span class="font-bold text-sm text-brand-textPrimary">Reymundo López</span>
+            <div>
+              <span class="font-bold text-sm text-brand-textPrimary block">Reymundo López</span>
+              <span class="text-[11px] text-brand-textSecondary block">Consultor &amp; Full-Stack</span>
+            </div>
           </div>
           <button class="p-2 rounded-full bg-[#efe8df] text-brand-textSecondary hover:text-brand-textPrimary" id="drawer-close-btn" aria-label="Close Menu" type="button">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,14 +109,14 @@
 
         <!-- Mobile Links -->
         <nav class="flex flex-col gap-3 py-2">
-          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#especialidades" id="drawer-link-superpowers">
-            Especialidades <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-          </a>
           <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#que-hago" id="drawer-link-whatido">
-            Qué Hago <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            Soluciones <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
-          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#trayectoria" id="drawer-link-trackrecord">
-            Trayectoria &amp; Pruebas <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#como-trabajamos" id="drawer-link-howiwork">
+            Cómo Trabajo <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+          </a>
+          <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="/cv.html" id="drawer-link-cv">
+            CV Técnico &amp; Specs <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </a>
           <a class="text-sm font-semibold text-brand-textPrimary hover:text-brand-accent transition-colors flex items-center justify-between py-2 border-b border-brand-border/40" href="#contacto" id="drawer-link-contact">
             Contacto <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
@@ -135,7 +135,7 @@
   <!-- MAIN CONTENT -->
   <main>
 
-    <!-- HERO SECTION (Editorial Architectural Look) -->
+    <!-- HERO SECTION (Clean, Dignified, No Green Chat Dots, No 4 Squares) -->
     <section class="relative overflow-hidden border-b border-brand-border/60" id="hero">
       
       <!-- Architectural Background Texture -->
@@ -144,20 +144,15 @@
         <div class="absolute inset-0 bg-gradient-to-b from-[#fbf8f5]/20 via-transparent to-[#fbf8f5]/90"></div>
       </div>
 
-      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-14">
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-12 pb-14">
         
-        <!-- Status meta strip & Distinctive Moniker Badge -->
+        <!-- Clean Meta Strip (No Green Dots) -->
         <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-brand-textSecondary mb-8 pb-3 border-b border-brand-border/50">
           <div class="flex flex-wrap items-center gap-2">
-            <div class="inline-flex items-center gap-2 bg-[#f4efe8]/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-textPrimary font-medium border border-brand-border/80 text-[11px] shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span class="text-brand-textMuted uppercase text-[10px] tracking-wider" id="hero-status-tag">Estado:</span>
-              <span id="hero-status-text">Disponible para Proyectos</span>
-            </div>
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#fbf2eb] text-brand-accent border border-brand-accent/20 tracking-wide shadow-sm">
-              <span id="hero-moniker-es">El Creador de Software</span>
-              <span class="text-brand-textMuted font-normal">|</span>
-              <span class="text-brand-textSecondary font-medium" id="hero-moniker-en">The Software Creator</span>
+              <span id="hero-badge-experience">15+ Años de Experiencia</span>
+              <span class="text-brand-textMuted font-normal">•</span>
+              <span class="text-brand-textSecondary font-medium" id="hero-badge-engagement">Colaboración Flexible</span>
             </div>
           </div>
           <div class="flex items-center gap-1.5 text-brand-textSecondary text-xs bg-brand-surface/80 px-3 py-1 rounded-full border border-brand-border/50 shadow-sm">
@@ -165,133 +160,186 @@
               <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
               <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
             </svg>
-            <span id="hero-location">México (UTC-6) • Remoto &amp; Presencial</span>
+            <span id="hero-location">México • Proyectos Remotos &amp; Presenciales (Global)</span>
           </div>
         </div>
 
-        <!-- Hero Copy Inside Framed Editorial Card -->
-        <div class="max-w-4xl bg-[#fbf8f5]/90 rounded-2xl p-6 sm:p-8 border border-brand-border/80 shadow-sm backdrop-blur-sm">
-          <span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4 block font-mono" id="hero-consultant-tag">
-            Reymundo López — Consultor &amp; Creador de Software
-          </span>
-          <h1 class="font-serif-headline text-3xl sm:text-5xl lg:text-[52px] font-normal leading-[1.15] text-brand-textPrimary tracking-tight mb-6" id="hero-title">
-            Creo software que resuelve problemas reales, impulsa negocios y automatiza operaciones con Inteligencia Artificial.
-          </h1>
-          <p class="text-base sm:text-lg text-brand-textSecondary leading-relaxed max-w-3xl mb-8 font-normal" id="hero-subtitle">
-            Diseño y construyo sistemas robustos que eliminan cuellos de botella manuales, multiplican las ventas y transforman procesos lentos en ventajas competitivas automáticas para empresas de cualquier tamaño.
-          </p>
-          
-          <div class="flex flex-wrap items-center gap-4">
-            <a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-textPrimary hover:bg-black text-white rounded-lg font-semibold text-sm transition-all duration-150 shadow-md hover:shadow-lg" href="#contacto">
-              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 20 20">
-                <path clip-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0h-2v2h2V9z" fill-rule="evenodd"/>
-              </svg>
-              <span id="hero-cta-primary">Platiquemos sobre tu proyecto</span>
-            </a>
-            <a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-surface/90 hover:bg-[#ede5da] text-brand-textPrimary border border-brand-border rounded-lg font-semibold text-sm transition shadow-sm" href="#trayectoria">
-              <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-              </svg>
-              <span id="hero-cta-secondary">Ver Trayectoria &amp; Pruebas</span>
-            </a>
-          </div>
-        </div>
+        <!-- Hero Card with Professional Profile Picture (Clean, No Dots) -->
+        <div class="bg-[#fbf8f5]/95 rounded-3xl p-6 sm:p-10 border border-brand-border/80 shadow-sm backdrop-blur-sm">
+          <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10">
+            
+            <!-- Profile Photo Frame -->
+            <div class="relative shrink-0 text-center">
+              <div class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl overflow-hidden border-2 border-brand-border/90 shadow-md bg-[#f4ece3] p-1.5 relative group">
+                <img src="/images/reymundo-profile.jpg" alt="Reymundo López" class="w-full h-full object-cover rounded-xl shadow-inner group-hover:scale-105 transition-transform duration-300" />
+              </div>
+            </div>
 
-        <!-- Quick Metrics Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-brand-border/50" id="hero-stats-grid">
-          <!-- Populated by i18n -->
+            <!-- Hero Copy -->
+            <div class="flex-1 text-center lg:text-left">
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-3 block font-mono" id="hero-consultant-tag">
+                Consultor de Software &amp; Desarrollador Full-Stack
+              </span>
+              <h1 class="font-serif-headline text-3xl sm:text-5xl lg:text-[46px] font-normal leading-[1.18] text-brand-textPrimary tracking-tight mb-5" id="hero-title">
+                Desarrollo aplicaciones web a la medida y software que te ayudan a vender más, optimizar tus procesos y gastar menos.
+              </h1>
+              <p class="text-base sm:text-lg text-brand-textSecondary leading-relaxed mb-8 font-normal" id="hero-subtitle">
+                Desde plataformas web que reemplazan hojas de cálculo desordenadas hasta asistentes automáticos de atención 24/7—construyo tecnología confiable y de alto rendimiento adaptada a las necesidades reales de tu negocio, ya sea por proyecto, contrato o asesoría.
+              </p>
+              
+              <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                <a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-textPrimary hover:bg-black text-white rounded-lg font-semibold text-sm transition-all duration-150 shadow-md hover:shadow-lg" href="#contacto">
+                  <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 20 20">
+                    <path clip-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0h-2v2h2V9z" fill-rule="evenodd"/>
+                  </svg>
+                  <span id="hero-cta-primary">Platiquemos por WhatsApp</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-surface/90 hover:bg-[#ede5da] text-brand-textPrimary border border-brand-border rounded-lg font-semibold text-sm transition shadow-sm" href="#que-hago">
+                  <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  </svg>
+                  <span id="hero-cta-secondary">Ver Soluciones</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: ESPECIALIDADES TÉCNICAS (Core Superpowers) -->
-    <section class="py-14 border-b border-brand-border/60 bg-[#f7f3ed]/60" id="especialidades">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="superpowers-eyebrow">Especialidades Técnicas</span>
-          </div>
-          <h2 class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary text-left md:text-right" id="superpowers-title">
-            Cómo Trabajo y Tecnologías que Domino
-          </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="superpowers-grid">
-          <!-- Populated by i18n -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: SOLUCIONES PARA NEGOCIOS Y EMPRESAS (4 Solution Cards) -->
+    <!-- SECTION 1: SOLUCIONES PARA TU NEGOCIO (Directly below Hero) -->
     <section class="py-16" id="que-hago">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-brand-border/50 gap-4">
           <div class="max-w-xl">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="whatido-eyebrow">01 • Soluciones para Negocios y Empresas</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="whatido-eyebrow">01 • SOLUCIONES PARA TU NEGOCIO</span>
             <h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary" id="whatido-title">
-              ¿Cómo puedo ayudarte a crecer y operar mejor?
+              ¿Cómo Puedo Ayudarte a Vender Más y Gastar Menos?
             </h2>
           </div>
           <p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right" id="whatido-subtitle">
-            Soluciones prácticas diseñadas tanto para negocios en crecimiento como para empresas consolidadas que buscan resultados tangibles.
+            Herramientas digitales prácticas y de alto retorno diseñadas para eliminar tareas manuales y multiplicar ventas.
           </p>
         </div>
 
         <!-- 4 Business Solution Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="whatido-grid">
-          <!-- Populated by i18n -->
+          <!-- Populated by main.js -->
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: EXPERIENCIA VERIFICADA & TRAYECTORIA -->
-    <section class="py-16 bg-[#f7f3ed]/60 border-y border-brand-border/60" id="trayectoria">
+    <!-- SECTION 2: CÓMO TRABAJO & MODELOS FLEXIBLES -->
+    <section class="py-16 border-t border-brand-border/60 bg-[#f7f3ed]/60" id="como-trabajamos">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="trackrecord-eyebrow">02 • Experiencia Verificada</span>
-            <h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary mb-2" id="trackrecord-title">
-              Pruebas &amp; Trayectoria de Ingeniería.
-            </h2>
-            <p class="text-xs text-brand-textSecondary" id="trackrecord-prompt">
-              Haz clic en cualquier hito para ver los detalles técnicos comprobados:
-            </p>
-          </div>
-          <p class="text-xs sm:text-sm text-brand-textSecondary max-w-xs text-left md:text-right" id="trackrecord-subtitle">
-            15+ años creando software en producción para startups, plataformas de millones de usuarios y flotas empresariales.
+        <div class="max-w-2xl mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-2" id="howiwork-eyebrow">
+            02 • PROCESO &amp; COLABORACIÓN
+          </span>
+          <h2 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary mb-3" id="howiwork-title">
+            Un Proceso Claro y Modelos de Colaboración Flexibles
+          </h2>
+          <p class="text-xs sm:text-sm text-brand-textSecondary" id="howiwork-subtitle">
+            La tecnología debe resolver dolores de cabeza en tu negocio, no crear otros nuevos. Así trabajamos juntos:
           </p>
         </div>
 
-        <!-- 4 Milestones 2x2 Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" id="milestones-grid">
-          <!-- Populated by i18n -->
+        <!-- 3 Steps Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14" id="howiwork-steps-grid">
+          <!-- Populated by main.js -->
         </div>
 
-        <!-- Acreditaciones & Formación Strip -->
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-4" id="credentials-title">
-            Acreditaciones &amp; Formación
-          </span>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="credentials-grid">
-            <!-- Populated by i18n -->
+        <!-- Flexible Engagement Models Sub-section -->
+        <div class="pt-10 border-t border-brand-border/60">
+          <div class="max-w-xl mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent block mb-1" id="howiwork-models-eyebrow">
+              MODELOS DE COLABORACIÓN FLEXIBLES
+            </span>
+            <h3 class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary mb-2" id="howiwork-models-title">
+              Me Adapto a Tu Forma de Trabajar, No al Revés
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-textSecondary" id="howiwork-models-subtitle">
+              Ya sea que requieras una solución completa llave en mano, capacidad técnica dedicada o asesoría puntual, elegimos el esquema que más te convenga:
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="howiwork-models-grid">
+            <!-- Populated by main.js -->
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 3: CONTACTO DIRECTO -->
-    <section class="py-20" id="contacto">
+    <!-- PROVEN SYSTEMS & ORGANIZATIONS STRIP (Right below Flexible Models & Before Tech Leaders) -->
+    <section class="py-12 border-t border-brand-border/60 bg-brand-surface">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-textMuted block text-center mb-6 font-mono" id="proof-strip-title">
+          Sistemas desarrollados y experiencia técnica comprobada en:
+        </span>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border/70 shadow-sm flex flex-col justify-center items-center">
+            <span class="font-bold text-sm sm:text-base text-brand-textPrimary" id="proof-org1-title">Chicago Transit Systems</span>
+            <span class="text-xs text-brand-textSecondary mt-0.5" id="proof-org1-sub">Metra &amp; CTA (5M+ viajes diarios)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border/70 shadow-sm flex flex-col justify-center items-center">
+            <span class="font-bold text-sm sm:text-base text-brand-textPrimary" id="proof-org2-title">Coforge</span>
+            <span class="text-xs text-brand-textSecondary mt-0.5" id="proof-org2-sub">Hardware IoT &amp; Seguridad (5,000+ terminales)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border/70 shadow-sm flex flex-col justify-center items-center">
+            <span class="font-bold text-sm sm:text-base text-brand-textPrimary" id="proof-org3-title">Anexinet</span>
+            <span class="text-xs text-brand-textSecondary mt-0.5" id="proof-org3-sub">Modernización Cloud &amp; Microservicios</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border/70 shadow-sm flex flex-col justify-center items-center">
+            <span class="font-bold text-sm sm:text-base text-brand-textPrimary" id="proof-org4-title">Unosquare</span>
+            <span class="text-xs text-brand-textSecondary mt-0.5" id="proof-org4-sub">Movilidad Empresarial &amp; Plataformas Globales</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TECHNICAL SPECS & CV FOR LEADERS & HR (With Direct Official PDF Download) -->
+    <section class="py-14 border-t border-brand-border/60 bg-[#f7f3ed]/60" id="cv-specs">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="p-8 sm:p-10 rounded-3xl bg-brand-surface border border-brand-border/80 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="max-w-2xl">
+            <span class="text-xs font-mono font-bold tracking-wider text-brand-accent uppercase block mb-1" id="tech-card-eyebrow">
+              03 • LÍDERES TÉCNICOS &amp; HR
+            </span>
+            <h3 class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary font-semibold mb-2" id="tech-card-title">
+              ¿Buscas especificaciones técnicas detalladas o mi CV completo?
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed" id="tech-card-desc">
+              Para directores de tecnología, líderes técnicos y reclutadores: consulta el desglose de arquitectura (TypeScript, Kubernetes en AWS EKS, Stack ELK, Terraform IaC, biometría 2FA) o descarga el CV en PDF listo para imprimir.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
+            <a href="/cv.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-bold rounded-lg shadow-sm transition">
+              <span id="tech-card-btn">Ver CV Técnico &amp; Arquitectura →</span>
+            </a>
+            <a href="/Reymundo_Lopez_Resume.pdf" download="Reymundo_Lopez_Resume.pdf" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-bg hover:bg-[#ede5da] text-brand-textPrimary text-xs font-semibold rounded-lg border border-brand-border transition shadow-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span id="tech-card-pdf">Descargar PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONTACTO DIRECTO -->
+    <section class="py-20 border-t border-brand-border/60" id="contacto">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <span class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-3 block font-mono" id="contact-eyebrow">
-          03 • Contacto Directo
+          04 • CONTACTO DIRECTO
         </span>
         <h2 class="font-serif-headline text-3xl sm:text-5xl text-brand-textPrimary mb-4" id="contact-title">
           ¿Tienes un Proyecto en Mente? Hablemos.
         </h2>
         <p class="text-sm sm:text-base text-brand-textSecondary max-w-xl mx-auto leading-relaxed mb-8" id="contact-subtitle">
-          Ya sea que necesites una plataforma de software a la medida, automatizar procesos con IA o arquitectura de alta confiabilidad, estoy a tus órdenes.
+          Ya sea que necesites una aplicación web a la medida, automatizaciones con IA o capacidad técnica senior por proyecto o contrato, estoy a tus órdenes. Conversemos directamente abajo:
         </p>
 
         <!-- Prominent WhatsApp Action -->
@@ -303,7 +351,7 @@
             <span id="contact-wa-btn-text">Chatear Directamente por WhatsApp</span>
           </a>
           <p class="text-xs text-brand-textSecondary mt-2.5" id="contact-wa-sub">
-            Respuesta más rápida • Ideal para consultas inmediatas y proyectos
+            Respuesta más rápida • Ideal para consultas inmediatas y alcance de proyectos
           </p>
         </div>
 
@@ -316,14 +364,14 @@
               <span class="w-7 h-7 rounded bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
               </span>
-              <span class="text-[9px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full" id="card-wa-tag">Mensaje Inmediato</span>
+              <span class="text-[9px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full" id="card-wa-tag">Respuesta Inmediata</span>
             </div>
             <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-wa-label">WhatsApp</span>
             <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition" id="card-wa-val">+52 476 728 0600</span>
           </a>
 
           <!-- Email Card -->
-          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="mailto:me@reymundolopez.com">
+          <a class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 block hover:border-brand-accent transition group shadow-sm" href="mailto:reymundolopez@gmail.com">
             <div class="flex items-center justify-between mb-3">
               <span class="w-7 h-7 rounded bg-[#fbf2eb] text-brand-accent flex items-center justify-center text-xs">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
@@ -331,7 +379,7 @@
               <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-email-tag">Consultas &amp; Propuestas</span>
             </div>
             <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-email-label">Correo Directo</span>
-            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-email-val">me@reymundolopez.com</span>
+            <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-email-val">reymundolopez@gmail.com</span>
           </a>
 
           <!-- LinkedIn Card -->
@@ -340,7 +388,7 @@
               <span class="w-7 h-7 rounded bg-blue-50 text-blue-700 flex items-center justify-center text-xs font-bold">
                 in
               </span>
-              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-li-tag">Trayectoria Profesional</span>
+              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-li-tag">Red Profesional</span>
             </div>
             <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-li-label">LinkedIn</span>
             <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-li-val">linkedin.com/in/reymundolopez</span>
@@ -352,7 +400,7 @@
               <span class="w-7 h-7 rounded bg-[#f4ece3] text-brand-textPrimary flex items-center justify-center text-xs font-mono font-bold">
                 &lt;&gt;
               </span>
-              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-gh-tag">Código Abierto &amp; Repos</span>
+              <span class="text-[9px] font-semibold bg-brand-tagBg text-brand-textSecondary px-2 py-0.5 rounded-full" id="card-gh-tag">Código &amp; Repos</span>
             </div>
             <span class="text-[10px] font-bold tracking-wider uppercase text-brand-textMuted block" id="card-gh-label">GitHub</span>
             <span class="text-xs font-bold text-brand-textPrimary group-hover:text-brand-accent transition truncate block" id="card-gh-val">github.com/reymundolopez</span>
@@ -369,47 +417,17 @@
   <footer class="bg-[#f2ece3] border-t border-brand-border py-8 text-brand-textSecondary text-xs">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2 text-brand-textPrimary">
-        <span class="font-bold text-xs bg-brand-surface px-1.5 py-0.5 rounded border border-brand-border">RL</span>
-        <span class="font-medium" id="footer-tagline">Reymundo López — Arquitecto de Software Senior &amp; Especialista en IA.</span>
+        <div class="w-6 h-6 rounded-full overflow-hidden border border-brand-border">
+          <img src="/images/reymundo-profile.jpg" alt="Reymundo López" class="w-full h-full object-cover" />
+        </div>
+        <span class="font-medium" id="footer-tagline">Reymundo López — Consultor de Software Senior &amp; Desarrollador Full-Stack.</span>
       </div>
       <div class="text-center md:text-right text-[11px] text-brand-textSecondary">
-        <span id="footer-location">México (UTC-6) • Consultoría Global y Regional</span>
-        <span class="block sm:inline sm:ml-2 text-brand-textMuted" id="footer-copyright">• © 2025 Reymundo López. Claro, conciso y enfocado en resultados.</span>
+        <span id="footer-location">México • Proyectos locales y remotos para todo el mundo</span>
+        <span class="block sm:inline sm:ml-2 text-brand-textMuted" id="footer-copyright">• © 2025 Reymundo López. Claro, confiable y enfocado en resultados de negocio.</span>
       </div>
     </div>
   </footer>
-
-  <!-- DETAIL MODAL -->
-  <div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="infoModal" role="dialog" aria-modal="true">
-    <div class="bg-brand-surface rounded-2xl max-w-lg w-full p-6 sm:p-7 border border-brand-border shadow-2xl transition-transform transform scale-95 duration-150 flex flex-col gap-4" id="modalBox">
-      
-      <div class="flex items-start justify-between gap-4 border-b border-brand-border/60 pb-3">
-        <div>
-          <span class="text-[10px] font-mono font-bold tracking-wider text-brand-accent uppercase" id="modalCategory"></span>
-          <h3 class="font-serif-headline text-2xl text-brand-textPrimary font-semibold mt-0.5" id="modalTitle"></h3>
-        </div>
-        <button class="text-brand-textMuted hover:text-brand-textPrimary p-1.5 rounded-full hover:bg-brand-bg transition-colors" id="modalCloseBtn" aria-label="Close" type="button">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-        </button>
-      </div>
-
-      <div class="flex flex-wrap gap-1.5" id="modalTags"></div>
-
-      <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed font-light" id="modalDescription"></p>
-
-      <div class="rounded-xl bg-brand-bg p-3.5 text-xs font-mono border border-brand-border/80 flex items-center justify-between" id="modalStatBox">
-        <span class="text-brand-textSecondary" id="modalStatLabel"></span>
-        <span class="font-bold text-brand-accent text-sm" id="modalStatVal"></span>
-      </div>
-
-      <div class="flex justify-end pt-2">
-        <button class="px-5 py-2.5 bg-brand-accent text-white rounded-lg text-xs font-semibold hover:bg-brand-accentHover transition shadow-sm" id="modalUnderstoodBtn" type="button">
-          <span id="modalUnderstoodText">Entendido</span>
-        </button>
-      </div>
-
-    </div>
-  </div>
 
   <!-- FLOATING MOBILE WHATSAPP BUTTON -->
   <a class="fixed bottom-6 right-6 z-30 sm:hidden w-14 h-14 rounded-full bg-[#24955b] text-white shadow-xl flex items-center justify-center hover:bg-[#1e804d] transition-all focus:outline-none focus:ring-4 focus:ring-emerald-400/50" href="https://wa.me/524767280600" id="floating-whatsapp-btn" rel="noreferrer" target="_blank" aria-label="Chat on WhatsApp">

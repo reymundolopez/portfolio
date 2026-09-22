@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reymundo López — Technical CV & Architecture Specs</title>
+  <meta name="description" content="Technical curriculum vitae, systems architecture specs, and verified engineering experience of Reymundo López."/>
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="/src/styles/main.css"/>
+
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        font-size: 10.5pt !important;
+        padding: 0 !important;
+      }
+      .cv-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .cv-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#fcfaf8] text-brand-textPrimary min-h-screen py-6 sm:py-10 px-4 sm:px-6 selection:bg-[#c05c2a]/20">
+
+  <!-- Top Action Bar (Fixed / Sticky) -->
+  <div class="max-w-4xl mx-auto mb-8 flex flex-wrap items-center justify-between gap-4 no-print bg-brand-surface/90 backdrop-blur-md p-4 rounded-2xl border border-brand-border/80 shadow-sm">
+    <a href="/" class="inline-flex items-center gap-2 text-xs font-semibold text-brand-textSecondary hover:text-brand-accent transition">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+      <span id="cv-back-link">Back to Portfolio</span>
+    </a>
+
+    <div class="flex items-center gap-3">
+      <!-- Lang Switcher -->
+      <div class="flex items-center text-xs font-semibold bg-[#efe8df] p-1 rounded-full border border-brand-border/60">
+        <button id="cv-lang-en" class="px-2.5 py-0.5 rounded-full bg-brand-surface text-brand-accent font-bold shadow-sm cursor-pointer" type="button">EN</button>
+        <button id="cv-lang-es" class="px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary font-semibold cursor-pointer" type="button">ES</button>
+      </div>
+
+      <!-- Direct Official PDF Download Button -->
+      <a href="/Reymundo_Lopez_Resume.pdf" download="Reymundo_Lopez_Resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent text-white hover:bg-brand-accentHover text-xs font-semibold rounded-lg shadow-sm transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <span id="cv-download-btn">Download Official PDF</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main CV Container -->
+  <main class="max-w-4xl mx-auto bg-brand-surface rounded-3xl p-6 sm:p-12 border border-brand-border/80 shadow-sm cv-container">
+
+    <!-- CV Header (Clean Text Architecture, No Image Overflow) -->
+    <header class="border-b border-brand-border/70 pb-6 mb-8 cv-section">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="font-serif-headline text-3xl sm:text-4xl text-brand-textPrimary font-normal leading-tight">
+            Reymundo López
+          </h1>
+          <p class="text-sm sm:text-base font-semibold text-brand-accent mt-1" id="cv-header-role">
+            Lead Software Engineer &amp; Systems Architect
+          </p>
+          <p class="text-xs text-brand-textSecondary mt-1" id="cv-header-location">
+            Remote • Mexico (US Central Overlap) • Available for Global Roles &amp; Selective Consulting
+          </p>
+        </div>
+
+        <div class="no-print">
+          <a href="/Reymundo_Lopez_Resume.pdf" download="Reymundo_Lopez_Resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-brand-border text-xs font-semibold text-brand-textPrimary hover:bg-brand-bg transition shadow-sm">
+            <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Resume.pdf</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Bar -->
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-5 pt-4 border-t border-brand-border/50 text-xs text-brand-textSecondary font-mono">
+        <a href="mailto:reymundolopez@gmail.com" class="hover:text-brand-accent transition flex items-center gap-1.5">
+          <span>✉️</span> reymundolopez@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/reymundolopez" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center gap-1.5">
+          <span>💼</span> linkedin.com/in/reymundolopez
+        </a>
+        <a href="https://github.com/reymundolopez" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center gap-1.5">
+          <span>💻</span> github.com/reymundolopez
+        </a>
+        <a href="https://wa.me/524767280600" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center gap-1.5">
+          <span>📱</span> +52 476 728 0600
+        </a>
+      </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="mb-10 cv-section">
+      <h2 class="text-xs font-mono font-bold tracking-wider text-brand-accent uppercase mb-3" id="cv-summary-title">
+        Professional Summary
+      </h2>
+      <p class="text-xs sm:text-sm text-brand-textSecondary leading-relaxed" id="cv-summary-text">
+        Accomplished Lead Software Engineer and Systems Architect with 15+ years of experience engineering high-throughput backend services, enterprise cloud platforms, and distributed systems. Pragmatic systems designer specialized in bidirectional architectural migrations—evaluating organizational scale and operational cost to seamlessly transition between microservices and modular monoliths. Proven track record architecting critical infrastructure supporting 5,000+ active enterprise devices daily, implementing novel biometric 2FA authentication subsystems, scaling consumer transit platforms to 5M+ users, and deploying automated CI/CD and Agentic AI developer platforms.
+      </p>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section class="mb-10 cv-section">
+      <h2 class="text-xs font-mono font-bold tracking-wider text-brand-accent uppercase mb-4" id="cv-skills-title">
+        Technical Skills &amp; Stack
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1.5" id="cv-skill-cat1">Architecture &amp; System Design</span>
+          <p class="text-brand-textSecondary leading-relaxed">
+            Distributed Systems, Microservices, Modular Monoliths, Bidirectional Architectural Migrations, High-Throughput RESTful APIs, Biometric 2FA Authentication, Event-Driven Systems.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1.5" id="cv-skill-cat2">Languages &amp; Backend</span>
+          <p class="text-brand-textSecondary leading-relaxed">
+            JavaScript (ES6+), TypeScript, Node.js, Express.js, Swift, Objective-C, Java, PHP, C, HTML5, CSS3, SQL.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1.5" id="cv-skill-cat3">Cloud, DevOps &amp; Security</span>
+          <p class="text-brand-textSecondary leading-relaxed">
+            Kubernetes (K8s), Docker, CI/CD (GitHub Actions), AWS (EC2, Lambda, S3, RDS), Terraform, HashiCorp Vault Secrets, Private Docker/NPM Registries, Firebase, Nginx, Linux/Ubuntu Administration.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1.5" id="cv-skill-cat4">Data, Observability &amp; AI Tooling</span>
+          <p class="text-brand-textSecondary leading-relaxed">
+            Elastic Stack (ELK: Elasticsearch, Logstash, Kibana), PostgreSQL, MySQL, MongoDB, Redis, Enterprise ETL, Agentic AI Workflows, Custom AI Developer Skills, Prompt Engineering, SDLC Automation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="mb-10 cv-section">
+      <h2 class="text-xs font-mono font-bold tracking-wider text-brand-accent uppercase mb-6" id="cv-exp-title">
+        Professional Experience
+      </h2>
+
+      <div class="space-y-8" id="cv-experience-list">
+        <!-- Milestone 1: Coforge -->
+        <div class="border-l-2 border-brand-accent/40 pl-5 relative">
+          <div class="w-3 h-3 rounded-full bg-brand-accent absolute -left-[7px] top-1"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+            <h3 class="font-bold text-sm sm:text-base text-brand-textPrimary">
+              Lead Software Engineer <span class="font-normal text-brand-textSecondary">• Coforge (formerly Encora Inc.)</span>
+            </h3>
+            <span class="text-xs font-mono text-brand-accent font-semibold">Dec 2021 – Present</span>
+          </div>
+          <p class="text-xs text-brand-textSecondary italic mb-3">Enterprise IoT Hardware Fleet &amp; Security Infrastructure (Remote)</p>
+          <ul class="text-xs text-brand-textSecondary space-y-2 list-disc list-inside leading-relaxed">
+            <li><strong>Enterprise Device Scale (5,000+ Daily Devices):</strong> Architect and maintain core APIs and backend subsystems directly powering 5,000+ active enterprise client devices every day with high availability and fault tolerance.</li>
+            <li><strong>Biometric 2FA Authentication Subsystem:</strong> Designed and implemented an innovative multi-factor authentication (2FA) mechanism leveraging native FaceID and peer-to-peer verification flows, eliminating dependence on third-party authenticator applications.</li>
+            <li><strong>Internal Developer Tooling &amp; AI Skills:</strong> Built and deployed custom AI-assisted development skills and automated workflows, standardizing business logic execution and eliminating repetitive development overhead across engineering teams.</li>
+            <li><strong>Full-Lifecycle SDLC Traceability:</strong> Automated end-to-end SDLC tracking linking issue generation directly to Git branching strategies, commit conventions, PR templates, and CI/CD validation gates.</li>
+            <li><strong>Enterprise CI/CD &amp; Security Pipelines:</strong> Architected automated build/deployment pipelines integrating HashiCorp Vault secrets management, private Docker registries, internal NPM package registries, and enterprise SSO/authentication.</li>
+            <li><strong>Kubernetes Orchestration &amp; Observability:</strong> Containerized full-stack services with Docker and configured zero-downtime deployment pipelines targeting internal Kubernetes (K8s) clusters; deployed Elastic Stack (ELK) for centralized telemetry and proactive log monitoring.</li>
+          </ul>
+        </div>
+
+        <!-- Milestone 2: Hatch Startups -->
+        <div class="border-l-2 border-brand-accent/40 pl-5 relative">
+          <div class="w-3 h-3 rounded-full bg-brand-accent absolute -left-[7px] top-1"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+            <h3 class="font-bold text-sm sm:text-base text-brand-textPrimary">
+              Senior Software Architect / Full-Stack Engineer <span class="font-normal text-brand-textSecondary">• Hatch Startups (Mi Compa Seguros &amp; iSana Health)</span>
+            </h3>
+            <span class="text-xs font-mono text-brand-accent font-semibold">May 2021 – Oct 2021</span>
+          </div>
+          <p class="text-xs text-brand-textSecondary italic mb-3">Cloud Architecture &amp; Venture Engineering (Remote)</p>
+          <ul class="text-xs text-brand-textSecondary space-y-2 list-disc list-inside leading-relaxed">
+            <li><strong>System Design &amp; Architecture Governance:</strong> Guided core system architecture, load-handling strategies, infrastructure automation, and technical trade-offs across startup portfolio initiatives.</li>
+            <li><strong>Cloud &amp; Backend Engineering (Mi Compa Seguros):</strong> Developed full-stack features and critical backend logic using React on AWS EC2, AWS Lambda, managed MySQL, and Terraform, accelerating feature delivery to meet strict product launch deadlines.</li>
+            <li><strong>CI/CD &amp; Cloud Automation (iSana Health):</strong> Built and automated the core web foundation on Firebase and React, engineering end-to-end GitHub Actions CI/CD pipelines that automated production releases, real-time data sync, and internal operations.</li>
+          </ul>
+        </div>
+
+        <!-- Milestone 3: Anexinet -->
+        <div class="border-l-2 border-brand-accent/40 pl-5 relative">
+          <div class="w-3 h-3 rounded-full bg-brand-accent absolute -left-[7px] top-1"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+            <h3 class="font-bold text-sm sm:text-base text-brand-textPrimary">
+              Software Architect &amp; Senior Engineer <span class="font-normal text-brand-textSecondary">• Anexinet (acquired Propelics)</span>
+            </h3>
+            <span class="text-xs font-mono text-brand-accent font-semibold">Jun 2018 – Apr 2021</span>
+          </div>
+          <p class="text-xs text-brand-textSecondary italic mb-3">Enterprise Cloud Modernization &amp; Microservices Architecture (Remote / León, Mexico)</p>
+          <ul class="text-xs text-brand-textSecondary space-y-2 list-disc list-inside leading-relaxed">
+            <li><strong>Monolith-to-Microservices Modernization:</strong> Co-led the architectural decoupling of a large-scale monolithic application into domain-driven microservices, migrating workloads from a single AWS EC2 instance to multi-node Kubernetes (K8s) clusters.</li>
+            <li><strong>High-Volume Data Transformation &amp; API Facades:</strong> Built high-throughput backend services that ingested, processed, and transformed massive enterprise datasets into optimized formats consumed by heterogeneous mobile clients.</li>
+            <li><strong>Security &amp; Auth Layer Segregation:</strong> Designed distinct architectural layers separating authentication/authorization concerns from core data processing, cleanly bypassing legacy authentication roadblocks.</li>
+            <li><strong>Enterprise Mobility &amp; Acquisition Transition (Propelics):</strong> Initially joined Propelics delivering high-performance mobile clients for US-based enterprise accounts; retained and promoted to Software Architect post-acquisition by Anexinet to lead cloud architecture and backend modernization initiatives.</li>
+          </ul>
+        </div>
+
+        <!-- Milestone 4: unosquare / Chicago Transit -->
+        <div class="border-l-2 border-brand-accent/40 pl-5 relative">
+          <div class="w-3 h-3 rounded-full bg-brand-accent absolute -left-[7px] top-1"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+            <h3 class="font-bold text-sm sm:text-base text-brand-textPrimary">
+              Senior Mobile App Engineer <span class="font-normal text-brand-textSecondary">• unosquare</span>
+            </h3>
+            <span class="text-xs font-mono text-brand-accent font-semibold">Nov 2014 – Jun 2018</span>
+          </div>
+          <p class="text-xs text-brand-textSecondary italic mb-3">Mass Transit Mobile Payments &amp; Ticketing (León Area, Mexico)</p>
+          <ul class="text-xs text-brand-textSecondary space-y-2 list-disc list-inside leading-relaxed">
+            <li><strong>High-Scale Transit Platform (5M+ Users):</strong> Owned end-to-end mobile development of the Trip Planner engine on iOS and Android for the Chicago transit system (Ventra/CTA), serving over 5 million active commuters.</li>
+            <li><strong>First-Wave Apple Pay Integration:</strong> Implemented one of the earliest large-scale mobile Apple Pay payment flows, enabling seamless transit pass purchases and digital card management.</li>
+            <li><strong>Shared Runtime Architecture:</strong> Maintained a shared JavaScript business logic layer executed across iOS, Android, and backend services, ensuring consistent validation logic and accelerating cross-platform feature delivery.</li>
+            <li><strong>Industrial Telemetry &amp; Tracking Client:</strong> Developed a native iOS application (Objective-C &amp; Swift) for a North American forestry client, incorporating GPS telemetry, driver route logging, and automated compensation calculations.</li>
+          </ul>
+        </div>
+
+        <!-- Earlier Experience Strip -->
+        <div class="border-l-2 border-brand-border/60 pl-5 relative">
+          <div class="w-2.5 h-2.5 rounded-full bg-brand-textMuted absolute -left-[6px] top-1"></div>
+          <h3 class="font-bold text-sm text-brand-textPrimary">
+            Earlier Engineering &amp; Academic Foundation <span class="font-normal text-brand-textSecondary font-mono text-xs">(2008 – 2014)</span>
+          </h3>
+          <p class="text-xs text-brand-textSecondary mt-1 leading-relaxed">
+            • <strong>ITexico (2012 – 2014):</strong> Senior Mobile App Developer &amp; Certified Technical Instructor delivering official cross-platform certification courses (TCD, TCE, TCAD).<br/>
+            • <strong>Consulting Technologies &amp; Babker (2010 – 2012):</strong> Core backend engineer on babker.com with CodeIgniter, Zend, and Gearman; built asynchronous long-polling connections with PHP and Nginx.<br/>
+            • <strong>Universidad De La Salle Bajío (2009):</strong> Operating Systems Lecturer instructing undergraduate computer science students on Linux server administration, network protocols, and kernel compilation.<br/>
+            • <strong>KSP &amp; Consulting Tech (2008 – 2010):</strong> Enterprise .NET developer for HDI Seguros and custom database platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Accreditations -->
+    <section class="cv-section">
+      <h2 class="text-xs font-mono font-bold tracking-wider text-brand-accent uppercase mb-4" id="cv-edu-title">
+        Education &amp; Certifications
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1">Education</span>
+          <ul class="text-brand-textSecondary space-y-1.5 leading-relaxed">
+            <li>• <strong>Master’s Degree in Web Technology:</strong> Universidad De La Salle Bajío (2009 – 2010)</li>
+            <li>• <strong>Web Technology Specialist:</strong> Universidad De La Salle Bajío (2008 – 2009)</li>
+            <li>• <strong>B.S. in Computer Systems Engineering (ISC):</strong> Instituto Tecnológico de León (2002 – 2007)</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border/70">
+          <span class="font-bold text-brand-textPrimary block mb-1">Licenses &amp; Certifications</span>
+          <ul class="text-brand-textSecondary space-y-1.5 leading-relaxed">
+            <li>• <strong>GenAI Training Path:</strong> Agentic Track, Technical Track &amp; Foundational (Coursera)</li>
+            <li>• <strong>Titanium Certified Mobile Developer (TCMD)</strong> — Appcelerator</li>
+            <li>• <strong>Titanium Certified Expert Level 2 (TCE) &amp; Certified Instructor (TCI)</strong> — Appcelerator</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Note -->
+    <footer class="mt-12 pt-6 border-t border-brand-border/60 text-center text-xs text-brand-textSecondary cv-section">
+      <p id="cv-footer-text">
+        Reymundo López • reymundolopez@gmail.com • +52 476 728 0600 • reymundolopez.com
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Bilingual content toggle for CV page
+    const cvData = {
+      en: {
+        backLink: "Back to Portfolio",
+        downloadBtn: "Download Official PDF",
+        role: "Lead Software Engineer & Systems Architect",
+        location: "Remote • Mexico (US Central Overlap) • Available for Global Roles & Selective Consulting",
+        summaryTitle: "Professional Summary",
+        skillsTitle: "Technical Skills & Stack",
+        cat1: "Architecture & System Design",
+        cat2: "Languages & Backend",
+        cat3: "Cloud, DevOps & Security",
+        cat4: "Data, Observability & AI Tooling",
+        expTitle: "Professional Experience",
+        eduTitle: "Education & Certifications",
+        footer: "Reymundo López • reymundolopez@gmail.com • +52 476 728 0600 • reymundolopez.com"
+      },
+      es: {
+        backLink: "Volver al Portafolio",
+        downloadBtn: "Descargar PDF Oficial",
+        role: "Lead Software Engineer & Arquitecto de Sistemas",
+        location: "Remoto • México (Horario Central) • Disponible para Roles Globales & Consultoría Selectiva",
+        summaryTitle: "Resumen Profesional",
+        skillsTitle: "Habilidades Técnicas & Stack",
+        cat1: "Arquitectura & Diseño de Sistemas",
+        cat2: "Lenguajes & Backend",
+        cat3: "Cloud, DevOps & Seguridad",
+        cat4: "Datos, Observabilidad & Herramientas de IA",
+        expTitle: "Experiencia Profesional",
+        eduTitle: "Educación & Certificaciones",
+        footer: "Reymundo López • reymundolopez@gmail.com • +52 476 728 0600 • reymundolopez.com"
+      }
+    };
+
+    let currentCvLang = localStorage.getItem('preferred_lang') || 'en';
+    if (currentCvLang !== 'en' && currentCvLang !== 'es') currentCvLang = 'en';
+
+    function updateCvLang(lang) {
+      currentCvLang = lang;
+      localStorage.setItem('preferred_lang', lang);
+      document.documentElement.lang = lang;
+
+      const d = cvData[lang];
+      document.getElementById('cv-back-link').textContent = d.backLink;
+      document.getElementById('cv-download-btn').textContent = d.downloadBtn;
+      document.getElementById('cv-header-role').textContent = d.role;
+      document.getElementById('cv-header-location').textContent = d.location;
+      document.getElementById('cv-summary-title').textContent = d.summaryTitle;
+      document.getElementById('cv-skills-title').textContent = d.skillsTitle;
+      document.getElementById('cv-skill-cat1').textContent = d.cat1;
+      document.getElementById('cv-skill-cat2').textContent = d.cat2;
+      document.getElementById('cv-skill-cat3').textContent = d.cat3;
+      document.getElementById('cv-skill-cat4').textContent = d.cat4;
+      document.getElementById('cv-exp-title').textContent = d.expTitle;
+      document.getElementById('cv-edu-title').textContent = d.eduTitle;
+      document.getElementById('cv-footer-text').textContent = d.footer;
+
+      const btnEn = document.getElementById('cv-lang-en');
+      const btnEs = document.getElementById('cv-lang-es');
+      if (lang === 'en') {
+        btnEn.className = 'px-2.5 py-0.5 rounded-full bg-brand-surface text-brand-accent font-bold shadow-sm cursor-pointer';
+        btnEs.className = 'px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary font-semibold cursor-pointer';
+      } else {
+        btnEs.className = 'px-2.5 py-0.5 rounded-full bg-brand-surface text-brand-accent font-bold shadow-sm cursor-pointer';
+        btnEn.className = 'px-2.5 py-0.5 rounded-full text-brand-textSecondary hover:text-brand-textPrimary font-semibold cursor-pointer';
+      }
+    }
+
+    document.getElementById('cv-lang-en').addEventListener('click', () => updateCvLang('en'));
+    document.getElementById('cv-lang-es').addEventListener('click', () => updateCvLang('es'));
+
+    // Initialize
+    updateCvLang(currentCvLang);
+  </script>
+</body>
+</html>

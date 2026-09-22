@@ -1,4 +1,4 @@
-import { translations, modalDeepDives } from './data/translations.js';
+import { translations } from './data/translations.js';
 
 let currentLang = 'en';
 
@@ -46,30 +46,27 @@ function renderPageContent() {
 
   // Document Title
   document.title = currentLang === 'es'
-    ? 'Reymundo López — Arquitecto de Software & IA | El Creador de Software'
-    : 'Reymundo López — Software Architect & AI | The Software Creator';
+    ? 'Reymundo López — Consultor de Software & Full-Stack | Portafolio'
+    : 'Reymundo López — Software Consultant & Full-Stack Engineer | Portfolio';
 
   // Navigation
   setText('nav-role', t.nav.role);
-  setText('nav-status-badge', t.nav.statusBadge);
-  setText('nav-link-superpowers', t.nav.superpowers);
   setText('nav-link-whatido', t.nav.whatIDo);
-  setText('nav-link-trackrecord', t.nav.trackRecord);
+  setText('nav-link-howiwork', t.nav.howIWork);
+  setText('nav-link-cv', t.nav.cvLink);
   setText('nav-link-contact', t.nav.contact);
   setText('nav-get-in-touch', t.nav.getInTouch);
 
   // Drawer Nav (Mobile)
-  setText('drawer-link-superpowers', t.nav.superpowers);
   setText('drawer-link-whatido', t.nav.whatIDo);
-  setText('drawer-link-trackrecord', t.nav.trackRecord);
+  setText('drawer-link-howiwork', t.nav.howIWork);
+  setText('drawer-link-cv', t.nav.cvLink);
   setText('drawer-link-contact', t.nav.contact);
   setText('drawer-get-in-touch', t.nav.getInTouch);
 
   // Hero Section
-  setText('hero-status-tag', t.hero.status);
-  setText('hero-status-text', t.hero.statusText);
-  setText('hero-moniker-es', t.hero.monikerEs);
-  setText('hero-moniker-en', t.hero.monikerEn);
+  setText('hero-badge-experience', t.hero.experienceBadge);
+  setText('hero-badge-engagement', t.hero.engagementBadge);
   setText('hero-location', t.hero.location);
   setText('hero-consultant-tag', t.hero.consultantTag);
   setText('hero-title', t.hero.title);
@@ -77,62 +74,18 @@ function renderPageContent() {
   setText('hero-cta-primary', t.hero.ctaPrimary);
   setText('hero-cta-secondary', t.hero.ctaSecondary);
 
-  // Hero Stats Cards (with click to modal)
-  const statsContainer = document.getElementById('hero-stats-grid');
-  if (statsContainer) {
-    statsContainer.innerHTML = t.hero.stats.map(st => `
-      <div class="bg-brand-surface/90 backdrop-blur-md p-4 rounded-xl border border-brand-border/80 hover:border-brand-accent transition-all cursor-pointer group shadow-sm flex flex-col justify-between gap-2" data-stat-modal="${st.key}">
-        <div class="flex items-center justify-between text-[11px] font-mono text-brand-textMuted uppercase tracking-wider">
-          <span>${st.title}</span>
-          <span class="w-5 h-5 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </span>
-        </div>
-        <div>
-          <div class="font-serif-headline text-2xl sm:text-3xl text-brand-textPrimary font-semibold">${st.num}</div>
-          <div class="text-[11px] text-brand-textSecondary mt-0.5 leading-snug">${st.label}</div>
-        </div>
-      </div>
-    `).join('');
+  // Proof Strip (Organizations)
+  setText('proof-strip-title', t.proofStrip.title);
+  setText('proof-org1-title', t.proofStrip.org1Title);
+  setText('proof-org1-sub', t.proofStrip.org1Sub);
+  setText('proof-org2-title', t.proofStrip.org2Title);
+  setText('proof-org2-sub', t.proofStrip.org2Sub);
+  setText('proof-org3-title', t.proofStrip.org3Title);
+  setText('proof-org3-sub', t.proofStrip.org3Sub);
+  setText('proof-org4-title', t.proofStrip.org4Title);
+  setText('proof-org4-sub', t.proofStrip.org4Sub);
 
-    statsContainer.querySelectorAll('[data-stat-modal]').forEach(el => {
-      el.addEventListener('click', () => {
-        const key = el.getAttribute('data-stat-modal');
-        openDetailModal(key);
-      });
-    });
-  }
-
-  // Superpowers Section
-  setText('superpowers-eyebrow', t.superpowers.eyebrow);
-  setText('superpowers-title', t.superpowers.title);
-  const superpowersContainer = document.getElementById('superpowers-grid');
-  if (superpowersContainer) {
-    superpowersContainer.innerHTML = t.superpowers.items.map(item => {
-      let iconHtml = '';
-      if (item.codeBadge) {
-        iconHtml = `<span class="text-sm font-mono font-bold text-brand-accent">&lt;/&gt;</span>`;
-      } else if (item.icon === 'lightning') {
-        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`;
-      } else {
-        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`;
-      }
-
-      return `
-        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 shadow-sm flex flex-col justify-between gap-4 hover:border-brand-accent/60 transition-all">
-          <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center shrink-0">
-              ${iconHtml}
-            </div>
-            <h3 class="font-bold text-base text-brand-textPrimary">${item.title}</h3>
-          </div>
-          <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">${item.desc}</p>
-        </div>
-      `;
-    }).join('');
-  }
-
-  // "What I Do" (4 Solution Cards) Section
+  // "What I Do" (Solutions)
   setText('whatido-eyebrow', t.whatIDo.eyebrow);
   setText('whatido-title', t.whatIDo.title);
   setText('whatido-subtitle', t.whatIDo.subtitle);
@@ -172,68 +125,84 @@ function renderPageContent() {
     }).join('');
   }
 
-  // Track Record & Proof Section
-  setText('trackrecord-eyebrow', t.trackRecord.eyebrow);
-  setText('trackrecord-title', t.trackRecord.title);
-  setText('trackrecord-subtitle', t.trackRecord.subtitle);
-  setText('trackrecord-prompt', t.trackRecord.clickPrompt);
+  // "How I Work" (Process & Engagement Models)
+  setText('howiwork-eyebrow', t.howIWork.eyebrow);
+  setText('howiwork-title', t.howIWork.title);
+  setText('howiwork-subtitle', t.howIWork.subtitle);
 
-  const milestonesContainer = document.getElementById('milestones-grid');
-  if (milestonesContainer) {
-    milestonesContainer.innerHTML = t.trackRecord.milestones.map(m => `
-      <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 hover:border-brand-accent transition-all flex flex-col justify-between gap-5 group shadow-sm cursor-pointer" data-modal-btn="${m.id}">
-        <div class="space-y-2.5">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-mono font-bold text-brand-accent bg-[#fbf2eb] px-2.5 py-0.5 rounded-full border border-brand-accent/20">${m.period}</span>
-            <div class="w-7 h-7 rounded-full bg-brand-bg flex items-center justify-center text-brand-textMuted group-hover:bg-brand-accent group-hover:text-white transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-          </div>
-          <h4 class="font-serif-headline text-2xl font-semibold text-brand-textPrimary leading-snug">${m.title}</h4>
-          <div class="text-xs font-bold text-brand-textSecondary">${m.org}</div>
-          <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed pt-1">${m.summary}</p>
-        </div>
-        <div class="flex flex-wrap gap-1.5 pt-3 border-t border-brand-border/60">
-          ${m.tags.map(tg => `<span class="px-2 py-0.5 rounded bg-brand-bg text-[10px] font-mono text-brand-textSecondary border border-brand-border/60">${tg}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
-
-    milestonesContainer.querySelectorAll('[data-modal-btn]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        openDetailModal(btn.getAttribute('data-modal-btn'));
-      });
-    });
-  }
-
-  // Credentials
-  setText('credentials-title', t.trackRecord.credentialsTitle);
-  const credentialsContainer = document.getElementById('credentials-grid');
-  if (credentialsContainer) {
-    credentialsContainer.innerHTML = t.trackRecord.credentials.map(c => {
-      let iconSvg = '';
-      if (c.icon === 'degree') {
-        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5"/></svg>`;
-      } else if (c.icon === 'spark') {
-        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`;
+  const stepsContainer = document.getElementById('howiwork-steps-grid');
+  if (stepsContainer) {
+    stepsContainer.innerHTML = t.howIWork.steps.map(step => {
+      let iconHtml = '';
+      if (step.icon === 'chat') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>`;
+      } else if (step.icon === 'plan') {
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>`;
       } else {
-        iconSvg = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>`;
+        iconHtml = `<svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
       }
 
       return `
-        <div class="bg-brand-surface p-4 rounded-xl border border-brand-border/80 flex items-center gap-3.5 shadow-sm">
-          <div class="w-10 h-10 rounded-lg bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center shrink-0">
-            ${iconSvg}
+        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 shadow-sm flex flex-col justify-between gap-4 hover:border-brand-accent/60 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-brand-accent bg-[#fbf2eb] px-2.5 py-0.5 rounded-full border border-brand-accent/20">
+              ${step.num}
+            </span>
+            <div class="w-9 h-9 rounded-xl bg-[#f4ece3] border border-brand-border/80 flex items-center justify-center">
+              ${iconHtml}
+            </div>
           </div>
           <div>
-            <div class="text-xs sm:text-sm font-bold text-brand-textPrimary leading-tight">${c.title}</div>
-            <div class="text-[11px] font-mono text-brand-accent font-semibold">${c.issuer}</div>
-            <div class="text-[11px] text-brand-textSecondary font-light mt-0.5">${c.note}</div>
+            <h3 class="font-bold text-base text-brand-textPrimary mb-1.5">${step.title}</h3>
+            <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">${step.desc}</p>
           </div>
         </div>
       `;
     }).join('');
   }
+
+  // Engagement Models Sub-grid
+  setText('howiwork-models-eyebrow', t.howIWork.modelsEyebrow);
+  setText('howiwork-models-title', t.howIWork.modelsTitle);
+  setText('howiwork-models-subtitle', t.howIWork.modelsSubtitle);
+
+  const modelsContainer = document.getElementById('howiwork-models-grid');
+  if (modelsContainer) {
+    modelsContainer.innerHTML = t.howIWork.models.map(m => {
+      let iconSvg = '';
+      if (m.icon === 'target') {
+        iconSvg = `<svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+      } else if (m.icon === 'briefcase') {
+        iconSvg = `<svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`;
+      } else {
+        iconSvg = `<svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+      }
+
+      return `
+        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border/80 shadow-sm flex flex-col justify-between gap-4 hover:border-brand-accent transition-all">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#f4ece3] text-brand-textPrimary border border-brand-border/70">
+              ${m.badge}
+            </span>
+            <div class="w-8 h-8 rounded-full bg-brand-bg flex items-center justify-center">
+              ${iconSvg}
+            </div>
+          </div>
+          <div>
+            <h4 class="font-serif-headline text-lg text-brand-textPrimary font-semibold mb-1">${m.title}</h4>
+            <p class="text-xs sm:text-sm text-brand-textSecondary font-light leading-relaxed">${m.desc}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Technical Specs & CV Banner
+  setText('tech-card-eyebrow', t.techCard.eyebrow);
+  setText('tech-card-title', t.techCard.title);
+  setText('tech-card-desc', t.techCard.desc);
+  setText('tech-card-btn', t.techCard.btn);
+  setText('tech-card-pdf', t.techCard.pdfBtn);
 
   // Contact Section
   setText('contact-eyebrow', t.contact.eyebrow);
@@ -277,9 +246,6 @@ function renderPageContent() {
   setText('footer-tagline', t.footer.tagline);
   setText('footer-location', t.footer.location);
   setText('footer-copyright', t.footer.copyright);
-
-  // Modal Buttons
-  setText('modalUnderstoodText', t.modal.understood);
 }
 
 function setText(id, text) {
@@ -289,138 +255,48 @@ function setText(id, text) {
   }
 }
 
-export function openDetailModal(key) {
-  const data = modalDeepDives[key] ? modalDeepDives[key][currentLang] : null;
-  if (!data) return;
-
-  const catEl = document.getElementById('modalCategory');
-  const titleEl = document.getElementById('modalTitle');
-  const bodyEl = document.getElementById('modalDescription');
-  const statLabelEl = document.getElementById('modalStatLabel');
-  const statValEl = document.getElementById('modalStatVal');
-  const tagsContainer = document.getElementById('modalTags');
-
-  if (catEl) catEl.textContent = data.cat;
-  if (titleEl) titleEl.textContent = data.title;
-  if (bodyEl) bodyEl.textContent = data.body;
-  if (statLabelEl) statLabelEl.textContent = data.statLabel;
-  if (statValEl) statValEl.textContent = data.statVal;
-
-  if (tagsContainer) {
-    tagsContainer.innerHTML = '';
-    data.tags.forEach(tag => {
-      const sp = document.createElement('span');
-      sp.className = 'px-2 py-0.5 rounded bg-brand-bg text-[11px] font-mono text-brand-textSecondary border border-brand-border/80';
-      sp.textContent = tag;
-      tagsContainer.appendChild(sp);
-    });
-  }
-
-  const modal = document.getElementById('infoModal');
-  const modalBox = document.getElementById('modalBox');
-  if (modal) {
-    modal.classList.remove('hidden');
-    if (modalBox) {
-      modalBox.classList.remove('scale-95');
-      modalBox.classList.add('scale-100');
-    }
-    document.body.style.overflow = 'hidden';
-
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'view_case_study', {
-        case_study_id: key,
-        title: data.title,
-        language: currentLang
-      });
-    }
-  }
-}
-
-export function closeDetailModal() {
-  const modal = document.getElementById('infoModal');
-  const modalBox = document.getElementById('modalBox');
-  if (modal) {
-    if (modalBox) {
-      modalBox.classList.remove('scale-100');
-      modalBox.classList.add('scale-95');
-    }
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-}
-
-function initMobileDrawer() {
-  const openBtn = document.getElementById('drawer-open-btn');
-  const closeBtn = document.getElementById('drawer-close-btn');
-  const drawer = document.getElementById('mobile-drawer');
-  const backdrop = document.getElementById('drawer-backdrop');
-
-  function openDrawer() {
-    if (drawer) drawer.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeDrawer() {
-    if (drawer) drawer.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
-
-  if (openBtn) openBtn.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (backdrop) backdrop.addEventListener('click', closeDrawer);
-
-  const drawerLinks = drawer ? drawer.querySelectorAll('a') : [];
-  drawerLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeDrawer();
-    });
-  });
-}
-
+// Initial Setup
 document.addEventListener('DOMContentLoaded', () => {
   currentLang = detectInitialLanguage();
-
-  document.querySelectorAll('[data-lang-btn]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetLang = btn.getAttribute('data-lang-btn');
-      setLanguage(targetLang);
-    });
-  });
-
-  const modalCloseBtn = document.getElementById('modalCloseBtn');
-  const modalUnderstoodBtn = document.getElementById('modalUnderstoodBtn');
-  const modalContainer = document.getElementById('infoModal');
-
-  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeDetailModal);
-  if (modalUnderstoodBtn) modalUnderstoodBtn.addEventListener('click', closeDetailModal);
-  if (modalContainer) {
-    modalContainer.addEventListener('click', (e) => {
-      if (e.target === modalContainer) {
-        closeDetailModal();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDetailModal();
-  });
-
-  initMobileDrawer();
+  document.documentElement.lang = currentLang;
   renderPageContent();
   updateToggleButtons();
 
-  // Track WhatsApp conversion clicks
-  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-    link.addEventListener('click', () => {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', {
-          event_category: 'contact',
-          event_label: 'whatsapp_click',
-          button_id: link.id || 'whatsapp_link',
-          language: currentLang
-        });
-      }
+  // Language Toggle buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang-btn');
+      setLanguage(lang);
     });
   });
-});
 
+  // Mobile Drawer Toggle
+  const drawerOpenBtn = document.getElementById('drawer-open-btn');
+  const drawerCloseBtn = document.getElementById('drawer-close-btn');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+  function openDrawer() {
+    if (mobileDrawer) {
+      mobileDrawer.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeDrawer() {
+    if (mobileDrawer) {
+      mobileDrawer.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (drawerOpenBtn) drawerOpenBtn.addEventListener('click', openDrawer);
+  if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+
+  // Close drawer when a link is clicked
+  const drawerLinks = mobileDrawer ? mobileDrawer.querySelectorAll('nav a, a[id="drawer-get-in-touch"]') : [];
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+});
